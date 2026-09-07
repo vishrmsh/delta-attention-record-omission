@@ -1,0 +1,69 @@
+{
+  "conditions": {
+    "as_heard": {
+      "wrong_target_mean_logprob": -0.386627197265625,
+      "wrong_target_first_token_rank": 1,
+      "corrected_target_mean_logprob": -4.386701965332032,
+      "corrected_target_first_token_rank": 14,
+      "greedy_answer": "Breast cancer."
+    },
+    "corrected_from_start": {
+      "wrong_target_mean_logprob": -2.9325135548909507,
+      "wrong_target_first_token_rank": 4,
+      "corrected_target_mean_logprob": -0.5699226379394531,
+      "corrected_target_first_token_rank": 3,
+      "greedy_answer": "Benign breast lump"
+    },
+    "after_subtraction": {
+      "wrong_target_mean_logprob": -1.1414658228556316,
+      "wrong_target_first_token_rank": 3,
+      "corrected_target_mean_logprob": -2.9302608489990236,
+      "corrected_target_first_token_rank": 35,
+      "greedy_answer": "The patient did not mention anything about their mother's health condition.",
+      "seconds": 2.8333000955171883e-05
+    },
+    "after_amendment": {
+      "wrong_target_mean_logprob": -2.9325135548909507,
+      "wrong_target_first_token_rank": 4,
+      "corrected_target_mean_logprob": -0.5699226379394531,
+      "corrected_target_first_token_rank": 3,
+      "greedy_answer": "Benign breast lump",
+      "seconds": 0.1585438749898458,
+      "replayed_tokens": 55,
+      "replayed_records": [
+        "famhx",
+        "allergy",
+        "social"
+      ],
+      "checkpoint_bytes": 43417600
+    }
+  },
+  "audit": {
+    "max_abs_logit_delta_vs_corrected_from_start": 0.0,
+    "max_abs_kda_state_delta_vs_corrected_from_start": 0.0,
+    "greedy_answer_matches_reference": true
+  },
+  "model": "mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit",
+  "host": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64"
+  },
+  "protocol": {
+    "row_removal": "native-mla-mask",
+    "nu": null,
+    "chunk": null,
+    "preserve_prefix_mass": null,
+    "greedy_tokens": 16,
+    "statements": [
+      "Statement 1 (patient): I've had this cough for about three weeks, and it is worse at night.\n\n",
+      "Statement 2 (patient): I take lisinopril 10 mg daily and a multivitamin.\n\n",
+      "Statement 3 (patient): My mother had breast cancer.\n\n",
+      "Statement 4 (patient): I'm allergic to penicillin; it gives me hives.\n\n",
+      "Statement 5 (patient): I quit smoking six years ago.\n\n"
+    ],
+    "corrected_statement": "Statement 3 (patient, corrected): My mother had a breast lump that imaging showed was benign, not cancer.\n\n",
+    "question": "Question: According to the statements, what condition did the patient's mother have?\nAnswer:",
+    "wrong_target": " Breast cancer.",
+    "corrected_target": " A benign breast lump."
+  }
+}

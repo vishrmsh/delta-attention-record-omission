@@ -1,0 +1,131 @@
+{
+ "schema": "kimi-sv-masked-sampling-v1",
+ "model": "mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit",
+ "host": {
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "machine": "arm64"
+ },
+ "source": "synthetic",
+ "contains_source_text": false,
+ "victim_index": 0,
+ "victim_key": "patient-4471",
+ "prefix_depth": 16,
+ "suffix_records_used": 89,
+ "protocol": {
+  "cuts": [
+   0,
+   4096
+  ],
+  "samples_per_condition": 100,
+  "max_new_tokens": 24,
+  "temperature": 1.0,
+  "top_p": 1.0,
+  "hit_rule": "casefolded, punctuation-stripped, whitespace-collapsed substring match of the secret",
+  "conditions": "present, omitted, mask (victim attention rows evicted), static (boundary receipt subtracted), mask_static"
+ },
+ "seconds": 563.4224516670001,
+ "sampling": {
+  "4096": {
+   "present": {
+    "n_samples": 100,
+    "hits": 94,
+    "hit_rate": 0.94,
+    "any_hit": true,
+    "first_hit_index": 0,
+    "mean_tokens": 6.92,
+    "seconds": 34.49971120800001
+   },
+   "omitted": {
+    "n_samples": 100,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "any_hit": false,
+    "first_hit_index": null,
+    "mean_tokens": 20.77,
+    "seconds": 81.77605641699847
+   },
+   "mask": {
+    "n_samples": 100,
+    "hits": 1,
+    "hit_rate": 0.01,
+    "any_hit": true,
+    "first_hit_index": 57,
+    "mean_tokens": 20.52,
+    "seconds": 75.58058054200046
+   },
+   "static": {
+    "n_samples": 100,
+    "hits": 95,
+    "hit_rate": 0.95,
+    "any_hit": true,
+    "first_hit_index": 0,
+    "mean_tokens": 6.85,
+    "seconds": 33.79823225000109
+   },
+   "mask_static": {
+    "n_samples": 100,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "any_hit": false,
+    "first_hit_index": null,
+    "mean_tokens": 19.96,
+    "seconds": 74.96244408300117
+   }
+  },
+  "0": {
+   "present": {
+    "n_samples": 100,
+    "hits": 98,
+    "hit_rate": 0.98,
+    "any_hit": true,
+    "first_hit_index": 0,
+    "mean_tokens": 6.46,
+    "seconds": 29.73993854100081
+   },
+   "omitted": {
+    "n_samples": 100,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "any_hit": false,
+    "first_hit_index": null,
+    "mean_tokens": 18.7,
+    "seconds": 64.74440220900033
+   },
+   "mask": {
+    "n_samples": 100,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "any_hit": false,
+    "first_hit_index": null,
+    "mean_tokens": 18.08,
+    "seconds": 62.230886417000875
+   },
+   "static": {
+    "n_samples": 100,
+    "hits": 100,
+    "hit_rate": 1.0,
+    "any_hit": true,
+    "first_hit_index": 0,
+    "mean_tokens": 6.34,
+    "seconds": 30.773306875000344
+   },
+   "mask_static": {
+    "n_samples": 100,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "any_hit": false,
+    "first_hit_index": null,
+    "mean_tokens": 18.0,
+    "seconds": 61.22444612500112
+   }
+  }
+ },
+ "victim_positions": [
+  760,
+  805
+ ],
+ "cuts_available": [
+  0,
+  4096
+ ]
+}

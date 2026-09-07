@@ -1,0 +1,462 @@
+{
+ "schema": "kda-mla-logical-equality-v1",
+ "model": "mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit",
+ "contains_source_text": false,
+ "sources": {
+  "synthetic": {
+   "schema": "kda-mla-logical-equality-v1",
+   "model": "mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit",
+   "host": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64"
+   },
+   "source": "synthetic",
+   "contains_source_text": false,
+   "protocol": {
+    "cuts": [
+     0,
+     4096
+    ],
+    "comparison": "keys[..., :offset, :] and values[..., :offset, :] of every MLA layer, replay vs never-stored run, float32 max abs diff"
+   },
+   "configurations": [
+    {
+     "victim_index": 0,
+     "prefix_depth": 0,
+     "suffix_tokens": 4096,
+     "mla_layers": {
+      "3": {
+       "offset": 4114,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "7": {
+       "offset": 4114,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "11": {
+       "offset": 4114,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "15": {
+       "offset": 4114,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "19": {
+       "offset": 4114,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "23": {
+       "offset": 4114,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "26": {
+       "offset": 4114,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      }
+     },
+     "all_equal": true,
+     "seconds": 8.424484542003484
+    },
+    {
+     "victim_index": 0,
+     "prefix_depth": 16,
+     "suffix_tokens": 4096,
+     "mla_layers": {
+      "3": {
+       "offset": 4853,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "7": {
+       "offset": 4853,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "11": {
+       "offset": 4853,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "15": {
+       "offset": 4853,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "19": {
+       "offset": 4853,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "23": {
+       "offset": 4853,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "26": {
+       "offset": 4853,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      }
+     },
+     "all_equal": true,
+     "seconds": 11.042744334001327
+    },
+    {
+     "victim_index": 3,
+     "prefix_depth": 0,
+     "suffix_tokens": 4096,
+     "mla_layers": {
+      "3": {
+       "offset": 4114,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "7": {
+       "offset": 4114,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "11": {
+       "offset": 4114,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "15": {
+       "offset": 4114,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "19": {
+       "offset": 4114,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "23": {
+       "offset": 4114,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "26": {
+       "offset": 4114,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      }
+     },
+     "all_equal": true,
+     "seconds": 6.991006915995968
+    },
+    {
+     "victim_index": 3,
+     "prefix_depth": 16,
+     "suffix_tokens": 4096,
+     "mla_layers": {
+      "3": {
+       "offset": 4853,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "7": {
+       "offset": 4853,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "11": {
+       "offset": 4853,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "15": {
+       "offset": 4853,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "19": {
+       "offset": 4853,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "23": {
+       "offset": 4853,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "26": {
+       "offset": 4853,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      }
+     },
+     "all_equal": true,
+     "seconds": 10.974927791001392
+    }
+   ],
+   "all_equal": true,
+   "n_configurations": 4,
+   "n_mla_layers": 7
+  },
+  "tofu": {
+   "schema": "kda-mla-logical-equality-v1",
+   "model": "mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit",
+   "host": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64"
+   },
+   "source": "tofu",
+   "contains_source_text": false,
+   "protocol": {
+    "cuts": [
+     0,
+     4096
+    ],
+    "comparison": "keys[..., :offset, :] and values[..., :offset, :] of every MLA layer, replay vs never-stored run, float32 max abs diff"
+   },
+   "configurations": [
+    {
+     "victim_index": 0,
+     "prefix_depth": 0,
+     "suffix_tokens": 4096,
+     "mla_layers": {
+      "3": {
+       "offset": 4099,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "7": {
+       "offset": 4099,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "11": {
+       "offset": 4099,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "15": {
+       "offset": 4099,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "19": {
+       "offset": 4099,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "23": {
+       "offset": 4099,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "26": {
+       "offset": 4099,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      }
+     },
+     "all_equal": true,
+     "seconds": 8.087239333995967
+    },
+    {
+     "victim_index": 0,
+     "prefix_depth": 16,
+     "suffix_tokens": 4096,
+     "mla_layers": {
+      "3": {
+       "offset": 5006,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "7": {
+       "offset": 5006,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "11": {
+       "offset": 5006,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "15": {
+       "offset": 5006,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "19": {
+       "offset": 5006,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "23": {
+       "offset": 5006,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "26": {
+       "offset": 5006,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      }
+     },
+     "all_equal": true,
+     "seconds": 10.271446167003887
+    },
+    {
+     "victim_index": 4,
+     "prefix_depth": 0,
+     "suffix_tokens": 4096,
+     "mla_layers": {
+      "3": {
+       "offset": 4099,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "7": {
+       "offset": 4099,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "11": {
+       "offset": 4099,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "15": {
+       "offset": 4099,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "19": {
+       "offset": 4099,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "23": {
+       "offset": 4099,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "26": {
+       "offset": 4099,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      }
+     },
+     "all_equal": true,
+     "seconds": 8.652668250004353
+    },
+    {
+     "victim_index": 4,
+     "prefix_depth": 16,
+     "suffix_tokens": 4096,
+     "mla_layers": {
+      "3": {
+       "offset": 5006,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "7": {
+       "offset": 5006,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "11": {
+       "offset": 5006,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "15": {
+       "offset": 5006,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "19": {
+       "offset": 5006,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "23": {
+       "offset": 5006,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      },
+      "26": {
+       "offset": 5006,
+       "max_abs_diff_keys": 0.0,
+       "max_abs_diff_values": 0.0,
+       "equal": true
+      }
+     },
+     "all_equal": true,
+     "seconds": 13.04609045899997
+    }
+   ],
+   "all_equal": true,
+   "n_configurations": 4,
+   "n_mla_layers": 7
+  }
+ },
+ "all_equal": true,
+ "n_configurations": 8,
+ "n_mla_layers": 7
+}

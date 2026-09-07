@@ -1,0 +1,1815 @@
+{
+ "schema": "recurrent-families-summary-v1",
+ "predictions_file": "recurrent_families/benchmarks/family_predictions_v1.json",
+ "thresholds": {
+  "exact_max_relative_error": 0.0001,
+  "inexact_min_relative_error": 0.01,
+  "native_forcing_nonzero_min_fraction_of_direct": 0.01,
+  "min_frozen_diff_rel_omitted": 0.001
+ },
+ "families": {
+  "falcon_h1": {
+   "configurations": {
+    "attempted": 12,
+    "admitted": 12
+   },
+   "last_cut": 1024,
+   "recurrence_vs_model_error_max": 0.0,
+   "replay_max_abs_diff": 0.0,
+   "imprint_fraction_median_at_last_cut": {
+    "n": 12,
+    "min": 0.035271405016820384,
+    "median": 0.043279616082973135,
+    "max": 0.1416252084139067
+   },
+   "verdicts": {
+    "frozen_static_exact": {
+     "max_error_rel_omitted": {
+      "n": 12,
+      "min": 0.9640868811171809,
+      "median": 1.380559690755311,
+      "max": 2.9845375514831187
+     },
+     "exact_in_all_configurations": false,
+     "clearly_inexact_in_all_configurations": true
+    },
+    "frozen_ledger_exact": {
+     "max_error_rel_omitted": {
+      "n": 12,
+      "min": 1.0538111824792757e-06,
+      "median": 1.3481973422230822e-06,
+      "max": 2.5918174586450405e-06
+     },
+     "exact_in_all_configurations": true,
+     "clearly_inexact_in_all_configurations": false
+    },
+    "frozen_full_exact": {
+     "max_error_rel_omitted": {
+      "n": 12,
+      "min": 1.0538111824792757e-06,
+      "median": 1.3481973422230822e-06,
+      "max": 2.5918174586450405e-06
+     },
+     "exact_in_all_configurations": true,
+     "clearly_inexact_in_all_configurations": false
+    },
+    "native_forcing_nonzero": {
+     "median_forcing_share_at_last_cut": {
+      "n": 12,
+      "min": 0.9028678725854145,
+      "median": 1.0363017995386277,
+      "max": 1.2074631507224658
+     },
+     "nonzero_in_all_configurations": true
+    }
+   },
+   "behavior": {
+    "0": {
+     "present": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.47925606181628866,
+       "median": 1.6886363324398797,
+       "max": 5.500856041539616
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 4.0,
+       "median": 5.0,
+       "max": 10.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.250151251689852,
+       "median": 0.2866096477917167,
+       "max": 0.8091064131794834
+      }
+     },
+     "omitted": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 8.0,
+       "median": 23.5,
+       "max": 2429.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     }
+    },
+    "16": {
+     "present": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.5096135572946099,
+       "median": 1.5284447812155122,
+       "max": 5.607593263654659
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 3.0,
+       "median": 5.0,
+       "max": 10.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.15155745317200492,
+       "median": 0.1915971450107302,
+       "max": 0.5711707019191657
+      }
+     },
+     "omitted": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 5.0,
+       "median": 21.5,
+       "max": 1709.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     },
+     "static": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.41817605982734163,
+       "median": 1.5789237342736064,
+       "max": 5.691760117770173
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 5.0,
+       "max": 10.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.7272819475966202,
+       "median": 0.7635511393601877,
+       "max": 0.7856749298358813
+      }
+     },
+     "ledger": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.47624722432478206,
+       "median": 1.5600495951027067,
+       "max": 5.675751189352013
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 5.0,
+       "max": 11.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.7299039957428236,
+       "median": 0.7617558244391348,
+       "max": 0.7868981325692604
+      }
+     },
+     "full": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.47624722432478206,
+       "median": 1.5600495951027067,
+       "max": 5.675751189352013
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 5.0,
+       "max": 11.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.7299039957428236,
+       "median": 0.7617558244391348,
+       "max": 0.7868981325692604
+      }
+     }
+    },
+    "64": {
+     "present": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.42280768164450167,
+       "median": 1.3988581965289388,
+       "max": 3.5713681960478425
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 2.0,
+       "median": 5.0,
+       "max": 7.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.13435018552008307,
+       "median": 0.15378006296260566,
+       "max": 0.31646359656920425
+      }
+     },
+     "omitted": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 3.0,
+       "median": 20.0,
+       "max": 491.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     },
+     "static": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.38276364114218653,
+       "median": 1.4275013268343173,
+       "max": 3.6759800118549415
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 5.0,
+       "max": 10.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.7456873134974473,
+       "median": 0.7836635273629846,
+       "max": 0.8190971444873796
+      }
+     },
+     "ledger": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.41091305860235083,
+       "median": 1.4087319886117862,
+       "max": 3.6522061229140186
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 5.0,
+       "max": 10.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.699370116970409,
+       "median": 0.7814320247342867,
+       "max": 0.8211440047586803
+      }
+     },
+     "full": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.41091305860235083,
+       "median": 1.4087319886117862,
+       "max": 3.6522061229140186
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 5.0,
+       "max": 10.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.699370116970409,
+       "median": 0.7814320247342867,
+       "max": 0.8211440047586803
+      }
+     },
+     "trunc": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.41083539319307805,
+       "median": 1.4072329638196,
+       "max": 3.643232876667753
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 5.0,
+       "max": 10.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6813271978238662,
+       "median": 0.7814069598567723,
+       "max": 0.820536754465488
+      }
+     }
+    },
+    "256": {
+     "present": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.1867652362146015,
+       "median": 0.9928062246181071,
+       "max": 3.4592877708297847
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 5.0,
+       "median": 10.0,
+       "max": 29.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.07082034048602369,
+       "median": 0.0931130979372585,
+       "max": 0.1241209860763638
+      }
+     },
+     "omitted": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 7.0,
+       "median": 43.5,
+       "max": 4041.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     },
+     "static": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.12154317961540073,
+       "median": 0.9832062910645618,
+       "max": 3.739834546771211
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 4.0,
+       "median": 11.0,
+       "max": 36.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.7816672411266868,
+       "median": 0.8435838338434802,
+       "max": 0.8669760039897895
+      }
+     },
+     "ledger": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.11830200140442071,
+       "median": 1.000285420101136,
+       "max": 3.631894778402057
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 5.0,
+       "median": 10.0,
+       "max": 37.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.7407166907893781,
+       "median": 0.7907104311461166,
+       "max": 0.8468594983174275
+      }
+     },
+     "full": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.11830200140442071,
+       "median": 1.000285420101136,
+       "max": 3.631894778402057
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 5.0,
+       "median": 10.0,
+       "max": 37.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.7407166907893781,
+       "median": 0.7907104311461166,
+       "max": 0.8468594983174275
+      }
+     },
+     "trunc": {
+      "lift_nats": {
+       "n": 24,
+       "min": 0.1266437072190456,
+       "median": 0.9506595683718236,
+       "max": 3.4299587697605607
+      },
+      "first_token_rank": {
+       "n": 24,
+       "min": 5.0,
+       "median": 11.5,
+       "max": 36.0
+      },
+      "state_residual_mean": {
+       "n": 24,
+       "min": 0.7212728645187073,
+       "median": 0.7901140503636691,
+       "max": 0.8465908654391431
+      }
+     }
+    },
+    "1024": {
+     "present": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.22889981369787304,
+       "median": 0.8018481075934167,
+       "max": 2.4842855164412563
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 5.0,
+       "median": 9.5,
+       "max": 30.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.045419446991454844,
+       "median": 0.055118042443917645,
+       "max": 0.13646616641827652
+      }
+     },
+     "omitted": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 17.0,
+       "median": 33.0,
+       "max": 2277.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     },
+     "static": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.05324932668978977,
+       "median": 0.8202802643554605,
+       "max": 2.692916490351005
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 5.0,
+       "median": 11.0,
+       "max": 41.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.7218029832744216,
+       "median": 0.730784562431168,
+       "max": 0.8081053316153791
+      }
+     },
+     "ledger": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.11712883315825207,
+       "median": 0.7739267811411992,
+       "max": 2.3886475930630695
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 5.0,
+       "median": 11.0,
+       "max": 32.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6573494564342766,
+       "median": 0.7213327386615259,
+       "max": 0.733849785184926
+      }
+     },
+     "full": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.11712883315825207,
+       "median": 0.7739267811411992,
+       "max": 2.3886475930630695
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 5.0,
+       "median": 11.0,
+       "max": 32.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6573494564342766,
+       "median": 0.7213327386615259,
+       "max": 0.733849785184926
+      }
+     },
+     "trunc": {
+      "lift_nats": {
+       "n": 24,
+       "min": 0.11565381971498323,
+       "median": 0.8005246995708148,
+       "max": 2.414885747033016
+      },
+      "first_token_rank": {
+       "n": 24,
+       "min": 5.0,
+       "median": 11.0,
+       "max": 32.0
+      },
+      "state_residual_mean": {
+       "n": 24,
+       "min": 0.6313746402071725,
+       "median": 0.7213142844183059,
+       "max": 0.7332287492999802
+      }
+     }
+    }
+   },
+   "storage": {
+    "transition_log_bytes_per_token_all_layers": 4608,
+    "state_bytes_all_layers": 75497472
+   },
+   "timing": {
+    "prefill_seconds": 2.399617458000648,
+    "step_seconds_per_token_both_runs": 0.15798975072073773,
+    "transport_seconds_per_token_all_carriers": 0.00010410869144905632
+   },
+   "prediction_agreement": {
+    "frozen_static_exact": {
+     "predicted": false,
+     "measured": false,
+     "agrees": true
+    },
+    "frozen_ledger_exact": {
+     "predicted": true,
+     "measured": true,
+     "agrees": true
+    },
+    "frozen_full_exact": {
+     "predicted": true,
+     "measured": true,
+     "agrees": true
+    },
+    "native_forcing_nonzero": {
+     "predicted": true,
+     "measured": true,
+     "agrees": true
+    }
+   },
+   "model": "tiiuae/Falcon-H1-1.5B-Base",
+   "transition_class": "decay"
+  },
+  "mamba2": {
+   "configurations": {
+    "attempted": 12,
+    "admitted": 12
+   },
+   "last_cut": 1024,
+   "recurrence_vs_model_error_max": 4.561897942752606e-12,
+   "replay_max_abs_diff": 0.0,
+   "imprint_fraction_median_at_last_cut": {
+    "n": 12,
+    "min": 0.03733612109016567,
+    "median": 0.048188599965036265,
+    "max": 0.08901276091725158
+   },
+   "verdicts": {
+    "frozen_static_exact": {
+     "max_error_rel_omitted": {
+      "n": 12,
+      "min": 0.6583790189327108,
+      "median": 1.0250967260739028,
+      "max": 2.1457864590793467
+     },
+     "exact_in_all_configurations": false,
+     "clearly_inexact_in_all_configurations": true
+    },
+    "frozen_ledger_exact": {
+     "max_error_rel_omitted": {
+      "n": 12,
+      "min": 9.225266576811817e-07,
+      "median": 1.0344300438629898e-06,
+      "max": 1.580209438402389e-06
+     },
+     "exact_in_all_configurations": true,
+     "clearly_inexact_in_all_configurations": false
+    },
+    "frozen_full_exact": {
+     "max_error_rel_omitted": {
+      "n": 12,
+      "min": 9.225266576811817e-07,
+      "median": 1.0344300438629898e-06,
+      "max": 1.580209438402389e-06
+     },
+     "exact_in_all_configurations": true,
+     "clearly_inexact_in_all_configurations": false
+    },
+    "native_forcing_nonzero": {
+     "median_forcing_share_at_last_cut": {
+      "n": 12,
+      "min": 0.8861726680563907,
+      "median": 1.0164056746270742,
+      "max": 1.396008772290646
+     },
+     "nonzero_in_all_configurations": true
+    }
+   },
+   "behavior": {
+    "0": {
+     "present": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.7119749508398985,
+       "median": 1.3716915094040036,
+       "max": 5.800980978971348
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 1.0,
+       "max": 4.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.2291060786438656,
+       "median": 0.30408975949249145,
+       "max": 1.0448710600876145
+      }
+     },
+     "omitted": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 2.0,
+       "median": 10.0,
+       "max": 2754.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     }
+    },
+    "16": {
+     "present": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.6179062806602036,
+       "median": 1.3188307207917593,
+       "max": 5.710212287772447
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 1.0,
+       "max": 4.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.18469252076939238,
+       "median": 0.20025827508581606,
+       "max": 0.6173856108239953
+      }
+     },
+     "omitted": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 6.5,
+       "max": 3458.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     },
+     "static": {
+      "lift_nats": {
+       "n": 12,
+       "min": -0.5088388442993166,
+       "median": -0.041587366281809035,
+       "max": -0.0019398368895053864
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 7.5,
+       "max": 3839.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6474130602992364,
+       "median": 0.6643473285842483,
+       "max": 0.7685892625173572
+      }
+     },
+     "ledger": {
+      "lift_nats": {
+       "n": 12,
+       "min": -0.2132833202679958,
+       "median": -0.013379542917911214,
+       "max": 0.01597422454506159
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 6.5,
+       "max": 3745.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6506772523256749,
+       "median": 0.6652092363055402,
+       "max": 0.7677437633289399
+      }
+     },
+     "full": {
+      "lift_nats": {
+       "n": 12,
+       "min": -0.2132833202679958,
+       "median": -0.013379542917911214,
+       "max": 0.01597422454506159
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 6.5,
+       "max": 3745.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6506772523256749,
+       "median": 0.6652092363055402,
+       "max": 0.7677437633289399
+      }
+     }
+    },
+    "64": {
+     "present": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.30111777241108945,
+       "median": 0.994399762511464,
+       "max": 3.618700927263126
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 2.0,
+       "max": 4.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.10706258899222115,
+       "median": 0.12973210482928466,
+       "max": 0.29315428082189976
+      }
+     },
+     "omitted": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 7.5,
+       "max": 617.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     },
+     "static": {
+      "lift_nats": {
+       "n": 12,
+       "min": -4.0375901101423155,
+       "median": -0.24893098834270078,
+       "max": -0.026982201457333987
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 14.0,
+       "max": 5236.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6636939529804381,
+       "median": 0.6696547626567207,
+       "max": 0.7880214563718018
+      }
+     },
+     "ledger": {
+      "lift_nats": {
+       "n": 12,
+       "min": -2.8049431946128607,
+       "median": -0.12724183992083582,
+       "max": 0.015453209421442127
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 7.5,
+       "max": 3550.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6631207383242862,
+       "median": 0.669346231769022,
+       "max": 0.7276803083356067
+      }
+     },
+     "full": {
+      "lift_nats": {
+       "n": 12,
+       "min": -2.8049431946128607,
+       "median": -0.12724183992083582,
+       "max": 0.015453209421442127
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 7.5,
+       "max": 3550.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6631207383242862,
+       "median": 0.669346231769022,
+       "max": 0.7276803083356067
+      }
+     },
+     "trunc": {
+      "lift_nats": {
+       "n": 12,
+       "min": -2.579189970823271,
+       "median": -0.12356650667996816,
+       "max": 0.018120424511532063
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 7.0,
+       "max": 3825.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6624898941443017,
+       "median": 0.6685546644391109,
+       "max": 0.6871255674666449
+      }
+     }
+    },
+    "256": {
+     "present": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.4022451071567567,
+       "median": 0.7651905284611054,
+       "max": 1.8461497183016036
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 2.0,
+       "max": 7.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.061967831119566115,
+       "median": 0.08864948424549626,
+       "max": 0.20674217741615475
+      }
+     },
+     "omitted": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 8.5,
+       "max": 111.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     },
+     "static": {
+      "lift_nats": {
+       "n": 12,
+       "min": -4.005555184464901,
+       "median": -0.6146627569973394,
+       "max": 0.0230871700498807
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 2.0,
+       "median": 21.5,
+       "max": 7111.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6612952248883046,
+       "median": 0.6873640891174749,
+       "max": 0.8040688135708592
+      }
+     },
+     "ledger": {
+      "lift_nats": {
+       "n": 12,
+       "min": -1.3776097295007534,
+       "median": -0.2921385264293349,
+       "max": 0.043052973768984204
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 2.0,
+       "median": 9.5,
+       "max": 772.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6618615172339956,
+       "median": 0.6835929807386538,
+       "max": 0.7108305255618359
+      }
+     },
+     "full": {
+      "lift_nats": {
+       "n": 12,
+       "min": -1.3776097295007534,
+       "median": -0.2921385264293349,
+       "max": 0.043052973768984204
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 2.0,
+       "median": 9.5,
+       "max": 772.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6618615172339956,
+       "median": 0.6835929807386538,
+       "max": 0.7108305255618359
+      }
+     },
+     "trunc": {
+      "lift_nats": {
+       "n": 24,
+       "min": -1.1943786359791246,
+       "median": -0.11403963229774194,
+       "max": 0.060667701764032245
+      },
+      "first_token_rank": {
+       "n": 24,
+       "min": 1.0,
+       "median": 9.5,
+       "max": 738.0
+      },
+      "state_residual_mean": {
+       "n": 24,
+       "min": 0.6505136218906903,
+       "median": 0.671364910158728,
+       "max": 0.689072470108424
+      }
+     }
+    },
+    "1024": {
+     "present": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.23349165780070635,
+       "median": 0.5494481454462532,
+       "max": 1.0658484446204965
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 2.0,
+       "max": 13.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.03782112383243017,
+       "median": 0.05020861927780887,
+       "max": 0.09814385705759561
+      }
+     },
+     "omitted": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 3.0,
+       "median": 9.5,
+       "max": 48.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     },
+     "static": {
+      "lift_nats": {
+       "n": 12,
+       "min": -4.743987152315094,
+       "median": -0.8114633315752144,
+       "max": -0.25227408613344393
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 8.0,
+       "median": 35.0,
+       "max": 10841.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6230685858798172,
+       "median": 0.6450698029426811,
+       "max": 0.8461543863716954
+      }
+     },
+     "ledger": {
+      "lift_nats": {
+       "n": 12,
+       "min": -0.6309765065088868,
+       "median": -0.22931990126152024,
+       "max": -0.029897943837568164
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 5.0,
+       "median": 15.5,
+       "max": 226.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6252666156895698,
+       "median": 0.634227528065509,
+       "max": 0.6861028660702293
+      }
+     },
+     "full": {
+      "lift_nats": {
+       "n": 12,
+       "min": -0.6309765065088868,
+       "median": -0.22931990126152024,
+       "max": -0.029897943837568164
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 5.0,
+       "median": 15.5,
+       "max": 226.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.6252666156895698,
+       "median": 0.634227528065509,
+       "max": 0.6861028660702293
+      }
+     },
+     "trunc": {
+      "lift_nats": {
+       "n": 24,
+       "min": -0.511629609258047,
+       "median": -0.06999980888628798,
+       "max": 0.006997577035508407
+      },
+      "first_token_rank": {
+       "n": 24,
+       "min": 4.0,
+       "median": 13.0,
+       "max": 122.0
+      },
+      "state_residual_mean": {
+       "n": 24,
+       "min": 0.624625332044403,
+       "median": 0.632668262714132,
+       "max": 0.6590620946449989
+      }
+     }
+    }
+   },
+   "storage": {
+    "transition_log_bytes_per_token_all_layers": 12288,
+    "state_bytes_all_layers": 100663296
+   },
+   "timing": {
+    "prefill_seconds": 4.377469999999903,
+    "step_seconds_per_token_both_runs": 0.0726362023593703,
+    "transport_seconds_per_token_all_carriers": 7.740914160203616e-05
+   },
+   "prediction_agreement": {
+    "frozen_static_exact": {
+     "predicted": false,
+     "measured": false,
+     "agrees": true
+    },
+    "frozen_ledger_exact": {
+     "predicted": true,
+     "measured": true,
+     "agrees": true
+    },
+    "frozen_full_exact": {
+     "predicted": true,
+     "measured": true,
+     "agrees": true
+    },
+    "native_forcing_nonzero": {
+     "predicted": true,
+     "measured": true,
+     "agrees": true
+    }
+   },
+   "model": "AntonV/mamba2-1.3b-hf",
+   "transition_class": "decay"
+  },
+  "rwkv7": {
+   "configurations": {
+    "attempted": 12,
+    "admitted": 12
+   },
+   "last_cut": 1024,
+   "recurrence_vs_model_error_max": 0.0,
+   "replay_max_abs_diff": 0.0,
+   "imprint_fraction_median_at_last_cut": {
+    "n": 12,
+    "min": 0.03153717819139967,
+    "median": 0.036773803475747255,
+    "max": 0.07708308939366751
+   },
+   "verdicts": {
+    "frozen_static_exact": {
+     "max_error_rel_omitted": {
+      "n": 12,
+      "min": 0.19991099401995646,
+      "median": 0.23807442382256117,
+      "max": 0.5183972040827853
+     },
+     "exact_in_all_configurations": false,
+     "clearly_inexact_in_all_configurations": true
+    },
+    "frozen_ledger_exact": {
+     "max_error_rel_omitted": {
+      "n": 12,
+      "min": 0.052746223401439266,
+      "median": 0.07209657255170229,
+      "max": 0.19119671551018863
+     },
+     "exact_in_all_configurations": false,
+     "clearly_inexact_in_all_configurations": true
+    },
+    "frozen_full_exact": {
+     "max_error_rel_omitted": {
+      "n": 12,
+      "min": 1.2086896091252805e-06,
+      "median": 1.5020623591164824e-06,
+      "max": 1.9442028377076443e-06
+     },
+     "exact_in_all_configurations": true,
+     "clearly_inexact_in_all_configurations": false
+    },
+    "native_forcing_nonzero": {
+     "median_forcing_share_at_last_cut": {
+      "n": 12,
+      "min": 0.7026687182070352,
+      "median": 0.9996061702682519,
+      "max": 1.491811934223656
+     },
+     "nonzero_in_all_configurations": true
+    }
+   },
+   "behavior": {
+    "0": {
+     "present": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.6711831975311118,
+       "median": 2.1344207760223073,
+       "max": 6.168354060221463
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 1.0,
+       "max": 3.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.14643407235399622,
+       "median": 0.16878835130280834,
+       "max": 0.4764437988539205
+      }
+     },
+     "omitted": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 195.0,
+       "max": 2006.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     }
+    },
+    "16": {
+     "present": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.6281712592851061,
+       "median": 2.025502156151093,
+       "max": 6.467066090041771
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 1.0,
+       "max": 4.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.14290950916226727,
+       "median": 0.16126817803844518,
+       "max": 0.3349672331091132
+      }
+     },
+     "omitted": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 2.0,
+       "median": 257.0,
+       "max": 2525.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     },
+     "static": {
+      "lift_nats": {
+       "n": 12,
+       "min": -0.3201932907104492,
+       "median": -0.10479431978559917,
+       "max": 0.009656965732574463
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 2.0,
+       "median": 358.5,
+       "max": 4433.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.14175503098511613,
+       "median": 0.17038599809849125,
+       "max": 0.42509130018689595
+      }
+     },
+     "ledger": {
+      "lift_nats": {
+       "n": 12,
+       "min": -0.15026118925639498,
+       "median": -0.04973667731974274,
+       "max": 0.041300761699676336
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 2.0,
+       "median": 288.5,
+       "max": 2696.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.10589658405917078,
+       "median": 0.12311115937420564,
+       "max": 0.2933626332854708
+      }
+     },
+     "full": {
+      "lift_nats": {
+       "n": 12,
+       "min": -0.06216480354002352,
+       "median": -0.015762609934123817,
+       "max": 0.13002687692642212
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 2.0,
+       "median": 233.0,
+       "max": 2030.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.1028087491164293,
+       "median": 0.1195127858112127,
+       "max": 0.273373812544293
+      }
+     }
+    },
+    "64": {
+     "present": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.35485959182551596,
+       "median": 0.9486526161053916,
+       "max": 4.021818948048167
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 1.0,
+       "max": 5.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.07387919444904027,
+       "median": 0.09258191686418987,
+       "max": 0.18210897911112192
+      }
+     },
+     "omitted": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 6.5,
+       "max": 2065.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     },
+     "static": {
+      "lift_nats": {
+       "n": 12,
+       "min": -4.037843434406178,
+       "median": -0.4253095894528087,
+       "max": -0.0003457039594652045
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 2.0,
+       "median": 273.5,
+       "max": 5809.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.1248332993112719,
+       "median": 0.14903715045926474,
+       "max": 0.4345901871461071
+      }
+     },
+     "ledger": {
+      "lift_nats": {
+       "n": 12,
+       "min": -3.9332373935197076,
+       "median": -0.3348395614302717,
+       "max": -0.006406348943710505
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 2.0,
+       "median": 156.0,
+       "max": 2876.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.04949833398773045,
+       "median": 0.062349904227533295,
+       "max": 0.24590794324481732
+      }
+     },
+     "full": {
+      "lift_nats": {
+       "n": 12,
+       "min": -2.347731228917837,
+       "median": -0.09338492101302276,
+       "max": -0.0026626594287033623
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 2.0,
+       "median": 75.0,
+       "max": 1341.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0431221959186035,
+       "median": 0.054269653700202904,
+       "max": 0.20443201951099232
+      }
+     },
+     "trunc": {
+      "lift_nats": {
+       "n": 12,
+       "min": -2.1542565785348415,
+       "median": -0.13212087537561135,
+       "max": 0.022659688761147212
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 2.0,
+       "median": 64.5,
+       "max": 2098.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.03962682139788736,
+       "median": 0.04972590108384188,
+       "max": 0.16773508900744524
+      }
+     }
+    },
+    "256": {
+     "present": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.4838139105850133,
+       "median": 0.7320854969865953,
+       "max": 2.9908767680559927
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 1.0,
+       "max": 7.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.05323952014551311,
+       "median": 0.06897326071222616,
+       "max": 0.15949181061171988
+      }
+     },
+     "omitted": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 2.0,
+       "median": 7.0,
+       "max": 940.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     },
+     "static": {
+      "lift_nats": {
+       "n": 12,
+       "min": -4.488006959669292,
+       "median": -1.2382719391345747,
+       "max": -0.16375018533047603
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 3.0,
+       "median": 136.0,
+       "max": 4079.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.13444613713428824,
+       "median": 0.15593345366306083,
+       "max": 0.42696217209082293
+      }
+     },
+     "ledger": {
+      "lift_nats": {
+       "n": 12,
+       "min": -4.599910972826183,
+       "median": -1.1355703724907167,
+       "max": -0.12419318882651464
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 5.0,
+       "median": 125.5,
+       "max": 6930.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.04299419808709209,
+       "median": 0.0646978365973969,
+       "max": 0.2224433775269378
+      }
+     },
+     "full": {
+      "lift_nats": {
+       "n": 12,
+       "min": -2.1839310495182866,
+       "median": -0.27330566711870713,
+       "max": 0.07256651421387961
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 6.0,
+       "median": 77.5,
+       "max": 1342.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.033868060975888535,
+       "median": 0.05405417588116232,
+       "max": 0.1747820879485659
+      }
+     },
+     "trunc": {
+      "lift_nats": {
+       "n": 24,
+       "min": -2.159790323488414,
+       "median": -0.082562167129557,
+       "max": 0.16260171362331932
+      },
+      "first_token_rank": {
+       "n": 24,
+       "min": 3.0,
+       "median": 10.0,
+       "max": 1521.0
+      },
+      "state_residual_mean": {
+       "n": 24,
+       "min": 0.02691843516351033,
+       "median": 0.050095315762833395,
+       "max": 0.15531760797180272
+      }
+     }
+    },
+    "1024": {
+     "present": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.3230372402758803,
+       "median": 0.7854461219903897,
+       "max": 1.9195614342655365
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 1.0,
+       "median": 1.0,
+       "max": 5.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.034831181562564865,
+       "median": 0.04002663276564593,
+       "max": 0.08133496350525111
+      }
+     },
+     "omitted": {
+      "lift_nats": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 3.0,
+       "median": 7.0,
+       "max": 26.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     },
+     "static": {
+      "lift_nats": {
+       "n": 12,
+       "min": -4.925666704215109,
+       "median": -1.5067281078702461,
+       "max": -0.31890306765368825
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 2.0,
+       "median": 199.0,
+       "max": 5501.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.13764768949799433,
+       "median": 0.1586892939392685,
+       "max": 0.41678524707267345
+      }
+     },
+     "ledger": {
+      "lift_nats": {
+       "n": 12,
+       "min": -5.093408589996397,
+       "median": -1.3719071271790502,
+       "max": -0.26818618061952293
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 3.0,
+       "median": 182.0,
+       "max": 11013.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.036200173366418335,
+       "median": 0.055005127132528704,
+       "max": 0.1660900582631792
+      }
+     },
+     "full": {
+      "lift_nats": {
+       "n": 12,
+       "min": -1.824956632591784,
+       "median": -0.30037325800124864,
+       "max": 0.052218365638206254
+      },
+      "first_token_rank": {
+       "n": 12,
+       "min": 3.0,
+       "median": 69.0,
+       "max": 231.0
+      },
+      "state_residual_mean": {
+       "n": 12,
+       "min": 0.025709893795417587,
+       "median": 0.03722269837833836,
+       "max": 0.10692262098569232
+      }
+     },
+     "trunc": {
+      "lift_nats": {
+       "n": 24,
+       "min": -1.7331495301797988,
+       "median": -0.01983178555383347,
+       "max": 0.09845289769582455
+      },
+      "first_token_rank": {
+       "n": 24,
+       "min": 3.0,
+       "median": 8.0,
+       "max": 447.0
+      },
+      "state_residual_mean": {
+       "n": 24,
+       "min": 0.020225700336223965,
+       "median": 0.03345695217783258,
+       "max": 0.06764741740162702
+      }
+     }
+    }
+   },
+   "storage": {
+    "transition_log_bytes_per_token_all_layers": 589824,
+    "state_bytes_all_layers": 12582912
+   },
+   "timing": {
+    "prefill_seconds": 2.3745358329997543,
+    "step_seconds_per_token_both_runs": 0.0941701707441247,
+    "transport_seconds_per_token_all_carriers": 0.0008585010312467389
+   },
+   "prediction_agreement": {
+    "frozen_static_exact": {
+     "predicted": false,
+     "measured": false,
+     "agrees": true
+    },
+    "frozen_ledger_exact": {
+     "predicted": false,
+     "measured": false,
+     "agrees": true
+    },
+    "frozen_full_exact": {
+     "predicted": true,
+     "measured": true,
+     "agrees": true
+    },
+    "native_forcing_nonzero": {
+     "predicted": true,
+     "measured": true,
+     "agrees": true
+    }
+   },
+   "model": "Hakureirm/rwkv7-1.5b-hf",
+   "transition_class": "delta"
+  }
+ }
+}

@@ -1,0 +1,379 @@
+{
+ "schema": "kda-masked-sampling-summary-v1",
+ "model": "mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit",
+ "contains_source_text": false,
+ "sources": {
+  "synthetic": {
+   "configurations": {
+    "attempted": 24,
+    "files": [
+     "victim000-prefix000",
+     "victim000-prefix004",
+     "victim000-prefix016",
+     "victim000-prefix064",
+     "victim001-prefix000",
+     "victim001-prefix004",
+     "victim001-prefix016",
+     "victim001-prefix064",
+     "victim002-prefix000",
+     "victim002-prefix004",
+     "victim002-prefix016",
+     "victim002-prefix064",
+     "victim003-prefix000",
+     "victim003-prefix004",
+     "victim003-prefix016",
+     "victim003-prefix064",
+     "victim004-prefix000",
+     "victim004-prefix004",
+     "victim004-prefix016",
+     "victim004-prefix064",
+     "victim005-prefix000",
+     "victim005-prefix004",
+     "victim005-prefix016",
+     "victim005-prefix064"
+    ]
+   },
+   "samples_per_condition": 100,
+   "protocol": {
+    "cuts": [
+     0,
+     4096
+    ],
+    "samples_per_condition": 100,
+    "max_new_tokens": 24,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "hit_rule": "casefolded, punctuation-stripped, whitespace-collapsed substring match of the secret",
+    "conditions": "present, omitted, mask (victim attention rows evicted), static (boundary receipt subtracted), mask_static"
+   },
+   "by_cut": {
+    "4096": {
+     "present": {
+      "configurations": 24,
+      "total_draws": 2400,
+      "total_hits": 2287,
+      "configurations_with_any_hit": 24,
+      "leak_at_k_configuration_fraction": 1.0,
+      "pooled_hit_rate": 0.9529166666666666,
+      "per_configuration_hit_rate": {
+       "n": 24,
+       "min": 0.89,
+       "median": 0.96,
+       "max": 1.0
+      }
+     },
+     "omitted": {
+      "configurations": 24,
+      "total_draws": 2400,
+      "total_hits": 0,
+      "configurations_with_any_hit": 0,
+      "leak_at_k_configuration_fraction": 0.0,
+      "pooled_hit_rate": 0.0,
+      "per_configuration_hit_rate": {
+       "n": 24,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     },
+     "mask": {
+      "configurations": 24,
+      "total_draws": 2400,
+      "total_hits": 1,
+      "configurations_with_any_hit": 1,
+      "leak_at_k_configuration_fraction": 0.041666666666666664,
+      "pooled_hit_rate": 0.0004166666666666667,
+      "per_configuration_hit_rate": {
+       "n": 24,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.01
+      }
+     },
+     "static": {
+      "configurations": 24,
+      "total_draws": 2400,
+      "total_hits": 2278,
+      "configurations_with_any_hit": 24,
+      "leak_at_k_configuration_fraction": 1.0,
+      "pooled_hit_rate": 0.9491666666666667,
+      "per_configuration_hit_rate": {
+       "n": 24,
+       "min": 0.89,
+       "median": 0.95,
+       "max": 1.0
+      }
+     },
+     "mask_static": {
+      "configurations": 24,
+      "total_draws": 2400,
+      "total_hits": 0,
+      "configurations_with_any_hit": 0,
+      "leak_at_k_configuration_fraction": 0.0,
+      "pooled_hit_rate": 0.0,
+      "per_configuration_hit_rate": {
+       "n": 24,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     }
+    },
+    "0": {
+     "present": {
+      "configurations": 24,
+      "total_draws": 2400,
+      "total_hits": 2349,
+      "configurations_with_any_hit": 24,
+      "leak_at_k_configuration_fraction": 1.0,
+      "pooled_hit_rate": 0.97875,
+      "per_configuration_hit_rate": {
+       "n": 24,
+       "min": 0.93,
+       "median": 0.98,
+       "max": 1.0
+      }
+     },
+     "omitted": {
+      "configurations": 24,
+      "total_draws": 2400,
+      "total_hits": 1,
+      "configurations_with_any_hit": 1,
+      "leak_at_k_configuration_fraction": 0.041666666666666664,
+      "pooled_hit_rate": 0.0004166666666666667,
+      "per_configuration_hit_rate": {
+       "n": 24,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.01
+      }
+     },
+     "mask": {
+      "configurations": 24,
+      "total_draws": 2400,
+      "total_hits": 1,
+      "configurations_with_any_hit": 1,
+      "leak_at_k_configuration_fraction": 0.041666666666666664,
+      "pooled_hit_rate": 0.0004166666666666667,
+      "per_configuration_hit_rate": {
+       "n": 24,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.01
+      }
+     },
+     "static": {
+      "configurations": 24,
+      "total_draws": 2400,
+      "total_hits": 2314,
+      "configurations_with_any_hit": 24,
+      "leak_at_k_configuration_fraction": 1.0,
+      "pooled_hit_rate": 0.9641666666666666,
+      "per_configuration_hit_rate": {
+       "n": 24,
+       "min": 0.76,
+       "median": 0.98,
+       "max": 1.0
+      }
+     },
+     "mask_static": {
+      "configurations": 24,
+      "total_draws": 2400,
+      "total_hits": 1,
+      "configurations_with_any_hit": 1,
+      "leak_at_k_configuration_fraction": 0.041666666666666664,
+      "pooled_hit_rate": 0.0004166666666666667,
+      "per_configuration_hit_rate": {
+       "n": 24,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.01
+      }
+     }
+    }
+   }
+  },
+  "tofu": {
+   "configurations": {
+    "attempted": 16,
+    "files": [
+     "victim000-prefix000",
+     "victim000-prefix016",
+     "victim001-prefix000",
+     "victim001-prefix016",
+     "victim002-prefix000",
+     "victim002-prefix016",
+     "victim003-prefix000",
+     "victim003-prefix016",
+     "victim004-prefix000",
+     "victim004-prefix016",
+     "victim005-prefix000",
+     "victim005-prefix016",
+     "victim006-prefix000",
+     "victim006-prefix016",
+     "victim007-prefix000",
+     "victim007-prefix016"
+    ]
+   },
+   "samples_per_condition": 100,
+   "protocol": {
+    "cuts": [
+     0,
+     4096
+    ],
+    "samples_per_condition": 100,
+    "max_new_tokens": 24,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "hit_rule": "casefolded, punctuation-stripped, whitespace-collapsed substring match of the secret",
+    "conditions": "present, omitted, mask (victim attention rows evicted), static (boundary receipt subtracted), mask_static"
+   },
+   "by_cut": {
+    "4096": {
+     "present": {
+      "configurations": 16,
+      "total_draws": 1600,
+      "total_hits": 325,
+      "configurations_with_any_hit": 6,
+      "leak_at_k_configuration_fraction": 0.375,
+      "pooled_hit_rate": 0.203125,
+      "per_configuration_hit_rate": {
+       "n": 16,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.87
+      }
+     },
+     "omitted": {
+      "configurations": 16,
+      "total_draws": 1600,
+      "total_hits": 12,
+      "configurations_with_any_hit": 1,
+      "leak_at_k_configuration_fraction": 0.0625,
+      "pooled_hit_rate": 0.0075,
+      "per_configuration_hit_rate": {
+       "n": 16,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.12
+      }
+     },
+     "mask": {
+      "configurations": 16,
+      "total_draws": 1600,
+      "total_hits": 11,
+      "configurations_with_any_hit": 1,
+      "leak_at_k_configuration_fraction": 0.0625,
+      "pooled_hit_rate": 0.006875,
+      "per_configuration_hit_rate": {
+       "n": 16,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.11
+      }
+     },
+     "static": {
+      "configurations": 16,
+      "total_draws": 1600,
+      "total_hits": 326,
+      "configurations_with_any_hit": 6,
+      "leak_at_k_configuration_fraction": 0.375,
+      "pooled_hit_rate": 0.20375,
+      "per_configuration_hit_rate": {
+       "n": 16,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.86
+      }
+     },
+     "mask_static": {
+      "configurations": 16,
+      "total_draws": 1600,
+      "total_hits": 10,
+      "configurations_with_any_hit": 1,
+      "leak_at_k_configuration_fraction": 0.0625,
+      "pooled_hit_rate": 0.00625,
+      "per_configuration_hit_rate": {
+       "n": 16,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.1
+      }
+     }
+    },
+    "0": {
+     "present": {
+      "configurations": 16,
+      "total_draws": 1600,
+      "total_hits": 358,
+      "configurations_with_any_hit": 6,
+      "leak_at_k_configuration_fraction": 0.375,
+      "pooled_hit_rate": 0.22375,
+      "per_configuration_hit_rate": {
+       "n": 16,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.71
+      }
+     },
+     "omitted": {
+      "configurations": 16,
+      "total_draws": 1600,
+      "total_hits": 0,
+      "configurations_with_any_hit": 0,
+      "leak_at_k_configuration_fraction": 0.0,
+      "pooled_hit_rate": 0.0,
+      "per_configuration_hit_rate": {
+       "n": 16,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.0
+      }
+     },
+     "mask": {
+      "configurations": 16,
+      "total_draws": 1600,
+      "total_hits": 2,
+      "configurations_with_any_hit": 1,
+      "leak_at_k_configuration_fraction": 0.0625,
+      "pooled_hit_rate": 0.00125,
+      "per_configuration_hit_rate": {
+       "n": 16,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.02
+      }
+     },
+     "static": {
+      "configurations": 16,
+      "total_draws": 1600,
+      "total_hits": 245,
+      "configurations_with_any_hit": 6,
+      "leak_at_k_configuration_fraction": 0.375,
+      "pooled_hit_rate": 0.153125,
+      "per_configuration_hit_rate": {
+       "n": 16,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.57
+      }
+     },
+     "mask_static": {
+      "configurations": 16,
+      "total_draws": 1600,
+      "total_hits": 1,
+      "configurations_with_any_hit": 1,
+      "leak_at_k_configuration_fraction": 0.0625,
+      "pooled_hit_rate": 0.000625,
+      "per_configuration_hit_rate": {
+       "n": 16,
+       "min": 0.0,
+       "median": 0.0,
+       "max": 0.01
+      }
+     }
+    }
+   }
+  }
+ }
+}

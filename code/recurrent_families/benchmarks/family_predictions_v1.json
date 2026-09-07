@@ -1,0 +1,65 @@
+{
+  "schema": "recurrent-families-predictions-v1",
+  "written_before_runs": "2026-09-01T16:20-07:00",
+  "purpose": "Corollary 1 of the KDA paper classifies write rules by which receipt class transports a boundary receipt exactly when the suffix inputs are held fixed: additive writes keep a static receipt, per-channel (or per-head) decay needs only a diagonal ledger, and a delta rule (diagonal minus rank-one transition) needs the full matrix product. Native forcing (changed suffix inputs when the record is omitted) is predicted nonzero for every multi-layer model. These predictions were recorded before any family other than Kimi KDA and Qwen3.5 GDN was run.",
+  "thresholds": {
+    "exact_max_relative_error": 1e-4,
+    "inexact_min_relative_error": 1e-2,
+    "native_forcing_nonzero_min_fraction_of_direct": 1e-2
+  },
+  "families": {
+    "mamba2": {
+      "model": "AntonV/mamba2-1.3b-hf",
+      "transition_class": "decay",
+      "transition": "S_t = exp(dt_t A_h) S_{t-1} + dt_t x_t B_t^T, one scalar per head",
+      "has_attention": false,
+      "frozen_static_exact": false,
+      "frozen_ledger_exact": true,
+      "frozen_full_exact": true,
+      "native_forcing_nonzero": true,
+      "expectation_note": "Single recurrent channel and no attention rows: any recovery of the secret must come from the recurrent residual, so probe lift after full transport should fall with the residual rather than stay at the record-present level as it does in the Kimi hybrid."
+    },
+    "falcon_h1": {
+      "model": "tiiuae/Falcon-H1-1.5B-Base",
+      "transition_class": "decay",
+      "transition": "Mamba-2 mixer in parallel with softmax attention in every layer",
+      "has_attention": true,
+      "frozen_static_exact": false,
+      "frozen_ledger_exact": true,
+      "frozen_full_exact": true,
+      "native_forcing_nonzero": true,
+      "expectation_note": "Attention rows carry the record as in Kimi; recurrent corrections alone should leave the probe near the record-present level."
+    },
+    "rwkv7": {
+      "model": "Hakureirm/rwkv7-1.5b-hf",
+      "transition_class": "delta",
+      "transition": "S_t = (diag(exp(w_t)) - (kk_t * a_t) kk_t^T) S_{t-1} + k_t v_t^T",
+      "has_attention": false,
+      "frozen_static_exact": false,
+      "frozen_ledger_exact": false,
+      "frozen_full_exact": true,
+      "native_forcing_nonzero": true,
+      "expectation_note": "Single recurrent channel with a delta-class transition: the diagonal ledger should fail even under frozen inputs, and probe recovery should track the recurrent residual."
+    },
+    "kda": {
+      "model": "mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit",
+      "transition_class": "delta",
+      "has_attention": true,
+      "frozen_static_exact": false,
+      "frozen_ledger_exact": false,
+      "frozen_full_exact": true,
+      "native_forcing_nonzero": true,
+      "status": "measured in kimi_sv.eval_forcing_sweep and the published transport audit"
+    },
+    "gdn": {
+      "model": "Qwen/Qwen3.5-4B-Base",
+      "transition_class": "delta",
+      "has_attention": true,
+      "frozen_static_exact": false,
+      "frozen_ledger_exact": false,
+      "frozen_full_exact": true,
+      "native_forcing_nonzero": true,
+      "status": "measured in gemma_sv.qwen_replay_audit"
+    }
+  }
+}

@@ -1,0 +1,681 @@
+{
+  "schema": "kda-fixed-position-native-mask-v1",
+  "description": "Fixed-position masking-versus-replay runs on the released Kimi Linear 48B hybrid. The target record is placed early, in the middle, and late in a fixed context; its attention rows are evicted in the native MLA kernel (kimi_sv.mla_mask) and, separately, the pre-record checkpoint is restored and the suffix replayed. Produced by kimi_sv.eval_oracle --mechanism native.",
+  "row_removal": "native-mla-mask",
+  "qualification": {
+    "min_present_lift_nats": 0.05,
+    "lift_used": {
+      "synthetic": "whole-record",
+      "tofu": "whole-record",
+      "cds": "field",
+      "notes": "field"
+    }
+  },
+  "contains_source_text": false,
+  "contains_source_identifiers": false,
+  "sources": {
+    "synthetic": {
+      "model": "mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit",
+      "host": {
+        "platform": "macOS-26.5-arm64-arm-64bit",
+        "machine": "arm64"
+      },
+      "source": "synthetic",
+      "contains_source_text": false,
+      "contains_source_identifiers": false,
+      "generations_produced": true,
+      "source_rows": null,
+      "protocol": {
+        "records": 16,
+        "skip": 0,
+        "row_removal": "native-mla-mask",
+        "chunk": null,
+        "nu": null,
+        "preserve_prefix_mass": null,
+        "victims": [
+          1,
+          8,
+          14
+        ],
+        "greedy_tokens": 12,
+        "memory_limit_gb": 75.0
+      },
+      "gate_stats": null,
+      "aggregate": {
+        "mask_residual_lift_mean": 0.05492696762084962,
+        "mask_residual_lift_max": 0.3036794662475588,
+        "mask_removal_fraction_mean": 0.9612117451061349,
+        "field_removal_fraction_mean": null,
+        "replay_exact_all": true
+      },
+      "victims": {
+        "patient-5182": {
+          "victim_index": 1,
+          "span": [
+            64,
+            109
+          ],
+          "n_tokens": 45,
+          "lift_nats": {
+            "resident": 2.861741638183594,
+            "after_mask": -0.2293607711791994,
+            "after_replay": 0.0
+          },
+          "mask_removal_fraction": 1.080147267006528,
+          "field_lift_nats": null,
+          "field_removal_fraction": null,
+          "victim_rank": {
+            "resident": 1,
+            "after_mask": 5344,
+            "after_replay": 3346,
+            "never_ingested": 3346
+          },
+          "greedy_answers": {
+            "after_mask": "I don't have any information about patient 5182 in the",
+            "after_replay": "I don't have any information about patient 5182 in the",
+            "never_ingested": "I don't have any information about patient 5182 in the"
+          },
+          "retained_collateral_nats": {
+            "mask_vs_resident_mean": 0.005169174254886689,
+            "mask_vs_resident_max": 0.0471922556559245
+          },
+          "cost": {
+            "mask_seconds": 3.816699609160423e-05,
+            "mask_tokens_touched": 0,
+            "replay_seconds": 1.2257437500084052,
+            "replay_tokens": 648,
+            "checkpoint_bytes": 43417600
+          },
+          "replay_equivalence": {
+            "max_abs_logit_delta": 0.0,
+            "max_abs_kda_state_delta": 0.0
+          }
+        },
+        "patient-2096": {
+          "victim_index": 8,
+          "span": [
+            388,
+            438
+          ],
+          "n_tokens": 50,
+          "lift_nats": {
+            "resident": 1.802419185638428,
+            "after_mask": 0.3036794662475588,
+            "after_replay": 0.0
+          },
+          "mask_removal_fraction": 0.8315156270709615,
+          "field_lift_nats": null,
+          "field_removal_fraction": null,
+          "victim_rank": {
+            "resident": 2,
+            "after_mask": 214,
+            "after_replay": 270,
+            "never_ingested": 270
+          },
+          "greedy_answers": {
+            "after_mask": "I don't have any information about patient 2096 in the",
+            "after_replay": "I don't have any information about patient 2096 in the",
+            "never_ingested": "I don't have any information about patient 2096 in the"
+          },
+          "retained_collateral_nats": {
+            "mask_vs_resident_mean": 0.0017801586030021552,
+            "mask_vs_resident_max": 0.004700088500976564
+          },
+          "cost": {
+            "mask_seconds": 3.504099731799215e-05,
+            "mask_tokens_touched": 0,
+            "replay_seconds": 0.6245213750080438,
+            "replay_tokens": 319,
+            "checkpoint_bytes": 43417600
+          },
+          "replay_equivalence": {
+            "max_abs_logit_delta": 0.0,
+            "max_abs_kda_state_delta": 0.0
+          }
+        },
+        "patient-2918": {
+          "victim_index": 14,
+          "span": [
+            667,
+            713
+          ],
+          "n_tokens": 46,
+          "lift_nats": {
+            "resident": 3.227604866027832,
+            "after_mask": 0.09046220779418945,
+            "after_replay": 0.0
+          },
+          "mask_removal_fraction": 0.9719723412409152,
+          "field_lift_nats": null,
+          "field_removal_fraction": null,
+          "victim_rank": {
+            "resident": 1,
+            "after_mask": 1981,
+            "after_replay": 2833,
+            "never_ingested": 2833
+          },
+          "greedy_answers": {
+            "after_mask": "Patient 2918 is not listed in the provided records.",
+            "after_replay": "I don't have any information about patient 2918 in the",
+            "never_ingested": "I don't have any information about patient 2918 in the"
+          },
+          "retained_collateral_nats": {
+            "mask_vs_resident_mean": 0.009487854185558501,
+            "mask_vs_resident_max": 0.10847441355387372
+          },
+          "cost": {
+            "mask_seconds": 3.316698712296784e-05,
+            "mask_tokens_touched": 0,
+            "replay_seconds": 0.08557712499168701,
+            "replay_tokens": 44,
+            "checkpoint_bytes": 43417600
+          },
+          "replay_equivalence": {
+            "max_abs_logit_delta": 0.0,
+            "max_abs_kda_state_delta": 0.0
+          }
+        }
+      }
+    },
+    "tofu": {
+      "model": "mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit",
+      "host": {
+        "platform": "macOS-26.5-arm64-arm-64bit",
+        "machine": "arm64"
+      },
+      "source": "tofu",
+      "contains_source_text": false,
+      "contains_source_identifiers": false,
+      "generations_produced": true,
+      "source_rows": {
+        "dataset": "locuslab/TOFU:forget10",
+        "rows_available": 400,
+        "skip": 0,
+        "taken": 16
+      },
+      "protocol": {
+        "records": 16,
+        "skip": 0,
+        "row_removal": "native-mla-mask",
+        "chunk": null,
+        "nu": null,
+        "preserve_prefix_mass": null,
+        "victims": [
+          1,
+          8,
+          14
+        ],
+        "greedy_tokens": 12,
+        "memory_limit_gb": 75.0
+      },
+      "gate_stats": null,
+      "aggregate": {
+        "mask_residual_lift_mean": 0.07151528648855159,
+        "mask_residual_lift_max": 0.18920652327999,
+        "mask_removal_fraction_mean": 0.969064616843691,
+        "field_removal_fraction_mean": null,
+        "replay_exact_all": true
+      },
+      "victims": {
+        "tofu-001": {
+          "victim_index": 1,
+          "span": [
+            48,
+            81
+          ],
+          "n_tokens": 33,
+          "lift_nats": {
+            "resident": 0.7843375887189593,
+            "after_mask": -0.08179746355329243,
+            "after_replay": 0.0
+          },
+          "mask_removal_fraction": 1.1042885929856943,
+          "field_lift_nats": null,
+          "field_removal_fraction": null,
+          "victim_rank": {
+            "resident": 1,
+            "after_mask": 1,
+            "after_replay": 1,
+            "never_ingested": 1
+          },
+          "greedy_answers": {
+            "after_mask": "Hsiao Yun-Hwa identifies as a woman.",
+            "after_replay": "Hsiao Yun-Hwa identifies as a woman.",
+            "never_ingested": "Hsiao Yun-Hwa identifies as a woman."
+          },
+          "retained_collateral_nats": {
+            "mask_vs_resident_mean": 0.00380355096750957,
+            "mask_vs_resident_max": 0.01207288106282553
+          },
+          "cost": {
+            "mask_seconds": 5.616698763333261e-05,
+            "mask_tokens_touched": 0,
+            "replay_seconds": 1.7761938329931581,
+            "replay_tokens": 762,
+            "checkpoint_bytes": 43417600
+          },
+          "replay_equivalence": {
+            "max_abs_logit_delta": 0.0,
+            "max_abs_kda_state_delta": 0.0
+          }
+        },
+        "tofu-008": {
+          "victim_index": 8,
+          "span": [
+            397,
+            444
+          ],
+          "n_tokens": 47,
+          "lift_nats": {
+            "resident": 1.505751609802246,
+            "after_mask": 0.10713679973895718,
+            "after_replay": 0.0
+          },
+          "mask_removal_fraction": 0.92884829141705,
+          "field_lift_nats": null,
+          "field_removal_fraction": null,
+          "victim_rank": {
+            "resident": 1,
+            "after_mask": 1,
+            "after_replay": 1,
+            "never_ingested": 1
+          },
+          "greedy_answers": {
+            "after_mask": "Hsiao Yun-Hwa has received several accolades for her",
+            "after_replay": "Hsiao Yun-Hwa has received several awards for her",
+            "never_ingested": "Hsiao Yun-Hwa has received several awards for her"
+          },
+          "retained_collateral_nats": {
+            "mask_vs_resident_mean": 0.002895856493117373,
+            "mask_vs_resident_max": 0.007127541762131914
+          },
+          "cost": {
+            "mask_seconds": 3.0750001315027475e-05,
+            "mask_tokens_touched": 0,
+            "replay_seconds": 0.6982479160069488,
+            "replay_tokens": 399,
+            "checkpoint_bytes": 43417600
+          },
+          "replay_equivalence": {
+            "max_abs_logit_delta": 0.0,
+            "max_abs_kda_state_delta": 0.0
+          }
+        },
+        "tofu-014": {
+          "victim_index": 14,
+          "span": [
+            729,
+            780
+          ],
+          "n_tokens": 51,
+          "lift_nats": {
+            "resident": 1.5023182899721208,
+            "after_mask": 0.18920652327999,
+            "after_replay": 0.0
+          },
+          "mask_removal_fraction": 0.8740569661283288,
+          "field_lift_nats": null,
+          "field_removal_fraction": null,
+          "victim_rank": {
+            "resident": 1,
+            "after_mask": 5,
+            "after_replay": 5,
+            "never_ingested": 5
+          },
+          "greedy_answers": {
+            "after_mask": "Hsiao Yun-Hwa has also written about the intersection",
+            "after_replay": "Hsiao Yun-Hwa has also written about the intersection",
+            "never_ingested": "Hsiao Yun-Hwa has also written about the intersection"
+          },
+          "retained_collateral_nats": {
+            "mask_vs_resident_mean": 0.0024480190115291106,
+            "mask_vs_resident_max": 0.010287012372698107
+          },
+          "cost": {
+            "mask_seconds": 3.1167000997811556e-05,
+            "mask_tokens_touched": 0,
+            "replay_seconds": 0.10452054099005181,
+            "replay_tokens": 63,
+            "checkpoint_bytes": 43417600
+          },
+          "replay_equivalence": {
+            "max_abs_logit_delta": 0.0,
+            "max_abs_kda_state_delta": 0.0
+          }
+        }
+      }
+    },
+    "cds": {
+      "model": "mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit",
+      "host": {
+        "platform": "macOS-26.5-arm64-arm-64bit",
+        "machine": "arm64"
+      },
+      "source": "cds",
+      "contains_source_text": false,
+      "contains_source_identifiers": false,
+      "generations_produced": false,
+      "source_rows": {
+        "rows_scanned": 17,
+        "complete_rows_seen": 16
+      },
+      "protocol": {
+        "records": 16,
+        "skip": 0,
+        "row_removal": "native-mla-mask",
+        "chunk": null,
+        "nu": null,
+        "preserve_prefix_mass": null,
+        "victims": [
+          1,
+          8,
+          14
+        ],
+        "greedy_tokens": null,
+        "memory_limit_gb": 75.0
+      },
+      "gate_stats": null,
+      "aggregate": {
+        "mask_residual_lift_mean": 0.15916187636518242,
+        "mask_residual_lift_max": 0.2647297900655995,
+        "mask_removal_fraction_mean": 0.8054754847174044,
+        "field_removal_fraction_mean": 0.8476967645113934,
+        "replay_exact_all": true
+      },
+      "victims": {
+        "mimic-local-001": {
+          "victim_index": 1,
+          "span": [
+            46,
+            74
+          ],
+          "n_tokens": 28,
+          "lift_nats": {
+            "resident": 0.8496340910593668,
+            "after_mask": 0.023746808369954353,
+            "after_replay": 0.0
+          },
+          "mask_removal_fraction": 0.9720505466766928,
+          "field_lift_nats": {
+            "resident": 0.7731101475064717,
+            "after_mask": 0.015958861699179976,
+            "after_replay": 0.0
+          },
+          "field_removal_fraction": 0.9793575834560542,
+          "victim_rank": {
+            "resident": 3,
+            "after_mask": 91,
+            "after_replay": 73,
+            "never_ingested": 73
+          },
+          "greedy_answers": null,
+          "retained_collateral_nats": {
+            "mask_vs_resident_mean": 0.019175035528897492,
+            "mask_vs_resident_max": 0.07187569659689197
+          },
+          "cost": {
+            "mask_seconds": 3.2916999771259725e-05,
+            "mask_tokens_touched": 0,
+            "replay_seconds": 1.272792791001848,
+            "replay_tokens": 366,
+            "checkpoint_bytes": 43417600
+          },
+          "replay_equivalence": {
+            "max_abs_logit_delta": 0.0,
+            "max_abs_kda_state_delta": 0.0
+          }
+        },
+        "mimic-local-008": {
+          "victim_index": 8,
+          "span": [
+            236,
+            264
+          ],
+          "n_tokens": 28,
+          "lift_nats": {
+            "resident": 1.520424207051595,
+            "after_mask": 0.18900903065999342,
+            "after_replay": 0.0
+          },
+          "mask_removal_fraction": 0.8756866473294848,
+          "field_lift_nats": {
+            "resident": 1.971800274319119,
+            "after_mask": 0.24139875835842556,
+            "after_replay": 0.0
+          },
+          "field_removal_fraction": 0.8775744371768166,
+          "victim_rank": {
+            "resident": 2,
+            "after_mask": 2,
+            "after_replay": 6,
+            "never_ingested": 6
+          },
+          "greedy_answers": null,
+          "retained_collateral_nats": {
+            "mask_vs_resident_mean": 0.009197939797537252,
+            "mask_vs_resident_max": 0.0433910204016644
+          },
+          "cost": {
+            "mask_seconds": 3.3082993468269706e-05,
+            "mask_tokens_touched": 0,
+            "replay_seconds": 0.42145229199377354,
+            "replay_tokens": 176,
+            "checkpoint_bytes": 43417600
+          },
+          "replay_equivalence": {
+            "max_abs_logit_delta": 0.0,
+            "max_abs_kda_state_delta": 0.0
+          }
+        },
+        "mimic-local-014": {
+          "victim_index": 14,
+          "span": [
+            387,
+            414
+          ],
+          "n_tokens": 27,
+          "lift_nats": {
+            "resident": 0.6137797314187754,
+            "after_mask": 0.2647297900655995,
+            "after_replay": 0.0
+          },
+          "mask_removal_fraction": 0.5686892601460357,
+          "field_lift_nats": {
+            "resident": 0.6098823017544217,
+            "after_mask": 0.19140651490953234,
+            "after_replay": 0.0
+          },
+          "field_removal_fraction": 0.6861582729013096,
+          "victim_rank": {
+            "resident": 3,
+            "after_mask": 2,
+            "after_replay": 16,
+            "never_ingested": 16
+          },
+          "greedy_answers": null,
+          "retained_collateral_nats": {
+            "mask_vs_resident_mean": 0.009782834199875676,
+            "mask_vs_resident_max": 0.027353763580322266
+          },
+          "cost": {
+            "mask_seconds": 5.5666998378001153e-05,
+            "mask_tokens_touched": 0,
+            "replay_seconds": 0.061697959012235515,
+            "replay_tokens": 26,
+            "checkpoint_bytes": 43417600
+          },
+          "replay_equivalence": {
+            "max_abs_logit_delta": 0.0,
+            "max_abs_kda_state_delta": 0.0
+          }
+        }
+      }
+    },
+    "notes": {
+      "model": "mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit",
+      "host": {
+        "platform": "macOS-26.5-arm64-arm-64bit",
+        "machine": "arm64"
+      },
+      "source": "notes",
+      "contains_source_text": false,
+      "contains_source_identifiers": false,
+      "generations_produced": false,
+      "source_rows": {
+        "rows_scanned": 8,
+        "long_enough_notes_seen": 8
+      },
+      "protocol": {
+        "records": 8,
+        "skip": 0,
+        "row_removal": "native-mla-mask",
+        "chunk": null,
+        "nu": null,
+        "preserve_prefix_mass": null,
+        "victims": [
+          1,
+          4,
+          6
+        ],
+        "greedy_tokens": null,
+        "memory_limit_gb": 75.0
+      },
+      "gate_stats": null,
+      "aggregate": {
+        "mask_residual_lift_mean": -0.01969531956909648,
+        "mask_residual_lift_max": 0.004987162212992835,
+        "mask_removal_fraction_mean": 0.6199699217801719,
+        "field_removal_fraction_mean": 0.6199699217801719,
+        "replay_exact_all": true
+      },
+      "victims": {
+        "note-local-001": {
+          "victim_index": 1,
+          "span": [
+            1220,
+            2352
+          ],
+          "n_tokens": 1132,
+          "lift_nats": {
+            "resident": 0.004248796507369645,
+            "after_mask": 0.004987162212992835,
+            "after_replay": 0.0
+          },
+          "mask_removal_fraction": -0.1737823179675646,
+          "field_lift_nats": {
+            "resident": 0.004248796507369645,
+            "after_mask": 0.004987162212992835,
+            "after_replay": 0.0
+          },
+          "field_removal_fraction": -0.1737823179675646,
+          "victim_rank": {
+            "resident": 181,
+            "after_mask": 147,
+            "after_replay": 201,
+            "never_ingested": 201
+          },
+          "greedy_answers": null,
+          "retained_collateral_nats": {
+            "mask_vs_resident_mean": 0.004963517035714233,
+            "mask_vs_resident_max": 0.011423492431640647
+          },
+          "cost": {
+            "mask_seconds": 7.999999797903001e-05,
+            "mask_tokens_touched": 0,
+            "replay_seconds": 3.9497451670031296,
+            "replay_tokens": 6635,
+            "checkpoint_bytes": 43417600
+          },
+          "replay_equivalence": {
+            "max_abs_logit_delta": 0.0,
+            "max_abs_kda_state_delta": 0.0
+          }
+        },
+        "note-local-004": {
+          "victim_index": 4,
+          "span": [
+            4904,
+            5852
+          ],
+          "n_tokens": 948,
+          "lift_nats": {
+            "resident": 2.3277664184570312,
+            "after_mask": -0.020586776733398704,
+            "after_replay": 0.0
+          },
+          "mask_removal_fraction": 1.0088440045230331,
+          "field_lift_nats": {
+            "resident": 2.3277664184570312,
+            "after_mask": -0.020586776733398704,
+            "after_replay": 0.0
+          },
+          "field_removal_fraction": 1.0088440045230331,
+          "victim_rank": {
+            "resident": 62,
+            "after_mask": 870,
+            "after_replay": 636,
+            "never_ingested": 636
+          },
+          "greedy_answers": null,
+          "retained_collateral_nats": {
+            "mask_vs_resident_mean": 0.008443518249901904,
+            "mask_vs_resident_max": 0.02104610866970491
+          },
+          "cost": {
+            "mask_seconds": 9.741699614096433e-05,
+            "mask_tokens_touched": 0,
+            "replay_seconds": 1.9605792079964885,
+            "replay_tokens": 3135,
+            "checkpoint_bytes": 43417600
+          },
+          "replay_equivalence": {
+            "max_abs_logit_delta": 0.0,
+            "max_abs_kda_state_delta": 0.0
+          }
+        },
+        "note-local-006": {
+          "victim_index": 6,
+          "span": [
+            6959,
+            7970
+          ],
+          "n_tokens": 1011,
+          "lift_nats": {
+            "resident": 1.7500887920981958,
+            "after_mask": -0.043486344186883574,
+            "after_replay": 0.0
+          },
+          "mask_removal_fraction": 1.024848078785047,
+          "field_lift_nats": {
+            "resident": 1.7500887920981958,
+            "after_mask": -0.043486344186883574,
+            "after_replay": 0.0
+          },
+          "field_removal_fraction": 1.024848078785047,
+          "victim_rank": {
+            "resident": 1,
+            "after_mask": 16,
+            "after_replay": 18,
+            "never_ingested": 18
+          },
+          "greedy_answers": null,
+          "retained_collateral_nats": {
+            "mask_vs_resident_mean": 0.002586384554622912,
+            "mask_vs_resident_max": 0.005921341652093959
+          },
+          "cost": {
+            "mask_seconds": 6.316699727904052e-05,
+            "mask_tokens_touched": 0,
+            "replay_seconds": 0.658560750001925,
+            "replay_tokens": 1017,
+            "checkpoint_bytes": 43417600
+          },
+          "replay_equivalence": {
+            "max_abs_logit_delta": 0.0,
+            "max_abs_kda_state_delta": 0.0
+          }
+        }
+      }
+    }
+  }
+}
