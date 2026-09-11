@@ -28,12 +28,12 @@ import matplotlib.pyplot as plt  # noqa: E402
 matplotlib.rcParams.update(
     {
         "font.family": "DejaVu Sans",
-        "font.size": 9.0,
-        "axes.titlesize": 9.5,
-        "axes.labelsize": 9.0,
-        "xtick.labelsize": 8.0,
-        "ytick.labelsize": 8.0,
-        "legend.fontsize": 8.0,
+        "font.size": 11.3,
+        "axes.titlesize": 11.5,
+        "axes.labelsize": 11.3,
+        "xtick.labelsize": 11.3,
+        "ytick.labelsize": 11.3,
+        "legend.fontsize": 11.3,
         "axes.spines.top": False,
         "axes.spines.right": False,
         "svg.fonttype": "path",
@@ -52,11 +52,11 @@ EXCLUDED = "#5F6368"
 CONDITION_STYLE = {
     "present": dict(color=TARGET, marker="D", ls="-", label="record present"),
     "omitted": dict(color=BEHAVIORAL, marker="^", ls="--", label="never stored"),
-    "static": dict(color=OPERATION, marker="x", ls=":", label="static receipt subtracted"),
-    "ledger": dict(color=OPERATION, marker="v", ls="-.", label="diagonal-ledger receipt"),
-    "full": dict(color=OPERATION, marker="s", ls="-", label="full-transport receipt"),
+    "static": dict(color=OPERATION, marker="x", ls=":", label="static receipt"),
+    "ledger": dict(color=OPERATION, marker="v", ls="-.", label="diagonal ledger"),
+    "full": dict(color=OPERATION, marker="s", ls="-", label="full-matrix receipt"),
     "mask": dict(color=EXCLUDED, marker=">", ls="-", label="attention rows masked"),
-    "mask_full": dict(color=NUMERICAL, marker="P", ls="-", label="masked + full transport"),
+    "mask_full": dict(color=NUMERICAL, marker="P", ls="-", label="masked + full-matrix"),
 }
 
 
@@ -100,24 +100,24 @@ def figure_sweep(summary: Dict[str, Any], out_dir: Path) -> None:
     src = summary["sources"].get("synthetic") or next(iter(summary["sources"].values()))
     n_cfg = src["configurations"]["admitted"]
     n_att = src["configurations"]["attempted"]
-    fig, axes = plt.subplots(1, 3, figsize=(7.25, 2.75))
+    fig, axes = plt.subplots(1, 3, figsize=(7.25, 4.1))
 
     # (a) imprint and receipt residuals vs suffix length
     ax = axes[0]
     cuts, med, lo, hi = _series(src["state"], "imprint_fraction")
     x = [max(c, 1) for c in cuts]
     ax.fill_between(x, lo, hi, color=TARGET, alpha=0.15, lw=0)
-    ax.plot(x, med, color=TARGET, marker="D", ms=3.5, lw=1.4, label="no correction (imprint)")
+    ax.plot(x, med, color=TARGET, marker="D", ms=3.5, lw=1.4, label="record present")
     for key, cond in (("residual_static_rel_omitted", "static"), ("residual_ledger_rel_omitted", "ledger"), ("residual_full_rel_omitted", "full")):
         c2, m2, _, _ = _series(src["state"], key)
         st = CONDITION_STYLE[cond]
         ax.plot([max(c, 1) for c in c2], m2, color=st["color"], marker=st["marker"], ls=st["ls"], ms=3.5, lw=1.2, label=st["label"])
     ax.set_xscale("log", base=2)
     ax.set_yscale("log")
-    ax.set_xlabel("suffix tokens after record")
-    ax.set_ylabel("residual / never-stored norm\n(0 = exact)")
-    ax.set_title("(a) residual in recurrent state")
-    ax.legend(loc="lower left", frameon=False, handlelength=2.2, fontsize=7)
+    ax.set_xlabel("suffix tokens")
+    ax.set_ylabel("residual / state norm")
+    ax.set_title("(a) State residual")
+
     # Denominators (admitted/attempted configurations) are stated in the caption.
 
     # (b) forcing-to-difference norm ratio vs suffix length
@@ -125,16 +125,16 @@ def figure_sweep(summary: Dict[str, Any], out_dir: Path) -> None:
     cuts, med, lo, hi = _series(src["state"], "residual_full_rel_direct")
     x = [max(c, 1) for c in cuts]
     ax.fill_between(x, lo, hi, color=OPERATION, alpha=0.15, lw=0)
-    ax.plot(x, med, color=OPERATION, marker="s", ms=3.5, lw=1.4, label="forcing norm / direct-difference norm")
+    ax.plot(x, med, color=OPERATION, marker="s", ms=3.5, lw=1.4, label="forcing norm / difference norm")
     ax.axhline(1.0, color=EXCLUDED, lw=0.8, ls=":")
-    ax.text(x[0], 1.03, "1 = equal norm magnitudes", fontsize=7, color=EXCLUDED, va="bottom")
+    ax.text(x[0], 1.03, "equal norms", fontsize=11.3, color=EXCLUDED, va="bottom")
     ax.axhline(0.0, color=BEHAVIORAL, lw=0.8, ls="--")
-    ax.text(x[0], 0.03, "0 = receipt transports exactly", fontsize=7, color=BEHAVIORAL, va="bottom")
+    ax.text(x[0], 0.03, "exact transport", fontsize=11.3, color=BEHAVIORAL, va="bottom")
     ax.set_xscale("log", base=2)
     ax.set_ylim(-0.05, max(1.15, max(hi) * 1.05))
-    ax.set_xlabel("suffix tokens after record")
-    ax.set_ylabel("forcing norm / difference norm\n(0 = exact)")
-    ax.set_title("(b) forcing norm ratio")
+    ax.set_xlabel("suffix tokens")
+    ax.set_ylabel("forcing norm ratio")
+    ax.set_title("(b) Forcing norm ratio")
 
     # (c) truncated recompute
     ax = axes[2]
@@ -146,16 +146,22 @@ def figure_sweep(summary: Dict[str, Any], out_dir: Path) -> None:
     if pts:
         fx = [0.0] + [p[0] for p in pts] + [1.0]
         fm = [src["state"][str(src["cuts"][-1])]["residual_full_rel_direct"]["layers_pooled"]["median"]] + [p[1] for p in pts] + [0.0]
-        ax.plot(fx, fm, color=OPERATION, marker="D", ms=3.5, lw=1.4, label="recompute k; transport rest")
+        ax.plot(fx, fm, color=OPERATION, marker="D", ms=3.5, lw=1.4, label="recompute + transport")
         ax.fill_between([p[0] for p in pts], [p[2] for p in pts], [p[3] for p in pts], color=OPERATION, alpha=0.15, lw=0)
         ax.plot([0, 1], [fm[0], 0], color=EXCLUDED, lw=0.8, ls=":", label="linear reference")
     ax.axhline(0.0, color=NUMERICAL, lw=0.8, ls="-.")
-    ax.text(0.02, 0.03, "0 = full replay", fontsize=7, color=NUMERICAL, va="bottom")
+    ax.text(0.02, 0.03, "0 = full replay", fontsize=11.3, color=NUMERICAL, va="bottom")
     ax.set_xlabel("fraction recomputed")
-    ax.set_ylabel("remaining forcing norm ratio\n(0 = exact)")
-    ax.set_title("(c) partial recomputation")
-    ax.legend(loc="upper right", bbox_to_anchor=(1.02, 0.93), frameon=False, fontsize=7)
-    fig.tight_layout(w_pad=1.2)
+    ax.set_ylabel("remaining forcing ratio")
+    ax.set_title("(c) Partial recomputation")
+    ax.text(0.10, 0.97, "recompute +\ntransport", transform=ax.transAxes, va="top", fontsize=11.3)
+    ax.text(0.35, 0.20, "linear", color=EXCLUDED, fontsize=11.3)
+    axes[0].set_xticks([1, 16, 256, 4096], ["0", "$2^4$", "$2^8$", "$2^{12}$"])
+    axes[0].text(4, 0, "//", transform=axes[0].get_xaxis_transform(), ha="center", va="center", fontsize=11.3, bbox=dict(facecolor="white", edgecolor="none", pad=0.5))
+    axes[1].set_xticks([16, 256, 4096], ["$2^4$", "$2^8$", "$2^{12}$"])
+    axes[2].set_xticks([0, 0.5, 1])
+    fig.legend(*axes[0].get_legend_handles_labels(), loc="upper center", ncol=2, frameon=False, fontsize=11.3)
+    fig.tight_layout(w_pad=1.1, rect=(0, 0, 1, 0.81))
     save(
         fig,
         out_dir,
@@ -165,34 +171,51 @@ def figure_sweep(summary: Dict[str, Any], out_dir: Path) -> None:
 
 
 def figure_behavior(summary: Dict[str, Any], out_dir: Path) -> None:
-    fig, axes = plt.subplots(1, 2, figsize=(7.25, 2.7))
+    fig, axes = plt.subplots(1, 2, figsize=(7.25, 4.1))
+    groups = [
+        (("present",), TARGET, "D", "record present"),
+        (("static", "ledger", "full"), OPERATION, "s", "receipt-corrected, any class"),
+        (("mask",), EXCLUDED, ">", "attention masked"),
+        (("mask_full",), NUMERICAL, "P", "masked + full-matrix"),
+    ]
     for ax, source in zip(axes, ("synthetic", "tofu")):
         src = summary["sources"].get(source)
         if not src:
             ax.set_visible(False)
             continue
         pts = src["scatter_residual_vs_lift"]
-        for cond, st in CONDITION_STYLE.items():
-            xs = [p["state_residual_mean"] for p in pts if p["condition"] == cond]
-            ys = [p["lift_nats"] for p in pts if p["condition"] == cond]
-            if not xs:
-                continue
-            ax.scatter([max(v, 1e-6) for v in xs], ys, s=16, color=st["color"], marker=st["marker"], label=st["label"], alpha=0.85, linewidths=0.6, edgecolors="white" if st["marker"] not in ("x", ">") else st["color"])
-        ax.axhline(0.0, color=BEHAVIORAL, lw=0.8, ls="--")
-        ax.text(0.98, 0.04, "0 = never-stored behavior", fontsize=7, color=BEHAVIORAL, ha="right", transform=ax.transAxes)
+        selected = [p for p in pts if p["condition"] in CONDITION_STYLE]
+        positive = [p["state_residual_mean"] for p in selected if p["state_residual_mean"] > 0]
+        # A separated left-edge location denotes actual zero; positive values
+        # keep their original coordinates on the log axis. No averaging.
+        zero_x = min(positive) / 4
+        for conditions, color, marker, label in groups:
+            rows = [p for p in pts if p["condition"] in conditions]
+            ax.scatter([p["state_residual_mean"] if p["state_residual_mean"] > 0 else zero_x for p in rows],
+                       [p["lift_nats"] for p in rows], s=17, color=color,
+                       marker=marker, label=label, alpha=0.8,
+                       linewidths=0.35, edgecolors="white")
+        omitted = [p for p in pts if p["condition"] == "omitted"]
+        ax.scatter([zero_x] * len(omitted), [p["lift_nats"] for p in omitted],
+                   s=28, color=BEHAVIORAL, marker="^", zorder=4, label="never-stored state (x = 0)")
+        ax.axhline(0, color=BEHAVIORAL, lw=0.8, ls="--")
         ax.set_xscale("log")
-        ax.set_xlabel("recurrent-state residual vs never stored\n(mean over layers; 0 = exact)")
-        ax.set_ylabel("probe lift of the secret (nats)")
-        n = src["configurations"]["admitted"]
-        ax.set_title(f"({'a' if source == 'synthetic' else 'b'}) {source} records, {n} configurations × {len(src['cuts'])} cuts")
-    axes[0].legend(loc="upper left", frameon=False, ncol=1, fontsize=7, markerscale=1.1)
-    fig.tight_layout(w_pad=1.2)
-    save(
-        fig,
-        out_dir,
-        "kda_residual_vs_leakage",
-        "In the Kimi hybrid, every recurrent-state correction leaves the secret fully recoverable while masking the record's attention rows brings recovery to the never-stored floor despite a large recurrent residual.",
-    )
+        ax.set_xlim(zero_x / 1.3, max(positive) * 1.2)
+        ax.set_xticks([zero_x, 0.1, 1], ["0", "0.1", "1"])
+        ax.minorticks_off()
+        # Mark the visual gap separating zero from the positive log scale.
+        gap_x = (zero_x * min(positive)) ** 0.5
+        ax.text(gap_x, 0, "//", transform=ax.get_xaxis_transform(),
+                ha="center", va="center", fontsize=11.3,
+                bbox=dict(facecolor="white", edgecolor="none", pad=0.5))
+        ax.set_xlabel("recurrent residual / state norm")
+        ax.set_ylabel("target-secret lift (nats)")
+        ax.set_title(f"({'a' if source == 'synthetic' else 'b'}) {source.capitalize() if source == 'synthetic' else 'TOFU'}")
+    fig.legend(*axes[0].get_legend_handles_labels(), loc="upper center", ncol=2,
+               frameon=False, fontsize=11.3, handlelength=1.2, columnspacing=1.0)
+    fig.tight_layout(w_pad=1.1, rect=(0, 0, 1, 0.75))
+    save(fig, out_dir, "kda_residual_vs_leakage",
+         "Target-secret lift versus recurrent residual. All static, ledger, and full-matrix receipt points are retained in one visual series. The left-edge marker denotes actual zero outside the positive log scale. Masking lowers lift but includes positive scores across configurations and cuts.")
 
 
 def figure_families(fam: Dict[str, Any], out_dir: Path) -> None:
@@ -201,9 +224,9 @@ def figure_families(fam: Dict[str, Any], out_dir: Path) -> None:
     if not order:
         return
     thr = fam["thresholds"]
-    fig, axes = plt.subplots(1, 2, figsize=(7.25, 2.6), gridspec_kw={"width_ratios": [1.5, 1]})
+    fig, axes = plt.subplots(1, 2, figsize=(7.25, 3.6), gridspec_kw={"width_ratios": [1.2, 1]})
     ax = axes[0]
-    classes = [("frozen_static_exact", "static", "x"), ("frozen_ledger_exact", "diagonal ledger", "v"), ("frozen_full_exact", "full matrix", "s")]
+    classes = [("frozen_static_exact", "static", "x"), ("frozen_ledger_exact", "ledger", "v"), ("frozen_full_exact", "full matrix", "s")]
     width = 0.25
     for j, (key, label, marker) in enumerate(classes):
         xs, ys = [], []
@@ -212,19 +235,19 @@ def figure_families(fam: Dict[str, Any], out_dir: Path) -> None:
             if v:
                 xs.append(i + (j - 1) * width)
                 ys.append(max(v["max"], 1e-9))
-        ax.scatter(xs, ys, marker=marker, s=40, color=OPERATION, label=f"{label} receipt", zorder=3)
+        ax.scatter(xs, ys, marker=marker, s=40, color=OPERATION, label=label, zorder=3)
         for x_, y_ in zip(xs, ys):
             ax.vlines(x_, 1e-9, y_, color=OPERATION, lw=0.8, alpha=0.5)
     ax.axhline(thr["exact_max_relative_error"], color=NUMERICAL, ls="-.", lw=0.9)
-    ax.text(0.01, thr["exact_max_relative_error"] * 1.6, "exact (≤ 1e−4 of state)", fontsize=7, color=NUMERICAL, transform=ax.get_yaxis_transform())
+    ax.text(0.01, thr["exact_max_relative_error"] * 1.6, "tolerance: 1e−4", fontsize=11.3, color=NUMERICAL, transform=ax.get_yaxis_transform())
     ax.set_yscale("log")
     ax.set_ylim(3e-10, 3e2)
     ax.set_xlim(-0.6, len(order) - 0.4)
     ax.set_xticks(range(len(order)))
-    ax.set_xticklabels([f"{f}\n({families[f]['transition_class']})" for f in order])
-    ax.set_ylabel("max frozen-input error /\nstate norm (lower is better)")
-    ax.set_title("(a) which receipt class transports exactly")
-    ax.legend(loc="upper center", ncol=3, frameon=False, fontsize=7, columnspacing=1.0, handletextpad=0.3)
+    ax.set_xticklabels([{"mamba2": "Mamba-2", "falcon_h1": "Falcon-H1", "rwkv7": "RWKV-7"}[f] for f in order])
+    ax.set_ylabel("max error / state norm")
+    ax.set_title("(a) Frozen-input check")
+
 
     ax = axes[1]
     for i, f in enumerate(order):
@@ -232,20 +255,41 @@ def figure_families(fam: Dict[str, Any], out_dir: Path) -> None:
         if v:
             ax.errorbar(i, v["median"], yerr=[[v["median"] - v["min"]], [v["max"] - v["median"]]], fmt="s", color=OPERATION, ms=5, capsize=3, lw=1)
     ax.axhline(0.0, color=BEHAVIORAL, ls="--", lw=0.8)
-    ax.text(0.02, 0.02, "0 = receipt sufficient", fontsize=7, color=BEHAVIORAL, transform=ax.get_yaxis_transform())
+    ax.text(0.02, 0.02, "exact transport", fontsize=11.3, color=BEHAVIORAL, transform=ax.get_yaxis_transform())
     ax.set_xticks(range(len(order)))
-    ax.set_xticklabels(order)
+    ax.set_xticklabels([{"mamba2": "Mamba-2", "falcon_h1": "Falcon-H1", "rwkv7": "RWKV-7"}[f] for f in order])
     ax.set_xlim(-0.6, len(order) - 0.4)
     ax.set_ylim(-0.1, None)
-    ax.set_ylabel("forcing norm ratio at last cut\n(median layer; range over runs)")
-    ax.set_title("(b) native forcing in audited cases")
-    fig.tight_layout(w_pad=1.2)
+    ax.set_ylabel("forcing norm ratio")
+    ax.set_title("(b) Native residual")
+    axes[1].tick_params(axis="x", labelrotation=25)
+    fig.legend(*axes[0].get_legend_handles_labels(), loc="upper center", ncol=3, frameon=False, fontsize=11.3, handletextpad=0.3)
+    fig.tight_layout(w_pad=1.2, rect=(0, 0, 1, 0.90))
     save(
         fig,
         out_dir,
         "kda_families",
-        "Across the audited Mamba-2, Falcon-H1, and RWKV-7 configurations, the predicted receipt class meets the frozen-input transport tolerance. Native forcing-to-difference norm ratios are nonzero in all three audited families.",
+        "Across Mamba-2, Falcon-H1, and RWKV-7 the predicted receipt class meets the numerical tolerance under frozen inputs. Native forcing is nonzero in the audited cases. Frozen-input tolerance checks are distinct from zero-residual replay.",
     )
+
+
+def figure_replay(report: Dict[str, Any], out_dir: Path) -> None:
+    timing = sorted(report["per_position"], key=lambda row: int(row["replayed_tokens"]))
+    fig, ax = plt.subplots(figsize=(4.4, 2.7))
+    xs = [row["replayed_tokens"] for row in timing]
+    ys = [row["replay_seconds"] for row in timing]
+    rebuild = [row["rebuild_seconds"] for row in timing]
+    ax.plot(xs, ys, color=RETAINED, marker="s", ms=4, lw=1.4)
+    ax.axhline(sum(rebuild)/len(rebuild), color=EXCLUDED, ls="--", lw=0.9)
+    ax.text(max(xs), sum(rebuild)/len(rebuild)+0.12, "full rebuild: 6.77 s",
+            ha="right", va="bottom", fontsize=11.3)
+    ax.set_xlabel("surviving suffix tokens")
+    ax.set_ylabel("replay time (s)")
+    ax.set_ylim(-0.1, 7.6)
+    ax.grid(axis="y", alpha=0.2)
+    fig.tight_layout()
+    save(fig, out_dir, "kda_replay_iclr",
+         "Nine single replay timings in one 128-record context, from zero seconds for the newest record to 6.70 seconds for the oldest, against a 6.77-second full rebuild. Cohort exactness results appear in the paper tables.")
 
 
 def main(argv: Optional[List[str]] = None) -> int:
@@ -253,6 +297,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     ap.add_argument("--sweep", default="gemma_sv/benchmarks/kda_forcing_sweep_summary_v1.json")
     ap.add_argument("--families", default="gemma_sv/benchmarks/recurrent_families_summary_v1.json")
     ap.add_argument("--out-dir", default="kda_paper/paper/figs")
+    ap.add_argument("--replay", default="outputs/kimi_sv/mimic_deletion_8bit_n128_v2.json")
     args = ap.parse_args(argv)
     out = Path(args.out_dir)
     if Path(args.sweep).exists():
@@ -263,6 +308,11 @@ def main(argv: Optional[List[str]] = None) -> int:
     if Path(args.families).exists():
         figure_families(json.loads(Path(args.families).read_text()), out)
         print("wrote kda_families")
+    replay = Path(args.replay)
+    if not replay.exists():
+        replay = Path("artifacts/kimi_sv/mimic_deletion_8bit_n128_v2.json")
+    if replay.exists():
+        figure_replay(json.loads(replay.read_text()), out)
     return 0
 
 

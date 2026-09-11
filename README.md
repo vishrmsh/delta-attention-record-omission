@@ -5,6 +5,11 @@ Transport Criterion, Its Cost, and a Replay Certificate*, prepared for SaTML
 2027. It contains the numerical evidence and selected reproduction code. The
 manuscript and its figure sources are in the separate paper source package.
 
+This 11 September 2026 update synchronizes the finished quantitative figure
+renderer with the revised manuscript. The shipped measurement implementations,
+116 configuration reports, benchmark records, and numerical macros are unchanged.
+Experiments still in progress are not part of this release.
+
 ## Start here: offline verification
 
 Run from this directory with Python 3.11 or later:
@@ -59,10 +64,12 @@ hybrid diagnostic is included, but that historical full report and the full
 Qwen live report are not. Their recorded hashes are preserved.
 
 Selected measurement implementation modules are unchanged. The quantitative
-figure renderer has release-only label, accessibility-description and comment
-corrections: norm-ratio terminology, a linear reference, and shorter labels
-that fit within the unchanged axes. Its computations and plotted values are
-unchanged. `gemma_sv/__init__.py` and
+figure renderer now uses larger labels, explicit norm-ratio and numerical-
+tolerance terminology, and a standalone replay timing curve. The three
+receipt classes share one scatter series with every original point retained.
+Actual zero is labelled outside the positive log scale. These presentation
+changes are synchronized with the canonical renderer; the recorded numerical
+values and measurement code are unchanged. `gemma_sv/__init__.py` and
 `svattn/__init__.py` are minimal packaging initializers so this subset does not
 import unrelated application code. The exact Qwen audit implementation hash
 still matches its measured result. No model, data, or dependency licenses are
@@ -80,9 +87,9 @@ PYTHONPATH=code python -B -m kimi_sv.make_forcing_sweep_figures \
   --out-dir regenerated_figures
 ```
 
-This recreates the three quantitative figures without models or data. The other
-five paper figures are authored SVGs in the paper source package; this script
-does not recreate them.
+This recreates four quantitative figures from the saved sweep/family summaries
+and replay timings, without model execution. These are all four figures in
+the current manuscript; illustrative diagrams are excluded from its source package.
 
 ## Optional model reruns
 
