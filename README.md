@@ -27,6 +27,12 @@ network access, package installation, credential access, or clinical-data read.
 These checks validate the packaged records and aggregation; they do not repeat
 the original measurements or establish their correctness independently.
 
+The same command works in an extracted ZIP or a Git checkout. The checkout's
+top-level `.git` directory (or worktree `.git` file) is repository metadata and
+is excluded from the artifact inventory. Other unexpected files and changes to
+manifest-listed files still fail verification. Verifier regression checks run
+with `python3 -B -m unittest test_verify_offline.py`.
+
 ## Contents and evidence boundaries
 
 | Location | Contents |

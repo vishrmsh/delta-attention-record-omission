@@ -25,6 +25,7 @@ def main():
         path.relative_to(ROOT).as_posix(): path
         for path in ROOT.rglob("*")
         if path.is_file() and "__pycache__" not in path.parts
+        and path.relative_to(ROOT).parts[0] != ".git"
         and path.name != "MANIFEST.json"
     }
     assert set(expected) == set(observed), "artifact file inventory differs"

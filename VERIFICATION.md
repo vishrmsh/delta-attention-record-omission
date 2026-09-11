@@ -3,6 +3,9 @@
 This release was checked on 11 September 2026.
 
 - Every shipped file matches the inventory, size, and SHA-256 checksum.
+- Offline verification accepts extracted archives and Git checkouts, including
+  worktree `.git` files. Seven end-to-end regression checks also confirm that
+  unexpected hidden/nested files, missing payloads and altered payloads fail.
 - Every Python source parses and every JSON file passes strict parsing.
 - The 40 forcing, 40 sampling, and 36 family reports regenerate the shipped
   summary JSONs with complete equality; the numerical TeX macros regenerate
