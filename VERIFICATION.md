@@ -1,34 +1,16 @@
 # Packaging verification
 
-This release was checked on 11 September 2026.
+This release was checked on 11 September 2026. The historical evidence remains intact; the added follow-up evidence is enumerated in `followup/PROVENANCE.json`.
 
-- Every shipped file matches the inventory, size, and SHA-256 checksum.
-- Offline verification accepts extracted archives and Git checkouts, including
-  worktree `.git` files. Seven end-to-end regression checks also confirm that
-  unexpected hidden/nested files, missing payloads and altered payloads fail.
-- Every Python source parses and every JSON file passes strict parsing.
-- The 40 forcing, 40 sampling, and 36 family reports regenerate the shipped
-  summary JSONs with complete equality; the numerical TeX macros regenerate
-  byte for byte, without pending values.
-- The Qwen manifest and measurement implementation retain the recorded hashes.
-- All shipped measurement implementations match the maintained source files.
-  Two package initializers remain intentionally minimal to avoid unrelated
-  application imports.
-- The quantitative figure renderer is the current maintained version. It
-  changes labels, composition and presentation, with all measurement records
-  and numerical macros unchanged. Previous geometry-preservation statements
-  applied to an earlier renderer revision and do not describe this update.
-- The five existing Qwen publication-validation tests passed.
-- An inventory and text scan found no creator identity, email address, private
-  source-repository URL, absolute creator path, symlink, credential file,
-  checkpoint, or new text-bearing clinical export. All evidence files are
-  byte-identical to the previously reviewed source-free artifact.
+- Complete file inventory, sizes, SHA-256 hashes, Python syntax and strict JSON/JSONL parsing pass. Extracted archives and Git checkouts, including worktree `.git` files, are supported. Nested `.git` or `MANIFEST.json` files are not exempt from inventory checks.
+- The historical 40 forcing, 40 sampling and 36 recurrent-family reports regenerate all three complete summary JSONs. Historical numerical TeX macros regenerate byte for byte. The original Qwen manifest and audit source retain their recorded fingerprints.
+- Follow-up coverage checks pass for 80 main Kimi contexts, eight original-BF16 contexts, eight same-master derived-8-bit contexts, 24 arithmetic diagnostics, 32 Qwen contexts with both suffixes, 12 amendments and six independent sequential pairs comprising 36 transitions.
+- All added JSON values outside enumerated filesystem-path string leaves were preserved in packaging. The map records original and released file/canonical hashes plus masked-content digests. Synthetic targets, probes, token IDs and generated readbacks remain available for strict scoring.
+- Main evaluator, analyzer, derived-precision runner and Qwen measurement source hashes agree with the original-run records. Original source and raw-output hashes are resolved through the provenance map instead of incorrectly comparing anonymized bytes with pre-anonymization hashes.
+- CPU-only regeneration with NumPy 2.4.6 reproduces every main cohort statistic and confidence interval, the calibrated attack, Qwen paired-suffix statistics, maintenance statistics with correct independent groups, both precision comparisons with their own arithmetic diagnostics, and the exploratory AUC sensitivity. Follow-up numerical TeX tables regenerate byte for byte with an explicitly labelled original-source hash.
+- The standard-library verifier's end-to-end regression tests cover clean extraction, Git metadata, unexpected files, missing/changed payloads, nested manifest files, duplicate manifest entries and changed synthetic answers even after the outer inventory is rehashed.
+- Creator identifiers, author-local paths, email addresses, private repository URLs, credentials, checkpoints, model weights, caches and the author review ZIP are excluded. Public upstream model and research links remain. The original historical synthetic/public-text exceptions and all new synthetic cohorts are documented in the README.
 
-The only HTTP URL in the implementation code is the XML namespace used by
-the figure sanitizer. Source-text exceptions remain limited to the invented
-and public-text examples documented in the README.
+Verification uses no models, downloads, credentials or controlled datasets. It checks integrity and aggregation, not independent replication of model measurements. External weight hashes and tokenizer equality are recorded run provenance; offline checks do not rehash absent weight files or rerun tokenizers. Model reproduction requires the specified upstream snapshots, hardware and dependencies.
 
-No pretrained models were loaded, no controlled datasets were read, and no
-model measurements were repeated. Verification concerns artifact integrity and
-aggregation, not independent replication of the measurements. Experiments
-still in progress are excluded from this release.
+The runtime provenance of a supplemental source audit is explicitly identified as captured during the run, not retroactively claimed to have been frozen before evaluation. The initial external-disk attempt stopped before producing observations; its configuration and interruption description remain as execution provenance. The larger attention-free delta-rule model remains deferred.

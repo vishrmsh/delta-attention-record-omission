@@ -1,0 +1,5449 @@
+{
+  "schema": "kda-matched-precision-summary-v1",
+  "status": "complete_with_own_arithmetic_diagnostics",
+  "plan_sha256": "ec0cf64dc78dd27ab48b30db3ce63eb2aafd3b4a4ecaf49881e665bd38ab4216",
+  "comparison_basis": "same_verified_original_master_with_in_memory_quantization",
+  "8bit_variant": "derived_in_memory_quantization",
+  "source_directories": {
+    "8bit": "followup/raw/kimi_derived8_v1",
+    "bf16": "followup/raw/kimi_bf16_v1"
+  },
+  "provenance_audits": {
+    "8bit": "followup/provenance/kimi_derived8_provenance_v1.json",
+    "bf16": "followup/provenance/kimi_bf16_provenance.json"
+  },
+  "record_ids": [
+    "kda-fu-evaluation-000",
+    "kda-fu-evaluation-001",
+    "kda-fu-evaluation-002",
+    "kda-fu-evaluation-003",
+    "kda-fu-evaluation-006",
+    "kda-fu-evaluation-007",
+    "kda-fu-evaluation-008",
+    "kda-fu-evaluation-009"
+  ],
+  "n_records": 8,
+  "all_records_included_regardless_of_qualification": true,
+  "bootstrap_unit": "whole context paired across condition and precision",
+  "bootstrap_replicates": 2000,
+  "by_precision": {
+    "8bit": {
+      "conditions_paired_difference_vs_own_never": {
+        "present": {
+          "target_mean_log_probability": {
+            "estimate": 3.2871050258477528,
+            "ci_low": 2.7931609647614613,
+            "ci_high": 3.809732952309506,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 3.764834508725575,
+            "ci_low": 3.2165260197860857,
+            "ci_high": 4.334382807271822,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": -501.375,
+            "ci_low": -889.265625,
+            "ci_high": -218.49687500000002,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.0002394004473610528,
+            "ci_low": -0.0005859804768410937,
+            "ci_high": 9.002170471287281e-05,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.011197196943666221,
+            "ci_low": -0.011222731822766051,
+            "ci_high": 0.03500778285119366,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "masked": {
+          "target_mean_log_probability": {
+            "estimate": 0.4257901306663239,
+            "ci_low": 0.2679098428714841,
+            "ci_high": 0.5801322118157429,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 0.4361350612980979,
+            "ci_low": 0.3011116517015869,
+            "ci_high": 0.5695249897880211,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": -318.0,
+            "ci_low": -601.665625,
+            "ci_high": -113.47500000000014,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.00021468744706855224,
+            "ci_low": -0.0005047202110290523,
+            "ci_high": 7.931032981822068e-05,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.030423772631224644,
+            "ci_low": 0.0041923153968084215,
+            "ci_high": 0.05659594981936944,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "static": {
+          "target_mean_log_probability": {
+            "estimate": 3.2258019814888637,
+            "ci_low": 2.7538473880645773,
+            "ci_high": 3.7405531368085314,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 3.761226683855057,
+            "ci_low": 3.2145260731450156,
+            "ci_high": 4.330244303686278,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": -501.375,
+            "ci_low": -889.265625,
+            "ci_high": -218.49687500000002,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.00016503611569682085,
+            "ci_low": -0.000558808378914676,
+            "ci_high": 0.0002833210602008477,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.005942937059185194,
+            "ci_low": -0.022796762777226375,
+            "ci_high": 0.04377633086735408,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "ledger": {
+          "target_mean_log_probability": {
+            "estimate": 3.241432178871972,
+            "ci_low": 2.7691214009267946,
+            "ci_high": 3.7532664234794315,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 3.760550170285361,
+            "ci_low": 3.213999691967454,
+            "ci_high": 4.330048763304949,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": -501.375,
+            "ci_low": -889.265625,
+            "ci_high": -218.49687500000002,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.00029557486059804384,
+            "ci_low": -0.0005626786480504987,
+            "ci_high": -4.907662354449056e-05,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.009164717392398186,
+            "ci_low": -0.011041000574888958,
+            "ci_high": 0.028235505503095278,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "transport": {
+          "target_mean_log_probability": {
+            "estimate": 3.239274179225876,
+            "ci_low": 2.765525187073009,
+            "ci_high": 3.753377189316919,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 3.761337170430592,
+            "ci_low": 3.214849258043937,
+            "ci_high": 4.329554765054158,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": -501.375,
+            "ci_low": -889.265625,
+            "ci_high": -218.49687500000002,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -4.888921187668231e-05,
+            "ci_low": -0.00039552199462103443,
+            "ci_high": 0.000333982434064623,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.020802607077249125,
+            "ci_low": -0.002239295795528997,
+            "ci_high": 0.04432346820677045,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "mask_transport": {
+          "target_mean_log_probability": {
+            "estimate": 0.015658160902204732,
+            "ci_low": -0.0013930822696006024,
+            "ci_high": 0.033859202762444376,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 0.018629765510559115,
+            "ci_low": -0.009550904695476824,
+            "ci_high": 0.04445968202182229,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": -9.125,
+            "ci_low": -35.503125,
+            "ci_high": 14.009374999999949,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": 4.765596339311579e-05,
+            "ci_low": -0.0002461091511779359,
+            "ci_high": 0.0002942208456930026,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.02883343455954368,
+            "ci_low": 0.006620593770073575,
+            "ci_high": 0.05112257322755409,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "replay": {
+          "target_mean_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "never_stored": {
+          "target_mean_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "never_stored_repeat": {
+          "target_mean_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "prompt_forget": {
+          "target_mean_log_probability": {
+            "estimate": 3.159497368335724,
+            "ci_low": 2.6677488528475872,
+            "ci_high": 3.68040568207701,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 3.6689416540520536,
+            "ci_low": 3.1250176100326446,
+            "ci_high": 4.2534918755292885,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": -501.0,
+            "ci_low": -889.015625,
+            "ci_high": -218.11875000000003,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": 0.00016523669005701785,
+            "ci_low": -0.00042210660047001345,
+            "ci_high": 0.000876483061010874,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.03349360991462172,
+            "ci_low": 0.018626861800256616,
+            "ci_high": 0.04736706053217249,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.625,
+            "ci_low": 0.25,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.625,
+            "ci_low": 0.25,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 31.5,
+            "ci_low": 31.125,
+            "ci_high": 31.875,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "prompt_neutral": {
+          "target_mean_log_probability": {
+            "estimate": 3.312560055511338,
+            "ci_low": 2.815026038874473,
+            "ci_high": 3.8358571109424027,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 3.762250580957957,
+            "ci_low": 3.213416098228523,
+            "ci_high": 4.332904996063028,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": -501.375,
+            "ci_low": -889.265625,
+            "ci_high": -218.49687500000002,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.0037659687339944184,
+            "ci_low": -0.0060552785478571736,
+            "ci_high": -0.0019164585247241628,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.022605925860118725,
+            "ci_low": -0.021497104529823598,
+            "ci_high": 0.06884113513164647,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 31.5,
+            "ci_low": 31.125,
+            "ci_high": 31.875,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        }
+      },
+      "absolute_metrics": {
+        "present": {
+          "target_mean_log_probability": {
+            "estimate": -0.11148042934281485,
+            "ci_low": -0.12329752509792646,
+            "ci_high": -0.10154717101227671,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -0.0073141804763249,
+            "ci_low": -0.009792002886533738,
+            "ci_high": -0.005190460596765791,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.0060388334844478225,
+            "ci_low": -0.007124076476172796,
+            "ci_high": -0.005064612777617874,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.2782291178500924,
+            "ci_low": 2.0426462775786596,
+            "ci_high": 2.490079793932522,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "masked": {
+          "target_mean_log_probability": {
+            "estimate": -2.9727953245242436,
+            "ci_low": -3.400633944507156,
+            "ci_high": -2.559997980956521,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -3.336013627903802,
+            "ci_low": -3.8694439483540397,
+            "ci_high": -2.840171346281257,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 184.375,
+            "ci_low": 73.99375,
+            "ci_high": 305.49687499999936,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.006014120484155321,
+            "ci_low": -0.007016235668823202,
+            "ci_high": -0.00513378052169053,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.2974556935376507,
+            "ci_low": 2.067212008009231,
+            "ci_high": 2.5003816326459245,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "static": {
+          "target_mean_log_probability": {
+            "estimate": -0.1727834737017041,
+            "ci_low": -0.21668439102669554,
+            "ci_high": -0.14066237796275388,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -0.010922005346843174,
+            "ci_low": -0.01519422678010804,
+            "ci_high": -0.007155203670263292,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.0059644691527835905,
+            "ci_low": -0.006808331045051099,
+            "ci_high": -0.005228551251705361,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.2729748579656115,
+            "ci_low": 2.0485370492589645,
+            "ci_high": 2.465263913013427,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "ledger": {
+          "target_mean_log_probability": {
+            "estimate": -0.15715327631859555,
+            "ci_low": -0.19308495313638735,
+            "ci_high": -0.13277802044437045,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -0.011598518916538784,
+            "ci_low": -0.01672308785574777,
+            "ci_high": -0.00713482073375157,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.006095007897684813,
+            "ci_low": -0.007093328310068321,
+            "ci_high": -0.005218687077994069,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.276196638298824,
+            "ci_low": 2.052282406144137,
+            "ci_high": 2.472504517133685,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "transport": {
+          "target_mean_log_probability": {
+            "estimate": -0.15931127596469152,
+            "ci_low": -0.19848135946052411,
+            "ci_high": -0.1325691266890083,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -0.010811518771307808,
+            "ci_low": -0.014972930806023733,
+            "ci_high": -0.007015766735587802,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.005848322248963452,
+            "ci_low": -0.006666111094611031,
+            "ci_high": -0.0051400221931555915,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.2878345279836756,
+            "ci_low": 2.054939420210587,
+            "ci_high": 2.483672919480697,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "mask_transport": {
+          "target_mean_log_probability": {
+            "estimate": -3.382927294288363,
+            "ci_low": -3.887474305572964,
+            "ci_high": -2.9011905235903606,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -3.753518923691341,
+            "ci_low": -4.316061475362097,
+            "ci_high": -3.1965786491121575,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 493.25,
+            "ci_low": 213.24375,
+            "ci_high": 888.625,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.005751777073693654,
+            "ci_low": -0.00667912212708009,
+            "ci_high": -0.004930193927237596,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.29586535546597,
+            "ci_low": 2.0661259954513724,
+            "ci_high": 2.4965783434239355,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "replay": {
+          "target_mean_log_probability": {
+            "estimate": -3.3985854551905677,
+            "ci_low": -3.9135318243219737,
+            "ci_high": -2.9090601449921016,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -3.7721486892018996,
+            "ci_low": -4.342931461163929,
+            "ci_high": -3.222894122706993,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 502.375,
+            "ci_low": 219.49687500000002,
+            "ci_high": 890.2656249999999,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.00579943303708677,
+            "ci_low": -0.006638018668644012,
+            "ci_high": -0.005008863597792923,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.267031920906426,
+            "ci_low": 2.0453973727813666,
+            "ci_high": 2.4652512360433616,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "never_stored": {
+          "target_mean_log_probability": {
+            "estimate": -3.3985854551905677,
+            "ci_low": -3.9135318243219737,
+            "ci_high": -2.9090601449921016,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -3.7721486892018996,
+            "ci_low": -4.342931461163929,
+            "ci_high": -3.222894122706993,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 502.375,
+            "ci_low": 219.49687500000002,
+            "ci_high": 890.2656249999999,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.00579943303708677,
+            "ci_low": -0.006638018668644012,
+            "ci_high": -0.005008863597792923,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.267031920906426,
+            "ci_low": 2.0453973727813666,
+            "ci_high": 2.4652512360433616,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "never_stored_repeat": {
+          "target_mean_log_probability": {
+            "estimate": -3.3985854551905677,
+            "ci_low": -3.9135318243219737,
+            "ci_high": -2.9090601449921016,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -3.7721486892018996,
+            "ci_low": -4.342931461163929,
+            "ci_high": -3.222894122706993,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 502.375,
+            "ci_low": 219.49687500000002,
+            "ci_high": 890.2656249999999,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.00579943303708677,
+            "ci_low": -0.006638018668644012,
+            "ci_high": -0.005008863597792923,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.267031920906426,
+            "ci_low": 2.0453973727813666,
+            "ci_high": 2.4652512360433616,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "prompt_forget": {
+          "target_mean_log_probability": {
+            "estimate": -0.23908808685484387,
+            "ci_low": -0.27156288234960463,
+            "ci_high": -0.20511787221545263,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -0.10320703514984676,
+            "ci_low": -0.14149211935698985,
+            "ci_high": -0.06845610307795666,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 1.375,
+            "ci_low": 1.0,
+            "ci_high": 1.75,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.0056341963470297515,
+            "ci_low": -0.006606962724968239,
+            "ci_high": -0.004765377648608395,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.300525530821048,
+            "ci_low": 2.081565851898667,
+            "ci_high": 2.4977592882668254,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.625,
+            "ci_low": 0.25,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.625,
+            "ci_low": 0.25,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 31.5,
+            "ci_low": 31.125,
+            "ci_high": 31.875,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "prompt_neutral": {
+          "target_mean_log_probability": {
+            "estimate": -0.08602539967922937,
+            "ci_low": -0.09779782693655718,
+            "ci_high": -0.07369783818721772,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -0.009898108243942261,
+            "ci_low": -0.012222535141876765,
+            "ci_high": -0.008054744473525456,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.00956540177108119,
+            "ci_low": -0.011740041491846558,
+            "ci_high": -0.007787396971668517,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.289637846766545,
+            "ci_low": 2.0342022296650564,
+            "ci_high": 2.4991235549158684,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 31.5,
+            "ci_low": 31.125,
+            "ci_high": 31.875,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        }
+      },
+      "answer_rates_wilson_by_context": {
+        "present": {
+          "target_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "masked": {
+          "target_exact": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "static": {
+          "target_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "ledger": {
+          "target_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "transport": {
+          "target_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "mask_transport": {
+          "target_exact": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "replay": {
+          "target_exact": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "never_stored": {
+          "target_exact": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "never_stored_repeat": {
+          "target_exact": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "prompt_forget": {
+          "target_exact": {
+            "successes": 5,
+            "n_independent_units": 8,
+            "estimate": 0.625,
+            "ci_low": 0.30574239460262737,
+            "ci_high": 0.8631557141764026,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 5,
+            "n_independent_units": 8,
+            "estimate": 0.625,
+            "ci_low": 0.30574239460262737,
+            "ci_high": 0.8631557141764026,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "prompt_neutral": {
+          "target_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        }
+      },
+      "qualified_records": 8,
+      "qualification_wilson": {
+        "successes": 8,
+        "n_independent_units": 8,
+        "estimate": 1.0,
+        "ci_low": 0.6755924351161198,
+        "ci_high": 1.0,
+        "confidence": 0.95
+      },
+      "replay_complete_state_and_logits_equal": 8,
+      "replay_state_max_abs_diff": 0.0,
+      "replay_logits_max_abs_diff": 0.0,
+      "repeat_numerical_floor_complete_state_and_logits_equal": 8,
+      "transport_residual_relative_to_present": [
+        0.6653461003952251,
+        0.7017192001434537,
+        0.6828567673858476,
+        0.6799774380616694,
+        0.7043655813431839,
+        0.7796492309424038,
+        0.7787486228599626,
+        0.6958408893571753
+      ]
+    },
+    "bf16": {
+      "conditions_paired_difference_vs_own_never": {
+        "present": {
+          "target_mean_log_probability": {
+            "estimate": 3.2547672268890198,
+            "ci_low": 2.7728634327330766,
+            "ci_high": 3.755952103897219,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 3.722684873853411,
+            "ci_low": 3.1838368728756907,
+            "ci_high": 4.239011651277542,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": -501.125,
+            "ci_low": -892.0218749999999,
+            "ci_high": -221.125,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.0006344073348575167,
+            "ci_low": -0.0010614805144292339,
+            "ci_high": -0.0002258020418661608,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.01858555880639373,
+            "ci_low": -0.0027746979802785593,
+            "ci_high": 0.041960276425748594,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "masked": {
+          "target_mean_log_probability": {
+            "estimate": 0.4027838518222172,
+            "ci_low": 0.22734355387233537,
+            "ci_high": 0.5829209635726043,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 0.3658564686775208,
+            "ci_low": 0.22590082619871413,
+            "ci_high": 0.5287930079868863,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": -315.75,
+            "ci_low": -599.75,
+            "ci_high": -103.99687500000002,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.0005749441959239816,
+            "ci_low": -0.000890030735541903,
+            "ci_high": -0.00022706750129896486,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.02246813735853323,
+            "ci_low": 0.007080355045958386,
+            "ci_high": 0.039020690190804494,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "static": {
+          "target_mean_log_probability": {
+            "estimate": 3.2056243948993224,
+            "ci_low": 2.7379770493223554,
+            "ci_high": 3.692337499009001,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 3.718649646214076,
+            "ci_low": 3.1805874733626847,
+            "ci_high": 4.237202182837896,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": -501.125,
+            "ci_low": -892.0218749999999,
+            "ci_high": -221.125,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.0001576897013124334,
+            "ci_low": -0.0005581087339176702,
+            "ci_high": 0.00025718786886760154,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.0038764716305348113,
+            "ci_low": -0.030003368286859428,
+            "ci_high": 0.03665172919384202,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "ledger": {
+          "target_mean_log_probability": {
+            "estimate": 3.2123176949364796,
+            "ci_low": 2.7405759092562256,
+            "ci_high": 3.7017733292920245,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 3.7188788788659233,
+            "ci_low": 3.1805106000176497,
+            "ci_high": 4.237401866061346,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": -501.125,
+            "ci_low": -892.0218749999999,
+            "ci_high": -221.125,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.00029225563876843317,
+            "ci_low": -0.0007706219872469624,
+            "ci_high": 0.00013455107808113035,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.017615753856504934,
+            "ci_low": -0.006215102793205314,
+            "ci_high": 0.03946710578464825,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "transport": {
+          "target_mean_log_probability": {
+            "estimate": 3.211437134657587,
+            "ci_low": 2.7386542596987313,
+            "ci_high": 3.699599510573205,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 3.719442657061985,
+            "ci_low": 3.1814145501383715,
+            "ci_high": 4.237880002600806,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": -501.125,
+            "ci_low": -892.0218749999999,
+            "ci_high": -221.125,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.0003958198443922416,
+            "ci_low": -0.0007160581648349756,
+            "ci_high": -6.266620424058671e-05,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.009538107653829009,
+            "ci_low": -0.012406102060407953,
+            "ci_high": 0.03615189092253057,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "mask_transport": {
+          "target_mean_log_probability": {
+            "estimate": -0.015280656587509933,
+            "ci_low": -0.0398739531778155,
+            "ci_high": 0.010661847094694877,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -0.006417626993996672,
+            "ci_low": -0.04883038486753183,
+            "ci_high": 0.030956672855785985,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 18.5,
+            "ci_low": -7.1281249999999945,
+            "ci_high": 45.625,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.0001585257747185923,
+            "ci_low": -0.00046201482730567754,
+            "ci_high": 0.0001893030958516255,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.006862332806083643,
+            "ci_low": -0.020892370757849367,
+            "ci_high": 0.04043468027134601,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "replay": {
+          "target_mean_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "never_stored": {
+          "target_mean_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "never_stored_repeat": {
+          "target_mean_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "prompt_forget": {
+          "target_mean_log_probability": {
+            "estimate": 3.140290343761444,
+            "ci_low": 2.6525791424867653,
+            "ci_high": 3.6320389807224274,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 3.6319206816809517,
+            "ci_low": 3.10366817387087,
+            "ci_high": 4.157919157509293,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": -500.75,
+            "ci_low": -891.65,
+            "ci_high": -220.5,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": 0.0003639197854137927,
+            "ci_low": -0.00012633820217122468,
+            "ci_high": 0.0009955772725993343,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.029378311875937563,
+            "ci_low": -0.009027252449629139,
+            "ci_high": 0.07262669147665213,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.625,
+            "ci_low": 0.25,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.625,
+            "ci_low": 0.25,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 31.5,
+            "ci_low": 31.125,
+            "ci_high": 31.875,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "prompt_neutral": {
+          "target_mean_log_probability": {
+            "estimate": 3.285839857232003,
+            "ci_low": 2.7976309132540513,
+            "ci_high": 3.788886220288417,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": 3.719423865420478,
+            "ci_low": 3.1797183636043753,
+            "ci_high": 4.237764374698911,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": -501.125,
+            "ci_low": -892.0218749999999,
+            "ci_high": -221.125,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.00588156300247031,
+            "ci_low": -0.010510248485854063,
+            "ci_high": -0.0030931821181660614,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 0.013810690527870456,
+            "ci_low": -0.032676334345624815,
+            "ci_high": 0.05959817256246292,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 31.5,
+            "ci_low": 31.125,
+            "ci_high": 31.875,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        }
+      },
+      "absolute_metrics": {
+        "present": {
+          "target_mean_log_probability": {
+            "estimate": -0.12087723641168502,
+            "ci_low": -0.13525484364302384,
+            "ci_high": -0.10797859572228932,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -0.007597018991197859,
+            "ci_low": -0.010636244671685354,
+            "ci_high": -0.005134594440460206,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.006442346522417018,
+            "ci_low": -0.007313362130570033,
+            "ci_high": -0.0056002819538116455,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.289807773117693,
+            "ci_low": 2.06801550748679,
+            "ci_high": 2.4824967423210973,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "masked": {
+          "target_mean_log_probability": {
+            "estimate": -2.9728606114784872,
+            "ci_low": -3.362908051978974,
+            "ci_high": -2.5767965336392327,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -3.364425424167088,
+            "ci_low": -3.8561309503657477,
+            "ci_high": -2.862517113855907,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 186.375,
+            "ci_low": 69.625,
+            "ci_high": 321.259375,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.0063828833834834835,
+            "ci_low": -0.007205477506710738,
+            "ci_high": -0.005600217694327944,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.2936903516698326,
+            "ci_low": 2.0705686927767277,
+            "ci_high": 2.488258330963907,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "static": {
+          "target_mean_log_probability": {
+            "estimate": -0.17002006840138206,
+            "ci_low": -0.22032748928382284,
+            "ci_high": -0.13278504961658094,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -0.0116322466305324,
+            "ci_low": -0.01596660784312657,
+            "ci_high": -0.007566214352846148,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.005965628888871935,
+            "ci_low": -0.0068932638762804555,
+            "ci_high": -0.005129806639813873,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.2750986859418347,
+            "ci_low": 2.0669019567485183,
+            "ci_high": 2.4521502241338013,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "ledger": {
+          "target_mean_log_probability": {
+            "estimate": -0.1633267683642251,
+            "ci_low": -0.20675757621370608,
+            "ci_high": -0.13631014284633458,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -0.011403013978685652,
+            "ci_low": -0.015639827996492387,
+            "ci_high": -0.007611731120518276,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.006100194826327935,
+            "ci_low": -0.0070388291263706465,
+            "ci_high": -0.005263732357946023,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.2888379681678046,
+            "ci_low": 2.0681923111279805,
+            "ci_high": 2.478836953639984,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "transport": {
+          "target_mean_log_probability": {
+            "estimate": -0.16420732864311763,
+            "ci_low": -0.2074900343872252,
+            "ci_high": -0.13550675905176573,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -0.010839235782623292,
+            "ci_low": -0.015124242241893496,
+            "ci_high": -0.0068640590991292695,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.006203759031951743,
+            "ci_low": -0.006942810132389976,
+            "ci_high": -0.0055617379882032915,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.2807603219651287,
+            "ci_low": 2.0439756281050716,
+            "ci_high": 2.4859933802630465,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "mask_transport": {
+          "target_mean_log_probability": {
+            "estimate": -3.3909251198882147,
+            "ci_low": -3.8999425158614205,
+            "ci_high": -2.90008384571189,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -3.7366995198386053,
+            "ci_low": -4.274971671381167,
+            "ci_high": -3.1930194858780934,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 520.625,
+            "ci_low": 221.9406250000001,
+            "ci_high": 934.3812499999999,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.0059664649622780935,
+            "ci_low": -0.006846213876885713,
+            "ci_high": -0.005164952285233,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.278084547117383,
+            "ci_low": 2.0517075427940914,
+            "ci_high": 2.4768285466894104,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "replay": {
+          "target_mean_log_probability": {
+            "estimate": -3.375644463300705,
+            "ci_low": -3.8750811378728773,
+            "ci_high": -2.8844625731309255,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -3.7302818928446086,
+            "ci_low": -4.248314901760645,
+            "ci_high": -3.1890246866004808,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 502.125,
+            "ci_low": 222.125,
+            "ci_high": 893.0218749999999,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.005807939187559502,
+            "ci_low": -0.006591593998449821,
+            "ci_high": -0.005013707252564253,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.2712222143112997,
+            "ci_low": 2.037637263914381,
+            "ci_high": 2.471691739863984,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "never_stored": {
+          "target_mean_log_probability": {
+            "estimate": -3.375644463300705,
+            "ci_low": -3.8750811378728773,
+            "ci_high": -2.8844625731309255,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -3.7302818928446086,
+            "ci_low": -4.248314901760645,
+            "ci_high": -3.1890246866004808,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 502.125,
+            "ci_low": 222.125,
+            "ci_high": 893.0218749999999,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.005807939187559502,
+            "ci_low": -0.006591593998449821,
+            "ci_high": -0.005013707252564253,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.2712222143112997,
+            "ci_low": 2.037637263914381,
+            "ci_high": 2.471691739863984,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "never_stored_repeat": {
+          "target_mean_log_probability": {
+            "estimate": -3.375644463300705,
+            "ci_low": -3.8750811378728773,
+            "ci_high": -2.8844625731309255,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -3.7302818928446086,
+            "ci_low": -4.248314901760645,
+            "ci_high": -3.1890246866004808,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 502.125,
+            "ci_low": 222.125,
+            "ci_high": 893.0218749999999,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.005807939187559502,
+            "ci_low": -0.006591593998449821,
+            "ci_high": -0.005013707252564253,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.2712222143112997,
+            "ci_low": 2.037637263914381,
+            "ci_high": 2.471691739863984,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "prompt_forget": {
+          "target_mean_log_probability": {
+            "estimate": -0.2353541195392609,
+            "ci_low": -0.26806479738581745,
+            "ci_high": -0.19992174116628514,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -0.09836121116365704,
+            "ci_low": -0.13940657649721416,
+            "ci_high": -0.06399985460298407,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 1.375,
+            "ci_low": 1.0,
+            "ci_high": 1.75,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.005444019402145709,
+            "ci_low": -0.006149884100471224,
+            "ci_high": -0.004832850404517361,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.300600526187237,
+            "ci_low": 2.0943604949221597,
+            "ci_high": 2.492958306308304,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 0.625,
+            "ci_low": 0.25,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 0.625,
+            "ci_low": 0.25,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 31.5,
+            "ci_low": 31.125,
+            "ci_high": 31.875,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        },
+        "prompt_neutral": {
+          "target_mean_log_probability": {
+            "estimate": -0.08980460606870197,
+            "ci_low": -0.10457229819680963,
+            "ci_high": -0.0748193828832536,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_log_probability": {
+            "estimate": -0.010858027424131122,
+            "ci_low": -0.013267026990652084,
+            "ci_high": -0.008954132539885386,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_first_token_rank": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_mean_log_probability": {
+            "estimate": -0.01168950219002981,
+            "ci_low": -0.016204484429939714,
+            "ci_high": -0.008659965630876955,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "continuation_nll": {
+            "estimate": 2.28503290483917,
+            "ci_low": 2.0390927048484113,
+            "ci_high": 2.484724246408196,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_exact": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "target_direct_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "retained_contains": {
+            "estimate": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "confidence": 0.95,
+            "n_records": 8
+          },
+          "extra_instruction_tokens": {
+            "estimate": 31.5,
+            "ci_low": 31.125,
+            "ci_high": 31.875,
+            "confidence": 0.95,
+            "n_records": 8
+          }
+        }
+      },
+      "answer_rates_wilson_by_context": {
+        "present": {
+          "target_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "masked": {
+          "target_exact": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "static": {
+          "target_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "ledger": {
+          "target_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "transport": {
+          "target_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "mask_transport": {
+          "target_exact": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "replay": {
+          "target_exact": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "never_stored": {
+          "target_exact": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "never_stored_repeat": {
+          "target_exact": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 0,
+            "n_independent_units": 8,
+            "estimate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.32440756488388023,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "prompt_forget": {
+          "target_exact": {
+            "successes": 5,
+            "n_independent_units": 8,
+            "estimate": 0.625,
+            "ci_low": 0.30574239460262737,
+            "ci_high": 0.8631557141764026,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 5,
+            "n_independent_units": 8,
+            "estimate": 0.625,
+            "ci_low": 0.30574239460262737,
+            "ci_high": 0.8631557141764026,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        },
+        "prompt_neutral": {
+          "target_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "target_contains": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_exact": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          },
+          "all_three_retained_contain": {
+            "successes": 8,
+            "n_independent_units": 8,
+            "estimate": 1.0,
+            "ci_low": 0.6755924351161198,
+            "ci_high": 1.0,
+            "confidence": 0.95
+          }
+        }
+      },
+      "qualified_records": 8,
+      "qualification_wilson": {
+        "successes": 8,
+        "n_independent_units": 8,
+        "estimate": 1.0,
+        "ci_low": 0.6755924351161198,
+        "ci_high": 1.0,
+        "confidence": 0.95
+      },
+      "replay_complete_state_and_logits_equal": 8,
+      "replay_state_max_abs_diff": 0.0,
+      "replay_logits_max_abs_diff": 0.0,
+      "repeat_numerical_floor_complete_state_and_logits_equal": 8,
+      "transport_residual_relative_to_present": [
+        0.645361084554829,
+        0.6738782872483199,
+        0.7110425831116823,
+        0.7153514913040815,
+        0.692312217527374,
+        0.7844490074128869,
+        0.8166975798393107,
+        0.6799970956728494
+      ]
+    }
+  },
+  "difference_of_own_reference_deltas_bf16_minus_8bit": {
+    "present": {
+      "target_mean_log_probability": {
+        "estimate": -0.03233779895873301,
+        "ci_low": -0.07626640115465418,
+        "ci_high": 0.003030849638439292,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_log_probability": {
+        "estimate": -0.04214963487216411,
+        "ci_low": -0.13628971746989665,
+        "ci_high": 0.02404380440711973,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_first_token_rank": {
+        "estimate": 0.25,
+        "ci_low": -12.0,
+        "ci_high": 14.125,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_mean_log_probability": {
+        "estimate": -0.00039500688749646395,
+        "ci_low": -0.0007209018621810526,
+        "ci_high": -0.00011497205842739715,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "continuation_nll": {
+        "estimate": 0.0073883618627275105,
+        "ci_low": -0.028119169246582896,
+        "ci_high": 0.043327999753611374,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "extra_instruction_tokens": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      }
+    },
+    "masked": {
+      "target_mean_log_probability": {
+        "estimate": -0.023006278844106692,
+        "ci_low": -0.06792931414785847,
+        "ci_high": 0.017363107843058556,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_log_probability": {
+        "estimate": -0.07027859262057712,
+        "ci_low": -0.15003634520939402,
+        "ci_high": 0.006089643729584329,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_first_token_rank": {
+        "estimate": 2.25,
+        "ci_low": -16.128124999999994,
+        "ci_high": 23.15624999999983,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_mean_log_probability": {
+        "estimate": -0.0003602567488554293,
+        "ci_low": -0.000497750164497466,
+        "ci_high": -0.00020074723337693232,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "continuation_nll": {
+        "estimate": -0.007955635272691414,
+        "ci_low": -0.03593617529756777,
+        "ci_high": 0.02659875014523051,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "extra_instruction_tokens": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      }
+    },
+    "static": {
+      "target_mean_log_probability": {
+        "estimate": -0.020177586589540775,
+        "ci_low": -0.06518673567544847,
+        "ci_high": 0.01798767214020092,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_log_probability": {
+        "estimate": -0.04257703764098042,
+        "ci_low": -0.13752027153968815,
+        "ci_high": 0.02381305647747849,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_first_token_rank": {
+        "estimate": 0.25,
+        "ci_low": -12.0,
+        "ci_high": 14.125,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_mean_log_probability": {
+        "estimate": 7.346414384387461e-06,
+        "ci_low": -0.00040121400009387396,
+        "ci_high": 0.00046692110716350466,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "continuation_nll": {
+        "estimate": -0.0020664654286503825,
+        "ci_low": -0.026459601499895884,
+        "ci_high": 0.024723841257038387,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "extra_instruction_tokens": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      }
+    },
+    "ledger": {
+      "target_mean_log_probability": {
+        "estimate": -0.029114483935492375,
+        "ci_low": -0.0713893936964727,
+        "ci_high": 0.006681304056019846,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_log_probability": {
+        "estimate": -0.04167129141943787,
+        "ci_low": -0.1362490142243246,
+        "ci_high": 0.025367219958986498,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_first_token_rank": {
+        "estimate": 0.25,
+        "ci_low": -12.0,
+        "ci_high": 14.125,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_mean_log_probability": {
+        "estimate": 3.31922182961067e-06,
+        "ci_low": -0.0005079125837674222,
+        "ci_high": 0.0005669964526696179,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "continuation_nll": {
+        "estimate": 0.008451036464106748,
+        "ci_low": -0.013546312571065533,
+        "ci_high": 0.032927785437422995,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "extra_instruction_tokens": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      }
+    },
+    "transport": {
+      "target_mean_log_probability": {
+        "estimate": -0.02783704456828895,
+        "ci_low": -0.07327969186007986,
+        "ci_high": 0.010457843793999519,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_log_probability": {
+        "estimate": -0.04189451336860661,
+        "ci_low": -0.13576779127120955,
+        "ci_high": 0.0240110521231376,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_first_token_rank": {
+        "estimate": 0.25,
+        "ci_low": -12.0,
+        "ci_high": 14.125,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_mean_log_probability": {
+        "estimate": -0.0003469306325155593,
+        "ci_low": -0.0008026013984566646,
+        "ci_high": 9.157036347363986e-05,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "continuation_nll": {
+        "estimate": -0.011264499423420116,
+        "ci_low": -0.04647693930205375,
+        "ci_high": 0.019977038739322182,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "extra_instruction_tokens": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      }
+    },
+    "mask_transport": {
+      "target_mean_log_probability": {
+        "estimate": -0.030938817489714665,
+        "ci_low": -0.054375486004920134,
+        "ci_high": -0.009424537186111807,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_log_probability": {
+        "estimate": -0.025047392504555788,
+        "ci_low": -0.08461107151848922,
+        "ci_high": 0.024213964300496174,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_first_token_rank": {
+        "estimate": 27.625,
+        "ci_low": -14.503124999999994,
+        "ci_high": 71.75312499999998,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_mean_log_probability": {
+        "estimate": -0.0002061817381117081,
+        "ci_low": -0.0005733816656801439,
+        "ci_high": 0.00023421640749330847,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "continuation_nll": {
+        "estimate": -0.021971101753460037,
+        "ci_low": -0.05787773659788309,
+        "ci_high": 0.016311057643120283,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "extra_instruction_tokens": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      }
+    },
+    "replay": {
+      "target_mean_log_probability": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_log_probability": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_first_token_rank": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_mean_log_probability": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "continuation_nll": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "extra_instruction_tokens": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      }
+    },
+    "never_stored": {
+      "target_mean_log_probability": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_log_probability": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_first_token_rank": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_mean_log_probability": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "continuation_nll": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "extra_instruction_tokens": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      }
+    },
+    "never_stored_repeat": {
+      "target_mean_log_probability": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_log_probability": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_first_token_rank": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_mean_log_probability": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "continuation_nll": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "extra_instruction_tokens": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      }
+    },
+    "prompt_forget": {
+      "target_mean_log_probability": {
+        "estimate": -0.01920702457427989,
+        "ci_low": -0.0731304133364134,
+        "ci_high": 0.027811409745897547,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_log_probability": {
+        "estimate": -0.0370209723711013,
+        "ci_low": -0.12901986424412035,
+        "ci_high": 0.028040670145835177,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_first_token_rank": {
+        "estimate": 0.25,
+        "ci_low": -12.0,
+        "ci_high": 14.125,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_mean_log_probability": {
+        "estimate": 0.00019868309535677484,
+        "ci_low": -9.992782558713564e-05,
+        "ci_high": 0.0005256352680070063,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "continuation_nll": {
+        "estimate": -0.0041152980386841564,
+        "ci_low": -0.04185843253419522,
+        "ci_high": 0.037425246069335116,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "extra_instruction_tokens": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      }
+    },
+    "prompt_neutral": {
+      "target_mean_log_probability": {
+        "estimate": -0.026720198279335416,
+        "ci_low": -0.07238593078085336,
+        "ci_high": 0.014978141912391796,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_log_probability": {
+        "estimate": -0.04282671553747991,
+        "ci_low": -0.13703603991440336,
+        "ci_high": 0.023271132537296756,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_first_token_rank": {
+        "estimate": 0.25,
+        "ci_low": -12.0,
+        "ci_high": 14.125,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_mean_log_probability": {
+        "estimate": -0.0021155942684758914,
+        "ci_low": -0.005320210474981834,
+        "ci_high": 6.934133156267152e-06,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "continuation_nll": {
+        "estimate": -0.008795235332248269,
+        "ci_low": -0.0393164436442019,
+        "ci_high": 0.02361047811667345,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_exact": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "target_direct_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "retained_contains": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      },
+      "extra_instruction_tokens": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "n_records": 8
+      }
+    }
+  },
+  "limitations": "Eight preselected synthetic contexts provide a small matched precision control for these artifacts and runtime; no general quantization or population-equivalence claim follows. Utility consists of three retained synthetic records and two continuations per context from a fixed six-passage bank, not a broad language benchmark. A zero observed replay difference is not a universal guarantee.",
+  "lineage_note": "The 8-bit variant was quantized in memory from the exact SHA-verified BF16 master, using the recorded MLX recipe.",
+  "arithmetic_diagnostics": {
+    "8bit": {
+      "directory": "followup/raw/transport_floor_derived8_v1",
+      "summary": {
+        "schema": "kda-transport-arithmetic-floor-summary-v1",
+        "status": "complete",
+        "precision": "8bit",
+        "model_variant": "derived_in_memory_quantization",
+        "tiny_plumbing_only": false,
+        "n_records": 8,
+        "record_ids": [
+          "kda-fu-evaluation-000",
+          "kda-fu-evaluation-001",
+          "kda-fu-evaluation-002",
+          "kda-fu-evaluation-003",
+          "kda-fu-evaluation-006",
+          "kda-fu-evaluation-007",
+          "kda-fu-evaluation-008",
+          "kda-fu-evaluation-009"
+        ],
+        "global_residual_to_reconstruction_error_ratios": [
+          79761.88231434986,
+          84695.28121304946,
+          73138.53751685134,
+          69231.46003538994,
+          25055.250773251748,
+          26105.44705280211,
+          22649.297218502117,
+          21927.646341105163
+        ],
+        "global_residual_to_max_empirical_floor_ratios": [
+          79761.88231434986,
+          84695.28121304946,
+          73138.53751685134,
+          69231.46003538994,
+          25055.250773251748,
+          26105.44705280211,
+          22649.297218502117,
+          21927.646341105163
+        ],
+        "minimum_global_combined_floor_ratio": 21927.646341105163,
+        "maximum_global_combined_floor_ratio": 84695.28121304946,
+        "max_present_reconstruction_relative_error": 1.0945065501141505e-06,
+        "max_omitted_reconstruction_relative_error": 1.0826273658161595e-06
+      },
+      "records": [
+        {
+          "record_id": "kda-fu-evaluation-000",
+          "suffix_class": "short",
+          "suffix_tokens": 128,
+          "global": {
+            "native_transport_residual_frobenius": 5.968252794178128,
+            "serial_transport_residual_frobenius": 5.968252733119885,
+            "present_reconstruction_error_frobenius": 3.7600303364111344e-05,
+            "omitted_reconstruction_error_frobenius": 3.722557362129661e-05,
+            "frozen_input_identity_error_frobenius": 4.906235068670031e-05,
+            "residual_change_from_reconstruction_frobenius": 5.239678687256892e-05,
+            "native_present_minus_omitted_frobenius": 8.970147703026893,
+            "native_present_frobenius": 98.19151925664782,
+            "native_omitted_frobenius": 96.18426825518527,
+            "reconstruction_error_triangle_sum": 7.482587698540795e-05,
+            "residual_to_reconstruction_error_ratio": 79761.88231434986,
+            "max_empirical_floor": 7.482587698540795e-05,
+            "residual_to_max_empirical_floor_ratio": 79761.88231434986,
+            "native_residual_relative_to_present_difference": 0.665346100395225,
+            "present_reconstruction_relative_error": 3.8292821670101314e-07,
+            "omitted_reconstruction_relative_error": 3.8702351534799753e-07
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.46826568245887756,
+            "serial_transport_residual": 0.468265563249588,
+            "present_reconstruction_error": 3.337860107421875e-06,
+            "omitted_reconstruction_error": 2.86102294921875e-06,
+            "frozen_input_identity_error": 4.649162292480469e-06,
+            "residual_change_from_reconstruction": 3.814697265625e-06
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 0,
+          "layer_residuals_above_ten_times_observed_floor": 20
+        },
+        {
+          "record_id": "kda-fu-evaluation-001",
+          "suffix_class": "short",
+          "suffix_tokens": 128,
+          "global": {
+            "native_transport_residual_frobenius": 6.304441338529343,
+            "serial_transport_residual_frobenius": 6.304441323938879,
+            "present_reconstruction_error_frobenius": 3.7404515528077824e-05,
+            "omitted_reconstruction_error_frobenius": 3.703223287435837e-05,
+            "frozen_input_identity_error_frobenius": 4.975405363968626e-05,
+            "residual_change_from_reconstruction_frobenius": 5.217674747866984e-05,
+            "native_present_minus_omitted_frobenius": 8.984279377335714,
+            "native_present_frobenius": 96.9347323475989,
+            "native_omitted_frobenius": 95.11301027107832,
+            "reconstruction_error_triangle_sum": 7.443674840243619e-05,
+            "residual_to_reconstruction_error_ratio": 84695.28121304946,
+            "max_empirical_floor": 7.443674840243619e-05,
+            "residual_to_max_empirical_floor_ratio": 84695.28121304946,
+            "native_residual_relative_to_present_difference": 0.7017192001434537,
+            "present_reconstruction_relative_error": 3.858732017121451e-07,
+            "omitted_reconstruction_relative_error": 3.8934981417173184e-07
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.3306892514228821,
+            "serial_transport_residual": 0.3306892514228821,
+            "present_reconstruction_error": 3.337860107421875e-06,
+            "omitted_reconstruction_error": 3.0994415283203125e-06,
+            "frozen_input_identity_error": 6.660819053649902e-06,
+            "residual_change_from_reconstruction": 4.5299530029296875e-06
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 1,
+          "layer_residuals_above_ten_times_observed_floor": 19
+        },
+        {
+          "record_id": "kda-fu-evaluation-002",
+          "suffix_class": "short",
+          "suffix_tokens": 128,
+          "global": {
+            "native_transport_residual_frobenius": 5.69725360663339,
+            "serial_transport_residual_frobenius": 5.697253517227302,
+            "present_reconstruction_error_frobenius": 3.901787933152228e-05,
+            "omitted_reconstruction_error_frobenius": 3.887886019954539e-05,
+            "frozen_input_identity_error_frobenius": 5.1552141478573516e-05,
+            "residual_change_from_reconstruction_frobenius": 5.5501313463055835e-05,
+            "native_present_minus_omitted_frobenius": 8.34326300732722,
+            "native_present_frobenius": 99.6233954723323,
+            "native_omitted_frobenius": 97.9885869289361,
+            "reconstruction_error_triangle_sum": 7.789673953106766e-05,
+            "residual_to_reconstruction_error_ratio": 73138.53751685134,
+            "max_empirical_floor": 7.789673953106766e-05,
+            "residual_to_max_empirical_floor_ratio": 73138.53751685134,
+            "native_residual_relative_to_present_difference": 0.6828567673858474,
+            "present_reconstruction_relative_error": 3.916537791803978e-07,
+            "omitted_reconstruction_relative_error": 3.967692709737856e-07
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.3857448101043701,
+            "serial_transport_residual": 0.3857450485229492,
+            "present_reconstruction_error": 3.5762786865234375e-06,
+            "omitted_reconstruction_error": 3.337860107421875e-06,
+            "frozen_input_identity_error": 4.9211084842681885e-06,
+            "residual_change_from_reconstruction": 5.4836273193359375e-06
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 0,
+          "layer_residuals_above_ten_times_observed_floor": 20
+        },
+        {
+          "record_id": "kda-fu-evaluation-003",
+          "suffix_class": "short",
+          "suffix_tokens": 128,
+          "global": {
+            "native_transport_residual_frobenius": 5.401156829997189,
+            "serial_transport_residual_frobenius": 5.401156656759364,
+            "present_reconstruction_error_frobenius": 3.931819159293546e-05,
+            "omitted_reconstruction_error_frobenius": 3.8697739708184136e-05,
+            "frozen_input_identity_error_frobenius": 5.19164193996826e-05,
+            "residual_change_from_reconstruction_frobenius": 5.492882042453383e-05,
+            "native_present_minus_omitted_frobenius": 7.94314123920585,
+            "native_present_frobenius": 99.49012959365736,
+            "native_omitted_frobenius": 97.71900367826406,
+            "reconstruction_error_triangle_sum": 7.80159313011196e-05,
+            "residual_to_reconstruction_error_ratio": 69231.46003538994,
+            "max_empirical_floor": 7.80159313011196e-05,
+            "residual_to_max_empirical_floor_ratio": 69231.46003538994,
+            "native_residual_relative_to_present_difference": 0.6799774380616695,
+            "present_reconstruction_relative_error": 3.951969080100791e-07,
+            "omitted_reconstruction_relative_error": 3.9601037926660516e-07
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.18060314655303955,
+            "serial_transport_residual": 0.18060302734375,
+            "present_reconstruction_error": 2.86102294921875e-06,
+            "omitted_reconstruction_error": 3.814697265625e-06,
+            "frozen_input_identity_error": 3.337860107421875e-06,
+            "residual_change_from_reconstruction": 6.198883056640625e-06
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 1,
+          "layer_residuals_above_ten_times_observed_floor": 19
+        },
+        {
+          "record_id": "kda-fu-evaluation-006",
+          "suffix_class": "long",
+          "suffix_tokens": 1024,
+          "global": {
+            "native_transport_residual_frobenius": 5.837330416414595,
+            "serial_transport_residual_frobenius": 5.837330319953521,
+            "present_reconstruction_error_frobenius": 0.00011761211554722058,
+            "omitted_reconstruction_error_frobenius": 0.00011536621179989016,
+            "frozen_input_identity_error_frobenius": 0.00015906250088638547,
+            "residual_change_from_reconstruction_frobenius": 0.00016351652239163323,
+            "native_present_minus_omitted_frobenius": 8.287358966750118,
+            "native_present_frobenius": 110.52637322195757,
+            "native_omitted_frobenius": 109.38632320318645,
+            "reconstruction_error_triangle_sum": 0.00023297832734711074,
+            "residual_to_reconstruction_error_ratio": 25055.250773251748,
+            "max_empirical_floor": 0.00023297832734711074,
+            "residual_to_max_empirical_floor_ratio": 25055.250773251748,
+            "native_residual_relative_to_present_difference": 0.7043655813431839,
+            "present_reconstruction_relative_error": 1.0641090639157545e-06,
+            "omitted_reconstruction_relative_error": 1.0546676076276556e-06
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.3477407395839691,
+            "serial_transport_residual": 0.34773871302604675,
+            "present_reconstruction_error": 7.62939453125e-06,
+            "omitted_reconstruction_error": 8.58306884765625e-06,
+            "frozen_input_identity_error": 1.614750362932682e-05,
+            "residual_change_from_reconstruction": 1.3589859008789062e-05
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 0,
+          "layer_residuals_above_ten_times_observed_floor": 20
+        },
+        {
+          "record_id": "kda-fu-evaluation-007",
+          "suffix_class": "long",
+          "suffix_tokens": 1024,
+          "global": {
+            "native_transport_residual_frobenius": 6.063311106579702,
+            "serial_transport_residual_frobenius": 6.063311406251439,
+            "present_reconstruction_error_frobenius": 0.00011715736279328444,
+            "omitted_reconstruction_error_frobenius": 0.00011510493458533401,
+            "frozen_input_identity_error_frobenius": 0.0001578943214624359,
+            "residual_change_from_reconstruction_frobenius": 0.00016409200283730639,
+            "native_present_minus_omitted_frobenius": 7.77697311296088,
+            "native_present_frobenius": 110.5033073649864,
+            "native_omitted_frobenius": 109.20198418188616,
+            "reconstruction_error_triangle_sum": 0.00023226229737861845,
+            "residual_to_reconstruction_error_ratio": 26105.44705280211,
+            "max_empirical_floor": 0.00023226229737861845,
+            "residual_to_max_empirical_floor_ratio": 26105.44705280211,
+            "native_residual_relative_to_present_difference": 0.7796492309424038,
+            "present_reconstruction_relative_error": 1.0602158938675027e-06,
+            "omitted_reconstruction_relative_error": 1.054055340181511e-06
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.18219351768493652,
+            "serial_transport_residual": 0.18219318985939026,
+            "present_reconstruction_error": 1.049041748046875e-05,
+            "omitted_reconstruction_error": 8.58306884765625e-06,
+            "frozen_input_identity_error": 9.261071681976318e-06,
+            "residual_change_from_reconstruction": 1.3828277587890625e-05
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 0,
+          "layer_residuals_above_ten_times_observed_floor": 20
+        },
+        {
+          "record_id": "kda-fu-evaluation-008",
+          "suffix_class": "long",
+          "suffix_tokens": 1024,
+          "global": {
+            "native_transport_residual_frobenius": 5.394119039165297,
+            "serial_transport_residual_frobenius": 5.394118379342785,
+            "present_reconstruction_error_frobenius": 0.00012105689025014768,
+            "omitted_reconstruction_error_frobenius": 0.00011710145025495474,
+            "frozen_input_identity_error_frobenius": 0.00016556178972416803,
+            "residual_change_from_reconstruction_frobenius": 0.00016839942355875088,
+            "native_present_minus_omitted_frobenius": 6.926649859559736,
+            "native_present_frobenius": 110.60408020173307,
+            "native_omitted_frobenius": 109.5998229857737,
+            "reconstruction_error_triangle_sum": 0.00023815834050510242,
+            "residual_to_reconstruction_error_ratio": 22649.297218502117,
+            "max_empirical_floor": 0.00023815834050510242,
+            "residual_to_max_empirical_floor_ratio": 22649.297218502117,
+            "native_residual_relative_to_present_difference": 0.7787486228599625,
+            "present_reconstruction_relative_error": 1.0945065501141505e-06,
+            "omitted_reconstruction_relative_error": 1.0684456148269033e-06
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.17739784717559814,
+            "serial_transport_residual": 0.17739790678024292,
+            "present_reconstruction_error": 1.0967254638671875e-05,
+            "omitted_reconstruction_error": 7.867813110351562e-06,
+            "frozen_input_identity_error": 1.1235475540161133e-05,
+            "residual_change_from_reconstruction": 1.4543533325195312e-05
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 1,
+          "layer_residuals_above_ten_times_observed_floor": 19
+        },
+        {
+          "record_id": "kda-fu-evaluation-009",
+          "suffix_class": "long",
+          "suffix_tokens": 1024,
+          "global": {
+            "native_transport_residual_frobenius": 5.232751405114728,
+            "serial_transport_residual_frobenius": 5.232751157873021,
+            "present_reconstruction_error_frobenius": 0.00011994764048703386,
+            "omitted_reconstruction_error_frobenius": 0.00011868952666325478,
+            "frozen_input_identity_error_frobenius": 0.0001620070223229107,
+            "residual_change_from_reconstruction_frobenius": 0.00016810612942810295,
+            "native_present_minus_omitted_frobenius": 7.52004012001766,
+            "native_present_frobenius": 110.77053764563567,
+            "native_omitted_frobenius": 109.6310054695305,
+            "reconstruction_error_triangle_sum": 0.00023863716715028866,
+            "residual_to_reconstruction_error_ratio": 21927.646341105163,
+            "max_empirical_floor": 0.00023863716715028866,
+            "residual_to_max_empirical_floor_ratio": 21927.646341105163,
+            "native_residual_relative_to_present_difference": 0.6958408893571754,
+            "present_reconstruction_relative_error": 1.0828478676410916e-06,
+            "omitted_reconstruction_relative_error": 1.0826273658161595e-06
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.2476840317249298,
+            "serial_transport_residual": 0.2476842999458313,
+            "present_reconstruction_error": 1.621246337890625e-05,
+            "omitted_reconstruction_error": 1.0013580322265625e-05,
+            "frozen_input_identity_error": 1.3900105841457844e-05,
+            "residual_change_from_reconstruction": 1.811981201171875e-05
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 0,
+          "layer_residuals_above_ten_times_observed_floor": 20
+        }
+      ],
+      "core_and_diagnostic_transport_residuals_agree": true
+    },
+    "bf16": {
+      "directory": "followup/raw/transport_floor_bf16_v1",
+      "summary": {
+        "schema": "kda-transport-arithmetic-floor-summary-v1",
+        "status": "complete",
+        "precision": "bf16",
+        "tiny_plumbing_only": false,
+        "n_records": 8,
+        "record_ids": [
+          "kda-fu-evaluation-000",
+          "kda-fu-evaluation-001",
+          "kda-fu-evaluation-002",
+          "kda-fu-evaluation-003",
+          "kda-fu-evaluation-006",
+          "kda-fu-evaluation-007",
+          "kda-fu-evaluation-008",
+          "kda-fu-evaluation-009"
+        ],
+        "global_residual_to_reconstruction_error_ratios": [
+          75555.64326024134,
+          77933.50582635852,
+          80373.457923389,
+          77001.55268863366,
+          24661.110512300158,
+          26526.310938435323,
+          25422.258684016393,
+          20970.212963220954
+        ],
+        "global_residual_to_max_empirical_floor_ratios": [
+          75555.64326024134,
+          77933.50582635852,
+          80373.457923389,
+          77001.55268863366,
+          24661.110512300158,
+          26526.310938435323,
+          25422.258684016393,
+          20970.212963220954
+        ],
+        "minimum_global_ratio": 20970.212963220954,
+        "maximum_global_ratio": 80373.457923389,
+        "minimum_global_combined_floor_ratio": 20970.212963220954,
+        "maximum_global_combined_floor_ratio": 80373.457923389,
+        "max_present_reconstruction_relative_error": 1.0835630246338259e-06,
+        "max_omitted_reconstruction_relative_error": 1.0728147829578905e-06
+      },
+      "records": [
+        {
+          "record_id": "kda-fu-evaluation-000",
+          "suffix_class": "short",
+          "suffix_tokens": 128,
+          "global": {
+            "native_transport_residual_frobenius": 5.704582827561835,
+            "serial_transport_residual_frobenius": 5.704582590678989,
+            "present_reconstruction_error_frobenius": 3.819073181598051e-05,
+            "omitted_reconstruction_error_frobenius": 3.731101208305772e-05,
+            "frozen_input_identity_error_frobenius": 5.0830351531748575e-05,
+            "residual_change_from_reconstruction_frobenius": 5.373117239535798e-05,
+            "native_present_minus_omitted_frobenius": 8.839365998488839,
+            "native_present_frobenius": 98.45911946603869,
+            "native_omitted_frobenius": 96.38840799491327,
+            "reconstruction_error_triangle_sum": 7.550174389903823e-05,
+            "residual_to_reconstruction_error_ratio": 75555.64326024134,
+            "max_empirical_floor": 7.550174389903823e-05,
+            "residual_to_max_empirical_floor_ratio": 75555.64326024134,
+            "native_residual_relative_to_present_difference": 0.6453610845548289,
+            "present_reconstruction_relative_error": 3.878841495139875e-07,
+            "omitted_reconstruction_relative_error": 3.87090241028016e-07
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.2886766195297241,
+            "serial_transport_residual": 0.288677453994751,
+            "present_reconstruction_error": 2.86102294921875e-06,
+            "omitted_reconstruction_error": 3.0994415283203125e-06,
+            "frozen_input_identity_error": 4.707835614681244e-06,
+            "residual_change_from_reconstruction": 4.0531158447265625e-06
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 0,
+          "layer_residuals_above_ten_times_observed_floor": 20
+        },
+        {
+          "record_id": "kda-fu-evaluation-001",
+          "suffix_class": "short",
+          "suffix_tokens": 128,
+          "global": {
+            "native_transport_residual_frobenius": 5.842808231667465,
+            "serial_transport_residual_frobenius": 5.842808382973712,
+            "present_reconstruction_error_frobenius": 3.770054210439799e-05,
+            "omitted_reconstruction_error_frobenius": 3.727116832635903e-05,
+            "frozen_input_identity_error_frobenius": 5.0093365091549105e-05,
+            "residual_change_from_reconstruction_frobenius": 5.3431435618508886e-05,
+            "native_present_minus_omitted_frobenius": 8.670420671254583,
+            "native_present_frobenius": 97.19021448785203,
+            "native_omitted_frobenius": 95.20514139182579,
+            "reconstruction_error_triangle_sum": 7.497171043075701e-05,
+            "residual_to_reconstruction_error_ratio": 77933.50582635852,
+            "max_empirical_floor": 7.497171043075701e-05,
+            "residual_to_max_empirical_floor_ratio": 77933.50582635852,
+            "native_residual_relative_to_present_difference": 0.6738782872483198,
+            "present_reconstruction_relative_error": 3.879047114265834e-07,
+            "omitted_reconstruction_relative_error": 3.9148272647341603e-07
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.26611873507499695,
+            "serial_transport_residual": 0.266118586063385,
+            "present_reconstruction_error": 4.76837158203125e-06,
+            "omitted_reconstruction_error": 4.291534423828125e-06,
+            "frozen_input_identity_error": 3.786059096455574e-06,
+            "residual_change_from_reconstruction": 9.059906005859375e-06
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 1,
+          "layer_residuals_above_ten_times_observed_floor": 19
+        },
+        {
+          "record_id": "kda-fu-evaluation-002",
+          "suffix_class": "short",
+          "suffix_tokens": 128,
+          "global": {
+            "native_transport_residual_frobenius": 6.216145834994794,
+            "serial_transport_residual_frobenius": 6.216145825105056,
+            "present_reconstruction_error_frobenius": 3.91954800212185e-05,
+            "omitted_reconstruction_error_frobenius": 3.8145298832914524e-05,
+            "frozen_input_identity_error_frobenius": 5.063599701488597e-05,
+            "residual_change_from_reconstruction_frobenius": 5.430645542314598e-05,
+            "native_present_minus_omitted_frobenius": 8.742297553813925,
+            "native_present_frobenius": 99.65634654323641,
+            "native_omitted_frobenius": 98.03770625358237,
+            "reconstruction_error_triangle_sum": 7.734077885413303e-05,
+            "residual_to_reconstruction_error_ratio": 80373.457923389,
+            "max_empirical_floor": 7.734077885413303e-05,
+            "residual_to_max_empirical_floor_ratio": 80373.457923389,
+            "native_residual_relative_to_present_difference": 0.7110425831116822,
+            "present_reconstruction_relative_error": 3.933064112902568e-07,
+            "omitted_reconstruction_relative_error": 3.8908803857822474e-07
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.41640961170196533,
+            "serial_transport_residual": 0.4164094924926758,
+            "present_reconstruction_error": 3.337860107421875e-06,
+            "omitted_reconstruction_error": 3.337860107421875e-06,
+            "frozen_input_identity_error": 3.2298266887664795e-06,
+            "residual_change_from_reconstruction": 3.0994415283203125e-06
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 0,
+          "layer_residuals_above_ten_times_observed_floor": 20
+        },
+        {
+          "record_id": "kda-fu-evaluation-003",
+          "suffix_class": "short",
+          "suffix_tokens": 128,
+          "global": {
+            "native_transport_residual_frobenius": 5.9171614285085035,
+            "serial_transport_residual_frobenius": 5.9171612682345165,
+            "present_reconstruction_error_frobenius": 3.905430112346231e-05,
+            "omitted_reconstruction_error_frobenius": 3.77904016377321e-05,
+            "frozen_input_identity_error_frobenius": 5.0521732185323364e-05,
+            "residual_change_from_reconstruction_frobenius": 5.433095445902073e-05,
+            "native_present_minus_omitted_frobenius": 8.271683921035173,
+            "native_present_frobenius": 99.70413441305655,
+            "native_omitted_frobenius": 98.01678436965767,
+            "reconstruction_error_triangle_sum": 7.684470276119441e-05,
+            "residual_to_reconstruction_error_ratio": 77001.55268863366,
+            "max_empirical_floor": 7.684470276119441e-05,
+            "residual_to_max_empirical_floor_ratio": 77001.55268863366,
+            "native_residual_relative_to_present_difference": 0.7153514913040815,
+            "present_reconstruction_relative_error": 3.9170192242647895e-07,
+            "omitted_reconstruction_relative_error": 3.855503103959264e-07
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.23669683933258057,
+            "serial_transport_residual": 0.2366967499256134,
+            "present_reconstruction_error": 4.291534423828125e-06,
+            "omitted_reconstruction_error": 3.814697265625e-06,
+            "frozen_input_identity_error": 2.8461217880249023e-06,
+            "residual_change_from_reconstruction": 4.0531158447265625e-06
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 1,
+          "layer_residuals_above_ten_times_observed_floor": 19
+        },
+        {
+          "record_id": "kda-fu-evaluation-006",
+          "suffix_class": "long",
+          "suffix_tokens": 1024,
+          "global": {
+            "native_transport_residual_frobenius": 5.703557160882711,
+            "serial_transport_residual_frobenius": 5.7035573393553545,
+            "present_reconstruction_error_frobenius": 0.00011655475998792259,
+            "omitted_reconstruction_error_frobenius": 0.00011472262543387186,
+            "frozen_input_identity_error_frobenius": 0.00015868690407627183,
+            "residual_change_from_reconstruction_frobenius": 0.00016066081385224742,
+            "native_present_minus_omitted_frobenius": 8.238417604781317,
+            "native_present_frobenius": 110.70980717001515,
+            "native_omitted_frobenius": 109.51066979634774,
+            "reconstruction_error_triangle_sum": 0.00023127738542179447,
+            "residual_to_reconstruction_error_ratio": 24661.110512300158,
+            "max_empirical_floor": 0.00023127738542179447,
+            "residual_to_max_empirical_floor_ratio": 24661.110512300158,
+            "native_residual_relative_to_present_difference": 0.692312217527374,
+            "present_reconstruction_relative_error": 1.0527952578666445e-06,
+            "omitted_reconstruction_relative_error": 1.0475931308539759e-06
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.3545672297477722,
+            "serial_transport_residual": 0.35456663370132446,
+            "present_reconstruction_error": 7.3909759521484375e-06,
+            "omitted_reconstruction_error": 7.62939453125e-06,
+            "frozen_input_identity_error": 1.5312572941184044e-05,
+            "residual_change_from_reconstruction": 1.049041748046875e-05
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 0,
+          "layer_residuals_above_ten_times_observed_floor": 20
+        },
+        {
+          "record_id": "kda-fu-evaluation-007",
+          "suffix_class": "long",
+          "suffix_tokens": 1024,
+          "global": {
+            "native_transport_residual_frobenius": 6.127246727144022,
+            "serial_transport_residual_frobenius": 6.127247735341704,
+            "present_reconstruction_error_frobenius": 0.00011789149969780813,
+            "omitted_reconstruction_error_frobenius": 0.00011309601836924212,
+            "frozen_input_identity_error_frobenius": 0.0001585347197545991,
+            "residual_change_from_reconstruction_frobenius": 0.0001623960431860583,
+            "native_present_minus_omitted_frobenius": 7.81089231963169,
+            "native_present_frobenius": 110.70316230611222,
+            "native_omitted_frobenius": 109.4842873399371,
+            "reconstruction_error_triangle_sum": 0.00023098751806705024,
+            "residual_to_reconstruction_error_ratio": 26526.310938435323,
+            "max_empirical_floor": 0.00023098751806705024,
+            "residual_to_max_empirical_floor_ratio": 26526.310938435323,
+            "native_residual_relative_to_present_difference": 0.784449007412887,
+            "present_reconstruction_relative_error": 1.0649334422066372e-06,
+            "omitted_reconstruction_relative_error": 1.0329885786998e-06
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.20374324917793274,
+            "serial_transport_residual": 0.20374324917793274,
+            "present_reconstruction_error": 8.58306884765625e-06,
+            "omitted_reconstruction_error": 1.1682510375976562e-05,
+            "frozen_input_identity_error": 1.6011297702789307e-05,
+            "residual_change_from_reconstruction": 1.2636184692382812e-05
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 0,
+          "layer_residuals_above_ten_times_observed_floor": 20
+        },
+        {
+          "record_id": "kda-fu-evaluation-008",
+          "suffix_class": "long",
+          "suffix_tokens": 1024,
+          "global": {
+            "native_transport_residual_frobenius": 6.0401904523716485,
+            "serial_transport_residual_frobenius": 6.040190463685914,
+            "present_reconstruction_error_frobenius": 0.00012001087541659326,
+            "omitted_reconstruction_error_frobenius": 0.00011758368797164206,
+            "frozen_input_identity_error_frobenius": 0.00016491363282147454,
+            "residual_change_from_reconstruction_frobenius": 0.0001668386297881304,
+            "native_present_minus_omitted_frobenius": 7.395871619406643,
+            "native_present_frobenius": 110.75578687003384,
+            "native_omitted_frobenius": 109.82501000625822,
+            "reconstruction_error_triangle_sum": 0.0002375945633882353,
+            "residual_to_reconstruction_error_ratio": 25422.258684016393,
+            "max_empirical_floor": 0.0002375945633882353,
+            "residual_to_max_empirical_floor_ratio": 25422.258684016393,
+            "native_residual_relative_to_present_difference": 0.8166975798393107,
+            "present_reconstruction_relative_error": 1.0835630246338259e-06,
+            "omitted_reconstruction_relative_error": 1.0706458207009652e-06
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.1741526573896408,
+            "serial_transport_residual": 0.17415259778499603,
+            "present_reconstruction_error": 7.152557373046875e-06,
+            "omitted_reconstruction_error": 1.0013580322265625e-05,
+            "frozen_input_identity_error": 1.7989426851272583e-05,
+            "residual_change_from_reconstruction": 1.6689300537109375e-05
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 1,
+          "layer_residuals_above_ten_times_observed_floor": 19
+        },
+        {
+          "record_id": "kda-fu-evaluation-009",
+          "suffix_class": "long",
+          "suffix_tokens": 1024,
+          "global": {
+            "native_transport_residual_frobenius": 4.990590285685222,
+            "serial_transport_residual_frobenius": 4.990589964745064,
+            "present_reconstruction_error_frobenius": 0.00011997834579924179,
+            "omitted_reconstruction_error_frobenius": 0.00011800637540688389,
+            "frozen_input_identity_error_frobenius": 0.00016809303761166947,
+            "residual_change_from_reconstruction_frobenius": 0.00016575154716369985,
+            "native_present_minus_omitted_frobenius": 7.339134707255021,
+            "native_present_frobenius": 111.13833769121082,
+            "native_omitted_frobenius": 109.99696991639591,
+            "reconstruction_error_triangle_sum": 0.0002379847212061257,
+            "residual_to_reconstruction_error_ratio": 20970.212963220954,
+            "max_empirical_floor": 0.0002379847212061257,
+            "residual_to_max_empirical_floor_ratio": 20970.212963220954,
+            "native_residual_relative_to_present_difference": 0.6799970956728494,
+            "present_reconstruction_relative_error": 1.0795405824099352e-06,
+            "omitted_reconstruction_relative_error": 1.0728147829578905e-06
+          },
+          "max_abs_errors": {
+            "native_transport_residual": 0.18462605774402618,
+            "serial_transport_residual": 0.1846257597208023,
+            "present_reconstruction_error": 1.049041748046875e-05,
+            "omitted_reconstruction_error": 1.0967254638671875e-05,
+            "frozen_input_identity_error": 1.5245750546455383e-05,
+            "residual_change_from_reconstruction": 1.4781951904296875e-05
+          },
+          "layer_count": 20,
+          "layer_residuals_at_or_below_observed_floor": 0,
+          "layer_residuals_above_ten_times_observed_floor": 20
+        }
+      ],
+      "core_and_diagnostic_transport_residuals_agree": true
+    }
+  },
+  "arithmetic_diagnostics_definition": "Independently reconstruct native present/omitted recurrent states from each branch's captured k,v,g,beta in serial fp32. Also propagate two initial states through identical present inputs/writes and compare their difference to separately transported receipt. The reported empirical floor is max(sum of native-versus-serial endpoint reconstruction norms, frozen-input identity-error norm). It is an observed numerical diagnostic, not a rigorous bound or security guarantee."
+}

@@ -1,0 +1,62 @@
+% Automatically generated; do not hand-edit numerical values.
+% Source: followup/analysis/kimi8_analysis_v2.json
+% Original source SHA-256 before path anonymization: c6c0497e220b426f04c930530ae4fc14adfbbe69fd744d13d3be41ae639d865a
+% Manifest SHA-256: 2003aaddfece115196f8f2a6d457d90004acc26484e6645e6664807df488eda5
+% This fragment needs only standard LaTeX; table* spans two IEEE columns.
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{Prospective synthetic Kimi Linear 48B-A3B 8-bit cohort: 40 evaluation contexts and 40 disjoint calibration contexts. Entries are condition-minus-never-stored differences with paired 95\% whole-context bootstrap intervals (2,000 replicates). Target scores average three fixed probes; retained scores average three retained records. Continuation NLL is token-weighted within each context and then averaged across contexts. Positive target differences indicate residual lift; positive NLL differences indicate worse continuation prediction. Unscaled differences are in nats/token. The retained column is multiplied by $10^3$ for legibility.}
+\label{tab:kda-prospective-cohort}
+\begin{tabular}{lccc}
+\hline
+Condition & Target log-probability $\Delta$ & Retained log-probability $\Delta\times10^3$ & Continuation NLL $\Delta$ \\
+\hline
+Record present & $3.2399\;[3.0625,\,3.4113]$ & $-0.249\;[-0.453,\,-0.043]$ & $0.0055\;[-0.0083,\,0.0192]$ \\
+Attention masking & $0.4858\;[0.4257,\,0.5463]$ & $-0.269\;[-0.461,\,-0.085]$ & $-0.0025\;[-0.0161,\,0.0114]$ \\
+Static receipt & $3.1783\;[3.0102,\,3.3414]$ & $0.101\;[-0.125,\,0.302]$ & $-0.0133\;[-0.0315,\,0.0038]$ \\
+Diagonal ledger & $3.1884\;[3.0179,\,3.3528]$ & $-0.067\;[-0.223,\,0.078]$ & $-0.0041\;[-0.0193,\,0.0098]$ \\
+Receipt transport & $3.1878\;[3.0180,\,3.3514]$ & $-0.069\;[-0.249,\,0.096]$ & $-0.0057\;[-0.0194,\,0.0078]$ \\
+Masking + transport & $0.0178\;[0.0108,\,0.0245]$ & $-0.101\;[-0.234,\,0.014]$ & $0.0049\;[-0.0050,\,0.0151]$ \\
+Checkpoint replay & $0.0000\;[0.0000,\,0.0000]$ & $0.000\;[0.000,\,0.000]$ & $0.0000\;[0.0000,\,0.0000]$ \\
+Never stored & $0.0000\;[0.0000,\,0.0000]$ & $0.000\;[0.000,\,0.000]$ & $0.0000\;[0.0000,\,0.0000]$ \\
+Independent never stored & $0.0000\;[0.0000,\,0.0000]$ & $0.000\;[0.000,\,0.000]$ & $0.0000\;[0.0000,\,0.0000]$ \\
+Prompt forgetting & $3.1205\;[2.9432,\,3.2908]$ & $0.072\;[-0.230,\,0.384]$ & $0.0124\;[-0.0081,\,0.0339]$ \\
+Neutral instruction & $3.2588\;[3.0801,\,3.4306]$ & $-2.878\;[-3.675,\,-2.180]$ & $-0.0356\;[-0.0591,\,-0.0118]$ \\
+\hline
+\end{tabular}
+\par\vspace{3pt}
+\begin{minipage}{0.98\textwidth}\footnotesize
+All 40 preselected evaluation contexts were retained; 40/40 qualified (Wilson 95\% interval $91.2\%$--$100.0\%$). The forgetting and neutral instructions have exactly matched per-context token counts (mean 31.35 extra tokens). Forgetting minus neutral: target log probability $-0.1383\;[-0.1550,\,-0.1228]$, retained log probability $0.0030\;[0.0024,\,0.0037]$, and continuation NLL $0.0480\;[0.0231,\,0.0733]$ (all three unscaled, in nats/token). The control is one fixed neutral string repeated/truncated to length; the contrast is wording-specific.
+\end{minipage}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{6pt}
+\caption{Fixed three-query candidate-scoring distinguisher on the same 40 evaluation contexts. Nominal calibration FPR is 5.0\%; empirical calibration FPR is 2.5\%. The measured evaluation FPR is 7.5\% (Wilson 95\% interval 2.6\%--19.9\%). AUC intervals resample paired whole contexts. The TPR bootstrap interval independently resamples calibration and evaluation contexts and recalibrates the threshold; the supplementary TPR Wilson interval is conditional on the deployed threshold.}
+\label{tab:kda-prospective-attack}
+\begin{tabular}{lccc}
+\hline
+Condition & AUC [95\% CI] & TPR, \% [two-stage 95\% CI] & TPR Wilson 95\% interval, \% \\
+\hline
+Record present & $1.0000\;[1.0000,\,1.0000]$ & $100.0\;[100.0,\,100.0]$ & $[91.2,\,100.0]$ \\
+Attention masking & $0.7400\;[0.6950,\,0.8094]$ & $30.0\;[5.0,\,50.0]$ & $[18.1,\,45.4]$ \\
+Static receipt & $1.0000\;[1.0000,\,1.0000]$ & $100.0\;[100.0,\,100.0]$ & $[91.2,\,100.0]$ \\
+Diagonal ledger & $1.0000\;[1.0000,\,1.0000]$ & $100.0\;[100.0,\,100.0]$ & $[91.2,\,100.0]$ \\
+Receipt transport & $1.0000\;[1.0000,\,1.0000]$ & $100.0\;[100.0,\,100.0]$ & $[91.2,\,100.0]$ \\
+Masking + transport & $0.5188\;[0.5113,\,0.5431]$ & $7.5\;[0.0,\,22.5]$ & $[2.6,\,19.9]$ \\
+Checkpoint replay & $0.5000\;[0.5000,\,0.5000]$ & $7.5\;[0.0,\,22.5]$ & $[2.6,\,19.9]$ \\
+Never stored & $0.5000\;[0.5000,\,0.5000]$ & $7.5\;[0.0,\,22.5]$ & $[2.6,\,19.9]$ \\
+Independent never stored & $0.5000\;[0.5000,\,0.5000]$ & $7.5\;[0.0,\,22.5]$ & $[2.6,\,19.9]$ \\
+Prompt forgetting & $1.0000\;[1.0000,\,1.0000]$ & $100.0\;[100.0,\,100.0]$ & $[91.2,\,100.0]$ \\
+Neutral instruction & $1.0000\;[1.0000,\,1.0000]$ & $100.0\;[100.0,\,100.0]$ & $[91.2,\,100.0]$ \\
+\hline
+\end{tabular}
+\par\vspace{3pt}
+\begin{minipage}{0.98\textwidth}\footnotesize
+The threshold is $-2.560180$ nats/token and is calibrated using only the 40 never-stored calibration scores. The attacker sees candidate-continuation log probabilities, not model state or evaluation never-stored references. Replay and independent rebuilding are measured null controls: their AUC is $0.5$ and their TPR equals FPR. Degenerate bootstrap intervals at zero or one describe the observed cohort; the Wilson intervals expose finite-sample rate uncertainty. This is one fixed attack on a synthetic cohort, not a general indistinguishability guarantee.
+\end{minipage}
+\end{table*}

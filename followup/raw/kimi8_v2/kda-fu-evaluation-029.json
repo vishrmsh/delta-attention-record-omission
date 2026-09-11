@@ -1,0 +1,4408 @@
+{
+  "schema_version": 1,
+  "manifest_sha256": "2003aaddfece115196f8f2a6d457d90004acc26484e6645e6664807df488eda5",
+  "record_id": "kda-fu-evaluation-029",
+  "model_id": "/models/models--mlx-community--Kimi-Linear-48B-A3B-Instruct-8bit/snapshots/553a7a5673491df2b2d38f7380188a9d8e9f9a66",
+  "tiny": false,
+  "split": "evaluation",
+  "status": "complete",
+  "conditions": {
+    "never_stored": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -3.9263377719455295,
+          "total_log_probability": -35.337039947509766,
+          "first_token_rank": 241,
+          "first_token_probability": 1.6850297470227815e-05,
+          "n_target_tokens": 9,
+          "greedy_text": "UNKNOWN",
+          "greedy_exact": false,
+          "generated_tokens": 1
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -3.6526209513346353,
+          "total_log_probability": -32.87358856201172,
+          "first_token_rank": 28,
+          "first_token_probability": 0.0008124288287945092,
+          "n_target_tokens": 9
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -4.090382893880208,
+          "total_log_probability": -36.813446044921875,
+          "first_token_rank": 289,
+          "first_token_probability": 4.1362782212672755e-05,
+          "n_target_tokens": 9
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.0039691925048828125,
+          "total_log_probability": -0.03572273254394531,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9663019776344299,
+          "n_target_tokens": 9,
+          "greedy_text": "KELP-HAZEL-4582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.003132290310329861,
+          "total_log_probability": -0.02819061279296875,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9726333022117615,
+          "n_target_tokens": 9,
+          "greedy_text": "OLIVE-THYME-8126",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.010292689005533854,
+          "total_log_probability": -0.09263420104980469,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9120746850967407,
+          "n_target_tokens": 9,
+          "greedy_text": "NETTLE-ALDER-1582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.6447595596313476,
+          "total_log_probability": -26.447595596313477,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6120635867118835,
+          "n_target_tokens": 10
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -1.2785585403442383,
+          "total_log_probability": -12.785585403442383,
+          "first_token_rank": 3,
+          "first_token_probability": 0.06363759189844131,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.6681187909998698
+    },
+    "present": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -0.003586663140190972,
+          "total_log_probability": -0.03227996826171875,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9690539240837097,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-1292",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -0.0020953284369574655,
+          "total_log_probability": -0.018857955932617188,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9818766117095947,
+          "n_target_tokens": 9
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -0.27850892808702254,
+          "total_log_probability": -2.506580352783203,
+          "first_token_rank": 3,
+          "first_token_probability": 0.08386682718992233,
+          "n_target_tokens": 9
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.004487779405381944,
+          "total_log_probability": -0.0403900146484375,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9618997573852539,
+          "n_target_tokens": 9,
+          "greedy_text": "KELP-HAZEL-4582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.0027592976888020835,
+          "total_log_probability": -0.02483367919921875,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9758722186088562,
+          "n_target_tokens": 9,
+          "greedy_text": "OLIVE-THYME-8126",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.0100349850124783,
+          "total_log_probability": -0.09031486511230469,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9141820669174194,
+          "n_target_tokens": 9,
+          "greedy_text": "NETTLE-ALDER-1582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.634341812133789,
+          "total_log_probability": -26.34341812133789,
+          "first_token_rank": 1,
+          "first_token_probability": 0.615481972694397,
+          "n_target_tokens": 10
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -1.3240245819091796,
+          "total_log_probability": -13.240245819091797,
+          "first_token_rank": 3,
+          "first_token_probability": 0.056694552302360535,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.8794167500018375
+    },
+    "masked": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -2.819621827867296,
+          "total_log_probability": -25.376596450805664,
+          "first_token_rank": 4,
+          "first_token_probability": 0.010322541929781437,
+          "n_target_tokens": 9,
+          "greedy_text": "UNKNOWN",
+          "greedy_exact": false,
+          "generated_tokens": 1
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -2.766140196058485,
+          "total_log_probability": -24.895261764526367,
+          "first_token_rank": 3,
+          "first_token_probability": 0.057914622128009796,
+          "n_target_tokens": 9
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -3.011326471964518,
+          "total_log_probability": -27.101938247680664,
+          "first_token_rank": 29,
+          "first_token_probability": 0.0023828812409192324,
+          "n_target_tokens": 9
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.0039988623725043405,
+          "total_log_probability": -0.03598976135253906,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9661415815353394,
+          "n_target_tokens": 9,
+          "greedy_text": "KELP-HAZEL-4582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.002915064493815104,
+          "total_log_probability": -0.026235580444335938,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9745943546295166,
+          "n_target_tokens": 9,
+          "greedy_text": "OLIVE-THYME-8126",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.010675430297851562,
+          "total_log_probability": -0.09607887268066406,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9089174866676331,
+          "n_target_tokens": 9,
+          "greedy_text": "NETTLE-ALDER-1582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.6530643463134767,
+          "total_log_probability": -26.530643463134766,
+          "first_token_rank": 1,
+          "first_token_probability": 0.5955655574798584,
+          "n_target_tokens": 10
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -1.3195762634277344,
+          "total_log_probability": -13.195762634277344,
+          "first_token_rank": 3,
+          "first_token_probability": 0.044481903314590454,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.047404375000042
+    },
+    "static": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -0.002441194322374132,
+          "total_log_probability": -0.021970748901367188,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9789221286773682,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-1292",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -0.002727084689670139,
+          "total_log_probability": -0.02454376220703125,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9763302206993103,
+          "n_target_tokens": 9
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -0.5342610677083334,
+          "total_log_probability": -4.808349609375,
+          "first_token_rank": 10,
+          "first_token_probability": 0.008487836457788944,
+          "n_target_tokens": 9
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.0035035875108506945,
+          "total_log_probability": -0.03153228759765625,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9701838493347168,
+          "n_target_tokens": 9,
+          "greedy_text": "KELP-HAZEL-4582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.0026717715793185765,
+          "total_log_probability": -0.024045944213867188,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9766747951507568,
+          "n_target_tokens": 9,
+          "greedy_text": "OLIVE-THYME-8126",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.009056515163845487,
+          "total_log_probability": -0.08150863647460938,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9222400188446045,
+          "n_target_tokens": 9,
+          "greedy_text": "NETTLE-ALDER-1582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.655154800415039,
+          "total_log_probability": -26.55154800415039,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6100798845291138,
+          "n_target_tokens": 10
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -1.330049705505371,
+          "total_log_probability": -13.300497055053711,
+          "first_token_rank": 3,
+          "first_token_probability": 0.057052310556173325,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.3913769589998992
+    },
+    "ledger": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -0.003361172146267361,
+          "total_log_probability": -0.03025054931640625,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9708021283149719,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-1292",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -0.003379609849717882,
+          "total_log_probability": -0.030416488647460938,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9706392288208008,
+          "n_target_tokens": 9
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -0.4447915818956163,
+          "total_log_probability": -4.003124237060547,
+          "first_token_rank": 8,
+          "first_token_probability": 0.018901510164141655,
+          "n_target_tokens": 9
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.0035455491807725695,
+          "total_log_probability": -0.031909942626953125,
+          "first_token_rank": 1,
+          "first_token_probability": 0.969815731048584,
+          "n_target_tokens": 9,
+          "greedy_text": "KELP-HAZEL-4582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.002739164564344618,
+          "total_log_probability": -0.024652481079101562,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9760639667510986,
+          "n_target_tokens": 9,
+          "greedy_text": "OLIVE-THYME-8126",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.009569168090820312,
+          "total_log_probability": -0.08612251281738281,
+          "first_token_rank": 1,
+          "first_token_probability": 0.918027937412262,
+          "n_target_tokens": 9,
+          "greedy_text": "NETTLE-ALDER-1582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.605121612548828,
+          "total_log_probability": -26.05121612548828,
+          "first_token_rank": 1,
+          "first_token_probability": 0.5993248820304871,
+          "n_target_tokens": 10
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -1.269906997680664,
+          "total_log_probability": -12.69906997680664,
+          "first_token_rank": 3,
+          "first_token_probability": 0.05816857889294624,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.4201250830010395
+    },
+    "transport": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -0.003681606716579861,
+          "total_log_probability": -0.03313446044921875,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9680710434913635,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-1292",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -0.003075493706597222,
+          "total_log_probability": -0.027679443359375,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9733069539070129,
+          "n_target_tokens": 9
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -0.5075221591525607,
+          "total_log_probability": -4.567699432373047,
+          "first_token_rank": 8,
+          "first_token_probability": 0.010732188820838928,
+          "n_target_tokens": 9
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.0036646525065104165,
+          "total_log_probability": -0.03298187255859375,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9685956239700317,
+          "n_target_tokens": 9,
+          "greedy_text": "KELP-HAZEL-4582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.002910825941297743,
+          "total_log_probability": -0.026197433471679688,
+          "first_token_rank": 1,
+          "first_token_probability": 0.974534809589386,
+          "n_target_tokens": 9,
+          "greedy_text": "OLIVE-THYME-8126",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.010050031873914931,
+          "total_log_probability": -0.09045028686523438,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9140164852142334,
+          "n_target_tokens": 9,
+          "greedy_text": "NETTLE-ALDER-1582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.6036487579345704,
+          "total_log_probability": -26.036487579345703,
+          "first_token_rank": 1,
+          "first_token_probability": 0.5903281569480896,
+          "n_target_tokens": 10
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -1.334345245361328,
+          "total_log_probability": -13.343452453613281,
+          "first_token_rank": 3,
+          "first_token_probability": 0.050472330302000046,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.4078877499996452
+    },
+    "mask_transport": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -3.9495340983072915,
+          "total_log_probability": -35.545806884765625,
+          "first_token_rank": 228,
+          "first_token_probability": 2.1833871869603172e-05,
+          "n_target_tokens": 9,
+          "greedy_text": "UNKNOWN",
+          "greedy_exact": false,
+          "generated_tokens": 1
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -3.7612101236979165,
+          "total_log_probability": -33.85089111328125,
+          "first_token_rank": 26,
+          "first_token_probability": 0.000636533135548234,
+          "n_target_tokens": 9
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -4.0857043796115455,
+          "total_log_probability": -36.771339416503906,
+          "first_token_rank": 313,
+          "first_token_probability": 3.473853212199174e-05,
+          "n_target_tokens": 9
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.0039984385172526045,
+          "total_log_probability": -0.03598594665527344,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9659205079078674,
+          "n_target_tokens": 9,
+          "greedy_text": "KELP-HAZEL-4582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.0031155480278862845,
+          "total_log_probability": -0.028039932250976562,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9727650284767151,
+          "n_target_tokens": 9,
+          "greedy_text": "OLIVE-THYME-8126",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.010093265109592013,
+          "total_log_probability": -0.09083938598632812,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9136120676994324,
+          "n_target_tokens": 9,
+          "greedy_text": "NETTLE-ALDER-1582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.6130245208740233,
+          "total_log_probability": -26.130245208740234,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6132192611694336,
+          "n_target_tokens": 10
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -1.3268492698669434,
+          "total_log_probability": -13.268492698669434,
+          "first_token_rank": 3,
+          "first_token_probability": 0.05033965781331062,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.2687280000027386
+    },
+    "prompt_forget": {
+      "extra_instruction_tokens": 31,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -0.024013943142361112,
+          "total_log_probability": -0.21612548828125,
+          "first_token_rank": 1,
+          "first_token_probability": 0.8064859509468079,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-1292",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -0.0488732655843099,
+          "total_log_probability": -0.43985939025878906,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6449765563011169,
+          "n_target_tokens": 9
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -0.402363035413954,
+          "total_log_probability": -3.621267318725586,
+          "first_token_rank": 5,
+          "first_token_probability": 0.027059262618422508,
+          "n_target_tokens": 9
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.003860685560438368,
+          "total_log_probability": -0.03474617004394531,
+          "first_token_rank": 1,
+          "first_token_probability": 0.96750807762146,
+          "n_target_tokens": 9,
+          "greedy_text": "KELP-HAZEL-4582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.001811981201171875,
+          "total_log_probability": -0.016307830810546875,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9842692613601685,
+          "n_target_tokens": 9,
+          "greedy_text": "OLIVE-THYME-8126",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.004603068033854167,
+          "total_log_probability": -0.0414276123046875,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9600448608398438,
+          "n_target_tokens": 9,
+          "greedy_text": "NETTLE-ALDER-1582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.686050033569336,
+          "total_log_probability": -26.86050033569336,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6481273174285889,
+          "n_target_tokens": 10
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -1.5119453430175782,
+          "total_log_probability": -15.119453430175781,
+          "first_token_rank": 3,
+          "first_token_probability": 0.06950125843286514,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.505286708001222
+    },
+    "prompt_neutral": {
+      "extra_instruction_tokens": 31,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -0.0034737057156032985,
+          "total_log_probability": -0.03126335144042969,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9699193239212036,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-1292",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -0.0018295711941189235,
+          "total_log_probability": -0.016466140747070312,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9840665459632874,
+          "n_target_tokens": 9
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -0.31783103942871094,
+          "total_log_probability": -2.8604793548583984,
+          "first_token_rank": 4,
+          "first_token_probability": 0.05815526843070984,
+          "n_target_tokens": 9
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.004761166042751736,
+          "total_log_probability": -0.042850494384765625,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9591808915138245,
+          "n_target_tokens": 9,
+          "greedy_text": "KELP-HAZEL-4582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.0032094319661458335,
+          "total_log_probability": -0.0288848876953125,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9719990491867065,
+          "n_target_tokens": 9,
+          "greedy_text": "OLIVE-THYME-8126",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.009403016832139757,
+          "total_log_probability": -0.08462715148925781,
+          "first_token_rank": 1,
+          "first_token_probability": 0.919343888759613,
+          "n_target_tokens": 9,
+          "greedy_text": "NETTLE-ALDER-1582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.490258979797363,
+          "total_log_probability": -24.902589797973633,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6823024153709412,
+          "n_target_tokens": 10
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -1.395463466644287,
+          "total_log_probability": -13.954634666442871,
+          "first_token_rank": 3,
+          "first_token_probability": 0.07315343618392944,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.5893300419993466
+    },
+    "never_stored_repeat": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -3.9263377719455295,
+          "total_log_probability": -35.337039947509766,
+          "first_token_rank": 241,
+          "first_token_probability": 1.6850297470227815e-05,
+          "n_target_tokens": 9,
+          "greedy_text": "UNKNOWN",
+          "greedy_exact": false,
+          "generated_tokens": 1
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -3.6526209513346353,
+          "total_log_probability": -32.87358856201172,
+          "first_token_rank": 28,
+          "first_token_probability": 0.0008124288287945092,
+          "n_target_tokens": 9
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -4.090382893880208,
+          "total_log_probability": -36.813446044921875,
+          "first_token_rank": 289,
+          "first_token_probability": 4.1362782212672755e-05,
+          "n_target_tokens": 9
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.0039691925048828125,
+          "total_log_probability": -0.03572273254394531,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9663019776344299,
+          "n_target_tokens": 9,
+          "greedy_text": "KELP-HAZEL-4582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.003132290310329861,
+          "total_log_probability": -0.02819061279296875,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9726333022117615,
+          "n_target_tokens": 9,
+          "greedy_text": "OLIVE-THYME-8126",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.010292689005533854,
+          "total_log_probability": -0.09263420104980469,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9120746850967407,
+          "n_target_tokens": 9,
+          "greedy_text": "NETTLE-ALDER-1582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.6447595596313476,
+          "total_log_probability": -26.447595596313477,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6120635867118835,
+          "n_target_tokens": 10
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -1.2785585403442383,
+          "total_log_probability": -12.785585403442383,
+          "first_token_rank": 3,
+          "first_token_probability": 0.06363759189844131,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.277095042001747
+    },
+    "replay": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -3.9263377719455295,
+          "total_log_probability": -35.337039947509766,
+          "first_token_rank": 241,
+          "first_token_probability": 1.6850297470227815e-05,
+          "n_target_tokens": 9,
+          "greedy_text": "UNKNOWN",
+          "greedy_exact": false,
+          "generated_tokens": 1
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -3.6526209513346353,
+          "total_log_probability": -32.87358856201172,
+          "first_token_rank": 28,
+          "first_token_probability": 0.0008124288287945092,
+          "n_target_tokens": 9
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -4.090382893880208,
+          "total_log_probability": -36.813446044921875,
+          "first_token_rank": 289,
+          "first_token_probability": 4.1362782212672755e-05,
+          "n_target_tokens": 9
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.0039691925048828125,
+          "total_log_probability": -0.03572273254394531,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9663019776344299,
+          "n_target_tokens": 9,
+          "greedy_text": "KELP-HAZEL-4582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.003132290310329861,
+          "total_log_probability": -0.02819061279296875,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9726333022117615,
+          "n_target_tokens": 9,
+          "greedy_text": "OLIVE-THYME-8126",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.010292689005533854,
+          "total_log_probability": -0.09263420104980469,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9120746850967407,
+          "n_target_tokens": 9,
+          "greedy_text": "NETTLE-ALDER-1582",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.6447595596313476,
+          "total_log_probability": -26.447595596313477,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6120635867118835,
+          "n_target_tokens": 10
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -1.2785585403442383,
+          "total_log_probability": -12.785585403442383,
+          "first_token_rank": 3,
+          "first_token_probability": 0.06363759189844131,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.2845772079963353
+    }
+  },
+  "qualification": {
+    "qualified": true,
+    "lift_nats": 3.9227511088053384,
+    "first_token_rank": 1
+  },
+  "state_checks": {
+    "replay_vs_never": {
+      "arrays": [
+        {
+          "name": "layer:0/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:0/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:0/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:0/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:3/keys",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:3/values",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:7/keys",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:7/values",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:11/keys",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:11/values",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:15/keys",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:15/values",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:19/keys",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:19/values",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:23/keys",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:23/values",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:26/keys",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:26/values",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        }
+      ],
+      "offsets": [
+        {
+          "layer": 3,
+          "candidate": 320,
+          "reference": 320,
+          "equal": true
+        },
+        {
+          "layer": 7,
+          "candidate": 320,
+          "reference": 320,
+          "equal": true
+        },
+        {
+          "layer": 11,
+          "candidate": 320,
+          "reference": 320,
+          "equal": true
+        },
+        {
+          "layer": 15,
+          "candidate": 320,
+          "reference": 320,
+          "equal": true
+        },
+        {
+          "layer": 19,
+          "candidate": 320,
+          "reference": 320,
+          "equal": true
+        },
+        {
+          "layer": 23,
+          "candidate": 320,
+          "reference": 320,
+          "equal": true
+        },
+        {
+          "layer": 26,
+          "candidate": 320,
+          "reference": 320,
+          "equal": true
+        }
+      ],
+      "n_arrays": 94,
+      "all_equal": true,
+      "max_abs_diff": 0.0,
+      "logits": {
+        "name": "audit_next_token_logits",
+        "shape_candidate": [
+          1,
+          163840
+        ],
+        "shape_reference": [
+          1,
+          163840
+        ],
+        "max_abs_diff": 0.0,
+        "equal": true
+      }
+    },
+    "repeat_never_vs_never": {
+      "arrays": [
+        {
+          "name": "layer:0/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:0/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:0/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:0/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:3/keys",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:3/values",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:7/keys",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:7/values",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:11/keys",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:11/values",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:15/keys",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:15/values",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:19/keys",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:19/values",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:23/keys",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:23/values",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:26/keys",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:26/values",
+          "shape_candidate": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            320,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        }
+      ],
+      "offsets": [
+        {
+          "layer": 3,
+          "candidate": 320,
+          "reference": 320,
+          "equal": true
+        },
+        {
+          "layer": 7,
+          "candidate": 320,
+          "reference": 320,
+          "equal": true
+        },
+        {
+          "layer": 11,
+          "candidate": 320,
+          "reference": 320,
+          "equal": true
+        },
+        {
+          "layer": 15,
+          "candidate": 320,
+          "reference": 320,
+          "equal": true
+        },
+        {
+          "layer": 19,
+          "candidate": 320,
+          "reference": 320,
+          "equal": true
+        },
+        {
+          "layer": 23,
+          "candidate": 320,
+          "reference": 320,
+          "equal": true
+        },
+        {
+          "layer": 26,
+          "candidate": 320,
+          "reference": 320,
+          "equal": true
+        }
+      ],
+      "n_arrays": 94,
+      "all_equal": true,
+      "max_abs_diff": 0.0,
+      "logits": {
+        "name": "audit_next_token_logits",
+        "shape_candidate": [
+          1,
+          163840
+        ],
+        "shape_reference": [
+          1,
+          163840
+        ],
+        "max_abs_diff": 0.0,
+        "equal": true
+      }
+    },
+    "corrections": {
+      "present": {
+        "per_layer_residual_norm": [
+          1.5065134763717651,
+          0.736615002155304,
+          0.4903068244457245,
+          0.5319700241088867,
+          0.9365021586418152,
+          1.3478807210922241,
+          1.5518232583999634,
+          1.4647096395492554,
+          1.8042409420013428,
+          1.5848493576049805,
+          2.2175002098083496,
+          2.1983354091644287,
+          2.2653486728668213,
+          2.1296424865722656,
+          2.265476942062378,
+          3.2560110092163086,
+          2.852515935897827,
+          4.216845512390137,
+          2.911567211151123,
+          2.4539623260498047
+        ],
+        "per_layer_relative_to_present_difference": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "per_layer_relative_to_reference": [
+          0.10194821917771088,
+          0.041210739192673804,
+          0.0379947488805337,
+          0.0508064615290731,
+          0.07932421213466301,
+          0.10128766202936461,
+          0.1459369015725123,
+          0.12748455789063462,
+          0.13036262951792493,
+          0.14850167308837836,
+          0.19366833738916023,
+          0.1820805078774689,
+          0.12534476018864374,
+          0.1147228629701363,
+          0.1263909106967469,
+          0.06589274261259401,
+          0.07313530364841297,
+          0.0900229467066667,
+          0.1073760160276931,
+          0.18776112837960998
+        ],
+        "global_relative_to_present_difference": 1.0
+      },
+      "static": {
+        "per_layer_residual_norm": [
+          0.9306207299232483,
+          1.2550172805786133,
+          1.2684532403945923,
+          1.3249746561050415,
+          1.7312653064727783,
+          3.1275947093963623,
+          2.9767918586730957,
+          3.296311140060425,
+          4.136634826660156,
+          2.9604055881500244,
+          3.3982019424438477,
+          4.037810325622559,
+          4.1638312339782715,
+          3.5863752365112305,
+          3.7985265254974365,
+          4.108126163482666,
+          3.523838520050049,
+          4.322371482849121,
+          3.345090389251709,
+          2.326456069946289
+        ],
+        "per_layer_relative_to_present_difference": [
+          0.6177314338830363,
+          1.703762856996513,
+          2.587060136942896,
+          2.4906942046678893,
+          1.8486506309644684,
+          2.320379437478702,
+          1.9182544420312226,
+          2.2504877765908744,
+          2.2927286097784814,
+          1.8679413118630912,
+          1.5324471796724393,
+          1.8367580801317762,
+          1.8380531367424784,
+          1.684026900817342,
+          1.6767005900485776,
+          1.2617052435800742,
+          1.2353440258488595,
+          1.0250248604434105,
+          1.1488968471825822,
+          0.948040662747759
+        ],
+        "per_layer_relative_to_reference": [
+          0.06297661961446942,
+          0.0702133267458481,
+          0.09829470024198445,
+          0.12654335929014443,
+          0.1466427548135041,
+          0.23502580824322994,
+          0.279944109697745,
+          0.28690243923696496,
+          0.29888613034169925,
+          0.27739241004256937,
+          0.29678649742386903,
+          0.3344378440784385,
+          0.23039032963897035,
+          0.19319638738049125,
+          0.21191971454201264,
+          0.08313721886818205,
+          0.09034726044070927,
+          0.0922757583847056,
+          0.12336396627724303,
+          0.1780051845872725
+        ],
+        "global_relative_to_present_difference": 1.4796597855216278
+      },
+      "ledger": {
+        "per_layer_residual_norm": [
+          0.5610626339912415,
+          0.4186186194419861,
+          0.3884636163711548,
+          0.48061880469322205,
+          0.6754776239395142,
+          1.5751956701278687,
+          1.509111762046814,
+          1.384334921836853,
+          1.647396445274353,
+          1.5000979900360107,
+          1.802519679069519,
+          2.1396265029907227,
+          2.0084474086761475,
+          1.8431317806243896,
+          2.06954026222229,
+          2.3959500789642334,
+          2.318742513656616,
+          2.966874122619629,
+          2.447953939437866,
+          1.5624027252197266
+        ],
+        "per_layer_relative_to_present_difference": [
+          0.3724245702351666,
+          0.5683004258902221,
+          0.7922867824862523,
+          0.9034697124115516,
+          0.7212771670693657,
+          1.168646190629869,
+          0.9724765715928321,
+          0.945125835495193,
+          0.9130689848147382,
+          0.9465240231430918,
+          0.8128611086919826,
+          0.973293926882604,
+          0.8865952657673829,
+          0.865465350285613,
+          0.9135119514119986,
+          0.7358544157812649,
+          0.812876269848706,
+          0.703576669788404,
+          0.8407684803092828,
+          0.6366857015831858
+        ],
+        "per_layer_relative_to_reference": [
+          0.03796802171349955,
+          0.02342008063444739,
+          0.030102737341931182,
+          0.04590209918632023,
+          0.05721474300849914,
+          0.11836944038842256,
+          0.14192021771011734,
+          0.12048894928912136,
+          0.11903007379171154,
+          0.14056040105509207,
+          0.15742545944868575,
+          0.1772178525208406,
+          0.11113007097199946,
+          0.09928866278621738,
+          0.11545960747132492,
+          0.048487465619415616,
+          0.059449952823974396,
+          0.06333804504841554,
+          0.09027836981726871,
+          0.1195448257524226
+        ],
+        "global_relative_to_present_difference": 0.8137091946464458
+      },
+      "transport": {
+        "per_layer_residual_norm": [
+          5.348050763132051e-06,
+          0.3381790816783905,
+          0.32696565985679626,
+          0.42803895473480225,
+          0.6188242435455322,
+          1.0191993713378906,
+          1.4387738704681396,
+          1.3257051706314087,
+          1.4984095096588135,
+          1.4827675819396973,
+          1.6931720972061157,
+          1.945696234703064,
+          1.89130437374115,
+          1.7700557708740234,
+          1.8859654664993286,
+          2.2210159301757812,
+          2.118180274963379,
+          2.8136277198791504,
+          2.321711301803589,
+          1.4593353271484375
+        ],
+        "per_layer_relative_to_present_difference": [
+          3.5499521557630607e-06,
+          0.459098824608368,
+          0.6668592880109716,
+          0.8046298387805189,
+          0.6607825063030255,
+          0.7561495282104828,
+          0.9271506034466931,
+          0.9050975939773132,
+          0.8304930205146062,
+          0.9355889724310777,
+          0.7635499152229845,
+          0.885077057209668,
+          0.8348844468819386,
+          0.8311516050391117,
+          0.8324805392997905,
+          0.6821278932685055,
+          0.7425656236681754,
+          0.667235190763336,
+          0.7974094820519951,
+          0.5946853020753422
+        ],
+        "per_layer_relative_to_reference": [
+          3.6191130044611975e-07,
+          0.018919801924598547,
+          0.025337151186628364,
+          0.04088039494914672,
+          0.05241605170485549,
+          0.07658861785704688,
+          0.13530548635809542,
+          0.1153859666160749,
+          0.10826525395056803,
+          0.1389365277290517,
+          0.14787544259486965,
+          0.16115528008743193,
+          0.10464839077964508,
+          0.09535209169231085,
+          0.10521797349941953,
+          0.04494727770001263,
+          0.05430776236584516,
+          0.060066478018900395,
+          0.08562265332544948,
+          0.11165878334843547
+        ],
+        "global_relative_to_present_difference": 0.7512238041663731
+      }
+    }
+  },
+  "tokens": {
+    "prefix": 192,
+    "target": 38,
+    "suffix": 128,
+    "forget_instruction": 31,
+    "neutral_instruction": 31,
+    "forget_ids": [
+      382,
+      123556,
+      1919,
+      4695,
+      25,
+      12415,
+      316,
+      859,
+      667,
+      1328,
+      5365,
+      75525,
+      12,
+      9758,
+      23630,
+      13,
+      28639,
+      473,
+      5365,
+      559,
+      41515,
+      658,
+      566,
+      1650,
+      13,
+      61982,
+      799,
+      1356,
+      5964,
+      17979,
+      1481
+    ],
+    "neutral_ids": [
+      382,
+      123556,
+      1919,
+      4695,
+      25,
+      5065,
+      2389,
+      566,
+      5365,
+      1650,
+      395,
+      29103,
+      5964,
+      13,
+      28639,
+      276,
+      1650,
+      559,
+      276,
+      2525,
+      8366,
+      13,
+      61982,
+      799,
+      5964,
+      17979,
+      1481,
+      382,
+      123556,
+      1919,
+      4695
+    ]
+  },
+  "timing": {
+    "transport_seconds": 0.11743404200387886,
+    "replay_seconds": 0.16205208400060656,
+    "present_suffix_seconds": 0.20343187500111526,
+    "never_suffix_seconds": 0.18193808299838565
+  },
+  "n_kda_layers": 20,
+  "n_mla_layers": 7,
+  "seconds": 18.20288137500029
+}

@@ -21,12 +21,13 @@ def digest(path):
 def main():
     manifest = json.loads((ROOT / "MANIFEST.json").read_text())
     expected = {entry["path"]: entry for entry in manifest["files"]}
+    assert len(expected) == len(manifest["files"]), "duplicate manifest inventory path"
     observed = {
         path.relative_to(ROOT).as_posix(): path
         for path in ROOT.rglob("*")
         if path.is_file() and "__pycache__" not in path.parts
         and path.relative_to(ROOT).parts[0] != ".git"
-        and path.name != "MANIFEST.json"
+        and path.relative_to(ROOT).as_posix() != "MANIFEST.json"
     }
     assert set(expected) == set(observed), "artifact file inventory differs"
     for name, path in observed.items():
@@ -35,8 +36,10 @@ def main():
         assert path.stat().st_size == expected[name]["bytes"], f"size: {name}"
         if path.suffix == ".py":
             ast.parse(path.read_text(), filename=name)
-        if path.suffix == ".json":
-            json.loads(path.read_text(), parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)))
+        if path.suffix in (".json", ".jsonl"):
+            strings = [path.read_text()] if path.suffix == ".json" else path.read_text().splitlines()
+            for value in strings:
+                json.loads(value, parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)))
     print(f"PASS inventory, SHA-256, Python syntax and strict JSON: {len(observed)} files")
 
     environment = dict(os.environ, PYTHONPATH=str(ROOT / "code"), PYTHONDONTWRITEBYTECODE="1")
@@ -78,6 +81,8 @@ def main():
     assert qwen["implementation_sha256"] == digest(ROOT / "code/gemma_sv/qwen_replay_audit.py")
     assert all(qwen["checks"].values())
     print("PASS recorded Qwen manifest/implementation fingerprints and aggregate checks")
+    from verify_followup import verify
+    verify()
     print("No models, downloads, credentials or controlled data were used.")
 
 

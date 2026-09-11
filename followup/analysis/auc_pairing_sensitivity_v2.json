@@ -1,0 +1,125 @@
+{
+  "schema": "kda-auc-pairing-sensitivity-v1",
+  "status": "complete_exploratory_sensitivity",
+  "manifest_sha256": "2003aaddfece115196f8f2a6d457d90004acc26484e6645e6664807df488eda5",
+  "n_evaluation_records": 40,
+  "script_sha256": "a930c4f63932234fa60c9721d5db660b2a91fd893e29643821437c5c5f88e3fb",
+  "bootstrap_seed": 2026091603,
+  "bootstrap_replicates": 2000,
+  "usable_replicates": 2000,
+  "selection": "Added after the primary analysis to inspect near-null AUC deviations; does not replace its frozen score, threshold, or AUC.",
+  "estimator": "Average positive-condition versus never-stored comparison over distinct source records i != j. Bootstrap resamples whole records; comparisons between copies of the same original source record are excluded.",
+  "reason": "Ordinary empirical AUC includes n matched pairs in n^2 comparisons. These within-context wins can produce O(1/n) differences from the AUC for independent positive/negative contexts.",
+  "conditions": {
+    "present": {
+      "primary_empirical_auc": 1.0,
+      "matched_diagonal_mean_win": 1.0,
+      "independent_pair_offdiagonal_auc": 1.0,
+      "offdiagonal_record_bootstrap_95": [
+        1.0,
+        1.0
+      ],
+      "primary_minus_offdiagonal_auc": 0.0
+    },
+    "masked": {
+      "primary_empirical_auc": 0.74,
+      "matched_diagonal_mean_win": 1.0,
+      "independent_pair_offdiagonal_auc": 0.7333333333333333,
+      "offdiagonal_record_bootstrap_95": [
+        0.6792825438792418,
+        0.8006919305029436
+      ],
+      "primary_minus_offdiagonal_auc": 0.00666666666666671
+    },
+    "static": {
+      "primary_empirical_auc": 1.0,
+      "matched_diagonal_mean_win": 1.0,
+      "independent_pair_offdiagonal_auc": 1.0,
+      "offdiagonal_record_bootstrap_95": [
+        1.0,
+        1.0
+      ],
+      "primary_minus_offdiagonal_auc": 0.0
+    },
+    "ledger": {
+      "primary_empirical_auc": 1.0,
+      "matched_diagonal_mean_win": 1.0,
+      "independent_pair_offdiagonal_auc": 1.0,
+      "offdiagonal_record_bootstrap_95": [
+        1.0,
+        1.0
+      ],
+      "primary_minus_offdiagonal_auc": 0.0
+    },
+    "transport": {
+      "primary_empirical_auc": 1.0,
+      "matched_diagonal_mean_win": 1.0,
+      "independent_pair_offdiagonal_auc": 1.0,
+      "offdiagonal_record_bootstrap_95": [
+        1.0,
+        1.0
+      ],
+      "primary_minus_offdiagonal_auc": 0.0
+    },
+    "mask_transport": {
+      "primary_empirical_auc": 0.51875,
+      "matched_diagonal_mean_win": 0.8,
+      "independent_pair_offdiagonal_auc": 0.5115384615384615,
+      "offdiagonal_record_bootstrap_95": [
+        0.503324247629663,
+        0.523780436526986
+      ],
+      "primary_minus_offdiagonal_auc": 0.007211538461538547
+    },
+    "replay": {
+      "primary_empirical_auc": 0.5,
+      "matched_diagonal_mean_win": 0.5,
+      "independent_pair_offdiagonal_auc": 0.5,
+      "offdiagonal_record_bootstrap_95": [
+        0.5,
+        0.5
+      ],
+      "primary_minus_offdiagonal_auc": 0.0
+    },
+    "never_stored": {
+      "primary_empirical_auc": 0.5,
+      "matched_diagonal_mean_win": 0.5,
+      "independent_pair_offdiagonal_auc": 0.5,
+      "offdiagonal_record_bootstrap_95": [
+        0.5,
+        0.5
+      ],
+      "primary_minus_offdiagonal_auc": 0.0
+    },
+    "never_stored_repeat": {
+      "primary_empirical_auc": 0.5,
+      "matched_diagonal_mean_win": 0.5,
+      "independent_pair_offdiagonal_auc": 0.5,
+      "offdiagonal_record_bootstrap_95": [
+        0.5,
+        0.5
+      ],
+      "primary_minus_offdiagonal_auc": 0.0
+    },
+    "prompt_forget": {
+      "primary_empirical_auc": 1.0,
+      "matched_diagonal_mean_win": 1.0,
+      "independent_pair_offdiagonal_auc": 1.0,
+      "offdiagonal_record_bootstrap_95": [
+        1.0,
+        1.0
+      ],
+      "primary_minus_offdiagonal_auc": 0.0
+    },
+    "prompt_neutral": {
+      "primary_empirical_auc": 1.0,
+      "matched_diagonal_mean_win": 1.0,
+      "independent_pair_offdiagonal_auc": 1.0,
+      "offdiagonal_record_bootstrap_95": [
+        1.0,
+        1.0
+      ],
+      "primary_minus_offdiagonal_auc": 0.0
+    }
+  }
+}

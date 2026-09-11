@@ -1,0 +1,183 @@
+{
+  "schema": "kda-transport-arithmetic-floor-v1",
+  "model": "/models/models--mlx-community--Kimi-Linear-48B-A3B-Instruct-8bit/snapshots/553a7a5673491df2b2d38f7380188a9d8e9f9a66",
+  "precision": "8bit",
+  "tiny_plumbing_only": false,
+  "manifest_sha256": "2003aaddfece115196f8f2a6d457d90004acc26484e6645e6664807df488eda5",
+  "plan_sha256": "ec0cf64dc78dd27ab48b30db3ce63eb2aafd3b4a4ecaf49881e665bd38ab4216",
+  "record_ids": [
+    "kda-fu-evaluation-000",
+    "kda-fu-evaluation-001",
+    "kda-fu-evaluation-002",
+    "kda-fu-evaluation-003",
+    "kda-fu-evaluation-006",
+    "kda-fu-evaluation-007",
+    "kda-fu-evaluation-008",
+    "kda-fu-evaluation-009"
+  ],
+  "runner_sha256": "a3b68f9d03e810ee173ec8c7fb0f91f4a5926bd316c9c7fc4b62db5915bc73ec",
+  "runtime": {
+    "mlx": "0.32.0",
+    "mlx-lm": "0.31.3",
+    "numpy": "2.4.6"
+  },
+  "precision_provenance": {
+    "path": "/models/models--mlx-community--Kimi-Linear-48B-A3B-Instruct-8bit/snapshots/553a7a5673491df2b2d38f7380188a9d8e9f9a66",
+    "snapshot_revision_if_hf_cache": "553a7a5673491df2b2d38f7380188a9d8e9f9a66",
+    "config_sha256": "bbeb9c1df0abf415b3db50a0546c1da0b822b13c9dac4b8b30015ef100592199",
+    "model_type": "kimi_linear",
+    "config_dtype": "bfloat16",
+    "quantization": {
+      "group_size": 64,
+      "bits": 8,
+      "mode": "affine",
+      "model.layers.1.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.2.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.3.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.4.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.5.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.6.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.7.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.8.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.9.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.10.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.11.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.12.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.13.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.14.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.15.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.16.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.17.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.18.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.19.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.20.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.21.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.22.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.23.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.24.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.25.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      },
+      "model.layers.26.mlp.gate": {
+        "group_size": 64,
+        "bits": 8
+      }
+    },
+    "weight_files": 10,
+    "weight_bytes": 52194309751,
+    "tensor_dtype_counts": {
+      "BF16": 958,
+      "U32": 395,
+      "F32": 40
+    },
+    "tensor_dtype_bytes": {
+      "BF16": 3072337408,
+      "U32": 49121476608,
+      "F32": 330240
+    },
+    "tensor_examples": {
+      "BF16": [
+        "model.embed_tokens.biases",
+        "model.embed_tokens.scales",
+        "model.layers.0.input_layernorm.weight"
+      ],
+      "U32": [
+        "model.embed_tokens.weight",
+        "model.layers.0.mlp.down_proj.weight",
+        "model.layers.0.mlp.gate_proj.weight"
+      ],
+      "F32": [
+        "model.layers.0.self_attn.A_log",
+        "model.layers.0.self_attn.dt_bias",
+        "model.layers.1.self_attn.A_log"
+      ]
+    },
+    "quantization_tensor_count": 790,
+    "bf16_tensor_format": false,
+    "original_bf16_provenance": "unverified",
+    "source": "https://huggingface.co/moonshotai/Kimi-Linear-48B-A3B-Instruct/tree/e1df551a447157d4658b573f9a695d57658590e9"
+  },
+  "definitions": {
+    "reconstruction": "Start from each branch's native post-target/omission state; reconstruct suffix from that branch's actual captured k,v,g,beta in serial fp32 arithmetic.",
+    "transport": "Propagate native initial present-minus-omitted receipt through present-branch captured transitions, in the same serial fp32 arithmetic.",
+    "native_residual": "native_present_final - transported_receipt - native_omitted_final",
+    "floor": "Observed sum of present and omitted reconstruction error norms; numerical diagnostic, not a proved bound for all transport floating-point error.",
+    "frozen_input_identity": "Propagate f_p and f_o from native present/omitted initial states through identical captured present k,v,g,beta, including writes. Compare f_p - f_o with the separately propagated receipt.",
+    "max_empirical_floor": "max(present reconstruction error norm + omitted reconstruction error norm, frozen-input identity error norm); an observed diagnostic, not a rigorous bound.",
+    "ratio_null": "A null ratio indicates a zero observed denominator.",
+    "scope": "Recurrent KDA arrays only; complete hybrid state and readout audits remain in the main evaluation."
+  }
+}

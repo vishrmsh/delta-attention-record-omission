@@ -5,10 +5,19 @@ Transport Criterion, Its Cost, and a Replay Certificate*, prepared for SaTML
 2027. It contains the numerical evidence and selected reproduction code. The
 manuscript and its figure sources are in the separate paper source package.
 
-This 11 September 2026 update synchronizes the finished quantitative figure
-renderer with the revised manuscript. The shipped measurement implementations,
-116 configuration reports, benchmark records, and numerical macros are unchanged.
-Experiments still in progress are not part of this release.
+The release supports a practical audit of inference-time memory edits: it
+connects the transport criterion to target and retained-record behavior, and
+checks replay against the declared never-stored state. The completed cohorts
+also test record replacement and repeated deletions with an intervening
+admission.
+
+This 11 September 2026 update retains the historical 116 configuration reports,
+benchmark records and numerical macros, and adds the completed frozen follow-up
+experiments. See [the follow-up guide](followup/README.md) and
+[results with limitations](followup/RESULTS.md): 80 main Kimi contexts, 32 paired
+Qwen contexts, eight same-master BF16/derived-8-bit pairs with their own arithmetic
+diagnostics, 12 amendments, and six sequential-deletion record pairs. The later
+larger attention-free model remains deferred. No model weights are included.
 
 ## Start here: offline verification
 
@@ -24,6 +33,9 @@ implementation fingerprints, and regeneration of all three sweep/sampling/family
 summary JSONs from the 116 shipped configuration reports. It also regenerates
 the exact numerical TeX macros supplied to the paper. It performs no inference,
 network access, package installation, credential access, or clinical-data read.
+It also checks follow-up record coverage and anonymization provenance. Full new
+statistical regeneration uses `python3 -B verify_followup_analysis.py` with
+`requirements-analysis.txt`.
 These checks validate the packaged records and aggregation; they do not repeat
 the original measurements or establish their correctness independently.
 
@@ -44,6 +56,7 @@ with `python3 -B -m unittest test_verify_offline.py`.
 | `reports/recurrent_families/` | 36 reports: 12 each for Mamba-2, Falcon-H1 and RWKV-7 |
 | `code/` | Kimi, recurrent-family and Qwen audit code; shared clinical loaders and disclosure checks; minimal MLX gate dependency; existing focused tests |
 | `expected/` | Reference numerical TeX macros for offline comparison |
+| `followup/` | Completed frozen cohorts, complete synthetic readbacks, analysis, figures and anonymization provenance |
 | `provenance.json` | Original and released hashes and the treatment of each copied file |
 | `MANIFEST.json` | Complete file inventory, sizes and SHA-256 hashes, excluding the manifest itself |
 
@@ -57,8 +70,9 @@ are preserved. The other 76 reports are copied verbatim.
 
 The Qwen protocol contains explicitly invented audit dialogue. The amendment
 example contains invented medical statements, and the original fixed-position
-record retains reviewed synthetic/TOFU readbacks. Those are the only intended
-text-bearing evidence exceptions. No real patient text, clinical source
+record retains reviewed synthetic/TOFU readbacks. The follow-up additionally retains its invented administrative records, all
+synthetic probes and complete generated readbacks so strict answer scoring is
+reproducible. These are the intended text-bearing evidence exceptions. No real patient text, clinical source
 identifiers, user conversations, credentials, model weights, caches, or
 checkpoints are included. The `patient-*` labels in synthetic reports are
 generated example keys, not clinical identifiers. Clinical replay records contain
@@ -67,7 +81,7 @@ only reviewed aggregates and anonymous positions.
 Historical report paths recorded within evidence identify provenance; a path
 such as `outputs/kimi_sv/decay_contrast_8bit.json` is not a bundled file. The
 hybrid diagnostic is included, but that historical full report and the full
-Qwen live report are not. Their recorded hashes are preserved.
+historical Qwen live report are not. The new 32-record Qwen full report is bundled. Their recorded hashes are preserved.
 
 Selected measurement implementation modules are unchanged. The quantitative
 figure renderer now uses larger labels, explicit norm-ratio and numerical-
@@ -165,10 +179,12 @@ statistics are required, and keep resulting text-bearing reports local.
 
 After dependencies are available, existing implementation tests may be run
 from `code/` with `python -m pytest tests -q`. Several instantiate tiny random
-models and exercise accelerator kernels. Only the five data-free tests in
-`test_publish_qwen_replay.py` were executed during packaging; all five passed.
-The model tests were included but were not executed. They do not rerun
-pretrained results.
+models and exercise accelerator kernels. The earlier release ran five data-free
+tests in `test_publish_qwen_replay.py`; all five passed. This follow-up packaging
+passed 10 offline-verifier regression tests and 11 analysis regression tests,
+plus complete CPU-only regeneration of the follow-up summaries and tables.
+Accelerator model tests are included but were not run during packaging. They
+use tiny random models and do not reproduce the pretrained measurements.
 
 ## Controlled-data reproduction
 

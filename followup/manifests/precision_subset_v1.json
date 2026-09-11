@@ -1,0 +1,47 @@
+{
+  "schema": "kda-precision-matched-subset-v1",
+  "manifest_path": "followup/manifests/main_v1.json",
+  "manifest_sha256": "2003aaddfece115196f8f2a6d457d90004acc26484e6645e6664807df488eda5",
+  "record_ids": [
+    "kda-fu-evaluation-000",
+    "kda-fu-evaluation-001",
+    "kda-fu-evaluation-002",
+    "kda-fu-evaluation-003",
+    "kda-fu-evaluation-006",
+    "kda-fu-evaluation-007",
+    "kda-fu-evaluation-008",
+    "kda-fu-evaluation-009"
+  ],
+  "selection_rule": "fixed evaluation indices 0,1,2,3,6,7,8,9, before examining evaluation output",
+  "record_sha256": {
+    "kda-fu-evaluation-000": "9ecbc77ef32e88a54ba6be6b5aaab1e9a427b8407bfc68a2a8400824f74e4247",
+    "kda-fu-evaluation-001": "b243e074d5eb512b24764a651c92a26405f048c6bcd9f22b94da70210dc46e0d",
+    "kda-fu-evaluation-002": "4bfccf854f0059f0dd7b4c96e588611d21b38fca28d3b83782f2e1685fffed32",
+    "kda-fu-evaluation-003": "f8941d36106daac0858a89bfa69ae583037f99708a9e3643f2345886965cfff2",
+    "kda-fu-evaluation-006": "c9881d2ddf156389bc59149168816d0c2e3bc64413249afff7da631195d0efbb",
+    "kda-fu-evaluation-007": "14c0aeaa2573ab991bc09684baef5dbfb4578d9ed3027746fc1b62c6e172f0db",
+    "kda-fu-evaluation-008": "5c95d0b0cb99af76504185da459430225c567ef550e200b8398e1f33c631c78f",
+    "kda-fu-evaluation-009": "6f162a2e4d3725d9f91095df92f6ee98c8479525e82e28259894f00519ca6f61"
+  },
+  "conditions": [
+    "present",
+    "masked",
+    "static",
+    "ledger",
+    "transport",
+    "mask_transport",
+    "replay",
+    "never_stored",
+    "never_stored_repeat",
+    "prompt_forget",
+    "prompt_neutral"
+  ],
+  "suffix_strata": {
+    "short": 4,
+    "long": 4
+  },
+  "bf16_repo": "moonshotai/Kimi-Linear-48B-A3B-Instruct",
+  "bf16_revision": "e1df551a447157d4658b573f9a695d57658590e9",
+  "comparison": "same frozen record contexts, probe/target token ids, decoding, conditions; each precision versus its own never-stored reference and repeat-rebuild floor",
+  "plan_sha256": "ec0cf64dc78dd27ab48b30db3ce63eb2aafd3b4a4ecaf49881e665bd38ab4216"
+}

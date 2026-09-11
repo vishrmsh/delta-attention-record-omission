@@ -1,0 +1,4408 @@
+{
+  "schema_version": 1,
+  "manifest_sha256": "2003aaddfece115196f8f2a6d457d90004acc26484e6645e6664807df488eda5",
+  "record_id": "kda-fu-evaluation-037",
+  "model_id": "/models/models--mlx-community--Kimi-Linear-48B-A3B-Instruct-8bit/snapshots/553a7a5673491df2b2d38f7380188a9d8e9f9a66",
+  "tiny": false,
+  "split": "evaluation",
+  "status": "complete",
+  "conditions": {
+    "never_stored": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -3.7664246559143066,
+          "total_log_probability": -30.131397247314453,
+          "first_token_rank": 850,
+          "first_token_probability": 1.2384379033392179e-06,
+          "n_target_tokens": 8,
+          "greedy_text": "UNKNOWN",
+          "greedy_exact": false,
+          "generated_tokens": 1
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -3.047898769378662,
+          "total_log_probability": -24.383190155029297,
+          "first_token_rank": 424,
+          "first_token_probability": 4.82335381093435e-05,
+          "n_target_tokens": 8
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -3.3309454917907715,
+          "total_log_probability": -26.647563934326172,
+          "first_token_rank": 705,
+          "first_token_probability": 1.2370539479888976e-05,
+          "n_target_tokens": 8
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.004851447211371528,
+          "total_log_probability": -0.04366302490234375,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9586377143859863,
+          "n_target_tokens": 9,
+          "greedy_text": "JUNIPER-DUNE-6204",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.0021642049153645835,
+          "total_log_probability": -0.01947784423828125,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9816538691520691,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-9042",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.0022096633911132812,
+          "total_log_probability": -0.01767730712890625,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9827591776847839,
+          "n_target_tokens": 8,
+          "greedy_text": "IRIS-MAPLE-3014",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.547382528131658,
+          "total_log_probability": -28.021207809448242,
+          "first_token_rank": 3,
+          "first_token_probability": 0.08271144330501556,
+          "n_target_tokens": 11
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -2.649082374572754,
+          "total_log_probability": -26.49082374572754,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6311108469963074,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.3058018329975312
+    },
+    "present": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -0.0018572807312011719,
+          "total_log_probability": -0.014858245849609375,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9856350421905518,
+          "n_target_tokens": 8,
+          "greedy_text": "REED-WILLOW-3157",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -0.0027108192443847656,
+          "total_log_probability": -0.021686553955078125,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9790061712265015,
+          "n_target_tokens": 8
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -0.26448071002960205,
+          "total_log_probability": -2.1158456802368164,
+          "first_token_rank": 3,
+          "first_token_probability": 0.123292475938797,
+          "n_target_tokens": 8
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.003997802734375,
+          "total_log_probability": -0.035980224609375,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9660808444023132,
+          "n_target_tokens": 9,
+          "greedy_text": "JUNIPER-DUNE-6204",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.0017903645833333333,
+          "total_log_probability": -0.01611328125,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9851237535476685,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-9042",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.0028123855590820312,
+          "total_log_probability": -0.02249908447265625,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9780094623565674,
+          "n_target_tokens": 8,
+          "greedy_text": "IRIS-MAPLE-3014",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.591865366155451,
+          "total_log_probability": -28.51051902770996,
+          "first_token_rank": 4,
+          "first_token_probability": 0.06499715149402618,
+          "n_target_tokens": 11
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -2.6707611083984375,
+          "total_log_probability": -26.707611083984375,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6243700385093689,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.4529103340028087
+    },
+    "masked": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -3.4781742095947266,
+          "total_log_probability": -27.825393676757812,
+          "first_token_rank": 414,
+          "first_token_probability": 4.098270892427536e-06,
+          "n_target_tokens": 8,
+          "greedy_text": "UNKNOWN",
+          "greedy_exact": false,
+          "generated_tokens": 1
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -2.554107189178467,
+          "total_log_probability": -20.432857513427734,
+          "first_token_rank": 64,
+          "first_token_probability": 0.0005731965065933764,
+          "n_target_tokens": 8
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -2.9987523555755615,
+          "total_log_probability": -23.990018844604492,
+          "first_token_rank": 197,
+          "first_token_probability": 7.450406701536849e-05,
+          "n_target_tokens": 8
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.0055565304226345485,
+          "total_log_probability": -0.05000877380371094,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9525192379951477,
+          "n_target_tokens": 9,
+          "greedy_text": "JUNIPER-DUNE-6204",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.0019179450141059028,
+          "total_log_probability": -0.017261505126953125,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9838469624519348,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-9042",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.002878904342651367,
+          "total_log_probability": -0.023031234741210938,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9775209426879883,
+          "n_target_tokens": 8,
+          "greedy_text": "IRIS-MAPLE-3014",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.578571319580078,
+          "total_log_probability": -28.36428451538086,
+          "first_token_rank": 4,
+          "first_token_probability": 0.06544949114322662,
+          "n_target_tokens": 11
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -2.64052734375,
+          "total_log_probability": -26.4052734375,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6265149116516113,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.2895262919992092
+    },
+    "static": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -0.002574920654296875,
+          "total_log_probability": -0.020599365234375,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9798561334609985,
+          "n_target_tokens": 8,
+          "greedy_text": "REED-WILLOW-3157",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -0.0028159618377685547,
+          "total_log_probability": -0.022527694702148438,
+          "first_token_rank": 1,
+          "first_token_probability": 0.978022575378418,
+          "n_target_tokens": 8
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -0.49715185165405273,
+          "total_log_probability": -3.977214813232422,
+          "first_token_rank": 7,
+          "first_token_probability": 0.01920323073863983,
+          "n_target_tokens": 8
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.0036801232231987845,
+          "total_log_probability": -0.03312110900878906,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9693126678466797,
+          "n_target_tokens": 9,
+          "greedy_text": "JUNIPER-DUNE-6204",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.0017102559407552083,
+          "total_log_probability": -0.015392303466796875,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9853981137275696,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-9042",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.0026216506958007812,
+          "total_log_probability": -0.02097320556640625,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9794749617576599,
+          "n_target_tokens": 8,
+          "greedy_text": "IRIS-MAPLE-3014",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.524611386385831,
+          "total_log_probability": -27.77072525024414,
+          "first_token_rank": 3,
+          "first_token_probability": 0.09380267560482025,
+          "n_target_tokens": 11
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -2.6047359466552735,
+          "total_log_probability": -26.047359466552734,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6087861061096191,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.5595126670013997
+    },
+    "ledger": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -0.0027670860290527344,
+          "total_log_probability": -0.022136688232421875,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9784274101257324,
+          "n_target_tokens": 8,
+          "greedy_text": "REED-WILLOW-3157",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -0.0030777454376220703,
+          "total_log_probability": -0.024621963500976562,
+          "first_token_rank": 1,
+          "first_token_probability": 0.976036012172699,
+          "n_target_tokens": 8
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -0.42617547512054443,
+          "total_log_probability": -3.4094038009643555,
+          "first_token_rank": 5,
+          "first_token_probability": 0.03400714695453644,
+          "n_target_tokens": 8
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.0043866899278428816,
+          "total_log_probability": -0.03948020935058594,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9626375436782837,
+          "n_target_tokens": 9,
+          "greedy_text": "JUNIPER-DUNE-6204",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.0023511250813802085,
+          "total_log_probability": -0.021160125732421875,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9800747632980347,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-9042",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.002667665481567383,
+          "total_log_probability": -0.021341323852539062,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9791536331176758,
+          "n_target_tokens": 8,
+          "greedy_text": "IRIS-MAPLE-3014",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.584551377729936,
+          "total_log_probability": -28.430065155029297,
+          "first_token_rank": 4,
+          "first_token_probability": 0.07469207048416138,
+          "n_target_tokens": 11
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -2.627827453613281,
+          "total_log_probability": -26.278274536132812,
+          "first_token_rank": 1,
+          "first_token_probability": 0.630244791507721,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.5497378329964704
+    },
+    "transport": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -0.002497434616088867,
+          "total_log_probability": -0.019979476928710938,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9805329442024231,
+          "n_target_tokens": 8,
+          "greedy_text": "REED-WILLOW-3157",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -0.0030269622802734375,
+          "total_log_probability": -0.0242156982421875,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9764382243156433,
+          "n_target_tokens": 8
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -0.459175705909729,
+          "total_log_probability": -3.673405647277832,
+          "first_token_rank": 6,
+          "first_token_probability": 0.02608383446931839,
+          "n_target_tokens": 8
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.004138946533203125,
+          "total_log_probability": -0.037250518798828125,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9648433923721313,
+          "n_target_tokens": 9,
+          "greedy_text": "JUNIPER-DUNE-6204",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.0019929673936631945,
+          "total_log_probability": -0.01793670654296875,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9831041097640991,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-9042",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.0023412704467773438,
+          "total_log_probability": -0.01873016357421875,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9817006587982178,
+          "n_target_tokens": 8,
+          "greedy_text": "IRIS-MAPLE-3014",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.5565650246360083,
+          "total_log_probability": -28.122215270996094,
+          "first_token_rank": 4,
+          "first_token_probability": 0.06928908824920654,
+          "n_target_tokens": 11
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -2.671563148498535,
+          "total_log_probability": -26.71563148498535,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6216156482696533,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.61473924999882
+    },
+    "mask_transport": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -3.8092968463897705,
+          "total_log_probability": -30.474374771118164,
+          "first_token_rank": 855,
+          "first_token_probability": 1.1459403594926698e-06,
+          "n_target_tokens": 8,
+          "greedy_text": "UNKNOWN",
+          "greedy_exact": false,
+          "generated_tokens": 1
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -3.0456600189208984,
+          "total_log_probability": -24.365280151367188,
+          "first_token_rank": 466,
+          "first_token_probability": 3.648877464001998e-05,
+          "n_target_tokens": 8
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -3.3260581493377686,
+          "total_log_probability": -26.60846519470215,
+          "first_token_rank": 681,
+          "first_token_probability": 1.2446427717804909e-05,
+          "n_target_tokens": 8
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.0050449371337890625,
+          "total_log_probability": -0.04540443420410156,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9573659300804138,
+          "n_target_tokens": 9,
+          "greedy_text": "JUNIPER-DUNE-6204",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.0021116468641493055,
+          "total_log_probability": -0.01900482177734375,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9819010496139526,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-9042",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.0022783279418945312,
+          "total_log_probability": -0.01822662353515625,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9822062849998474,
+          "n_target_tokens": 8,
+          "greedy_text": "IRIS-MAPLE-3014",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.5937610973011362,
+          "total_log_probability": -28.5313720703125,
+          "first_token_rank": 4,
+          "first_token_probability": 0.08290998637676239,
+          "n_target_tokens": 11
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -2.649380683898926,
+          "total_log_probability": -26.493806838989258,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6631733179092407,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.3626428749994375
+    },
+    "prompt_forget": {
+      "extra_instruction_tokens": 31,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -0.0911870002746582,
+          "total_log_probability": -0.7294960021972656,
+          "first_token_rank": 1,
+          "first_token_probability": 0.4824867844581604,
+          "n_target_tokens": 8,
+          "greedy_text": "REED-WILLOW-3157",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -0.026521921157836914,
+          "total_log_probability": -0.2121753692626953,
+          "first_token_rank": 1,
+          "first_token_probability": 0.809616208076477,
+          "n_target_tokens": 8
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -0.5615804195404053,
+          "total_log_probability": -4.492643356323242,
+          "first_token_rank": 9,
+          "first_token_probability": 0.011421000584959984,
+          "n_target_tokens": 8
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.006426069471571181,
+          "total_log_probability": -0.057834625244140625,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9451733231544495,
+          "n_target_tokens": 9,
+          "greedy_text": "JUNIPER-DUNE-6204",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.0030530293782552085,
+          "total_log_probability": -0.027477264404296875,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9739142656326294,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-9042",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.003474712371826172,
+          "total_log_probability": -0.027797698974609375,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9728745222091675,
+          "n_target_tokens": 8,
+          "greedy_text": "IRIS-MAPLE-3014",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.575977152044123,
+          "total_log_probability": -28.33574867248535,
+          "first_token_rank": 2,
+          "first_token_probability": 0.14700260758399963,
+          "n_target_tokens": 11
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -2.6311832427978517,
+          "total_log_probability": -26.311832427978516,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6561763882637024,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.5047425000011572
+    },
+    "prompt_neutral": {
+      "extra_instruction_tokens": 31,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -0.0032982826232910156,
+          "total_log_probability": -0.026386260986328125,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9742542505264282,
+          "n_target_tokens": 8,
+          "greedy_text": "REED-WILLOW-3157",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -0.0012936592102050781,
+          "total_log_probability": -0.010349273681640625,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9899325370788574,
+          "n_target_tokens": 8
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -0.28691530227661133,
+          "total_log_probability": -2.2953224182128906,
+          "first_token_rank": 3,
+          "first_token_probability": 0.1021377295255661,
+          "n_target_tokens": 8
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.010858535766601562,
+          "total_log_probability": -0.09772682189941406,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9078346490859985,
+          "n_target_tokens": 9,
+          "greedy_text": "JUNIPER-DUNE-6204",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.0030920240614149305,
+          "total_log_probability": -0.027828216552734375,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9731640219688416,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-9042",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.004083871841430664,
+          "total_log_probability": -0.03267097473144531,
+          "first_token_rank": 1,
+          "first_token_probability": 0.968106210231781,
+          "n_target_tokens": 8,
+          "greedy_text": "IRIS-MAPLE-3014",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.601766586303711,
+          "total_log_probability": -28.61943244934082,
+          "first_token_rank": 3,
+          "first_token_probability": 0.07536322623491287,
+          "n_target_tokens": 11
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -2.401369094848633,
+          "total_log_probability": -24.013690948486328,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6934887766838074,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.5913868749994435
+    },
+    "never_stored_repeat": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -3.7664246559143066,
+          "total_log_probability": -30.131397247314453,
+          "first_token_rank": 850,
+          "first_token_probability": 1.2384379033392179e-06,
+          "n_target_tokens": 8,
+          "greedy_text": "UNKNOWN",
+          "greedy_exact": false,
+          "generated_tokens": 1
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -3.047898769378662,
+          "total_log_probability": -24.383190155029297,
+          "first_token_rank": 424,
+          "first_token_probability": 4.82335381093435e-05,
+          "n_target_tokens": 8
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -3.3309454917907715,
+          "total_log_probability": -26.647563934326172,
+          "first_token_rank": 705,
+          "first_token_probability": 1.2370539479888976e-05,
+          "n_target_tokens": 8
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.004851447211371528,
+          "total_log_probability": -0.04366302490234375,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9586377143859863,
+          "n_target_tokens": 9,
+          "greedy_text": "JUNIPER-DUNE-6204",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.0021642049153645835,
+          "total_log_probability": -0.01947784423828125,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9816538691520691,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-9042",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.0022096633911132812,
+          "total_log_probability": -0.01767730712890625,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9827591776847839,
+          "n_target_tokens": 8,
+          "greedy_text": "IRIS-MAPLE-3014",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.547382528131658,
+          "total_log_probability": -28.021207809448242,
+          "first_token_rank": 3,
+          "first_token_probability": 0.08271144330501556,
+          "n_target_tokens": 11
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -2.649082374572754,
+          "total_log_probability": -26.49082374572754,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6311108469963074,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.2781187500004307
+    },
+    "replay": {
+      "extra_instruction_tokens": 0,
+      "target_probes": [
+        {
+          "probe_id": "target-direct",
+          "mean_log_probability": -3.7664246559143066,
+          "total_log_probability": -30.131397247314453,
+          "first_token_rank": 850,
+          "first_token_probability": 1.2384379033392179e-06,
+          "n_target_tokens": 8,
+          "greedy_text": "UNKNOWN",
+          "greedy_exact": false,
+          "generated_tokens": 1
+        },
+        {
+          "probe_id": "target-lookup",
+          "mean_log_probability": -3.047898769378662,
+          "total_log_probability": -24.383190155029297,
+          "first_token_rank": 424,
+          "first_token_probability": 4.82335381093435e-05,
+          "n_target_tokens": 8
+        },
+        {
+          "probe_id": "target-completion",
+          "mean_log_probability": -3.3309454917907715,
+          "total_log_probability": -26.647563934326172,
+          "first_token_rank": 705,
+          "first_token_probability": 1.2370539479888976e-05,
+          "n_target_tokens": 8
+        }
+      ],
+      "retained_probes": [
+        {
+          "probe_id": "retained-1",
+          "mean_log_probability": -0.004851447211371528,
+          "total_log_probability": -0.04366302490234375,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9586377143859863,
+          "n_target_tokens": 9,
+          "greedy_text": "JUNIPER-DUNE-6204",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-2",
+          "mean_log_probability": -0.0021642049153645835,
+          "total_log_probability": -0.01947784423828125,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9816538691520691,
+          "n_target_tokens": 9,
+          "greedy_text": "GROVE-GROVE-9042",
+          "greedy_exact": true,
+          "generated_tokens": 9
+        },
+        {
+          "probe_id": "retained-3",
+          "mean_log_probability": -0.0022096633911132812,
+          "total_log_probability": -0.01767730712890625,
+          "first_token_rank": 1,
+          "first_token_probability": 0.9827591776847839,
+          "n_target_tokens": 8,
+          "greedy_text": "IRIS-MAPLE-3014",
+          "greedy_exact": true,
+          "generated_tokens": 8
+        }
+      ],
+      "continuations": [
+        {
+          "probe_id": "continuation-1",
+          "mean_log_probability": -2.547382528131658,
+          "total_log_probability": -28.021207809448242,
+          "first_token_rank": 3,
+          "first_token_probability": 0.08271144330501556,
+          "n_target_tokens": 11
+        },
+        {
+          "probe_id": "continuation-2",
+          "mean_log_probability": -2.649082374572754,
+          "total_log_probability": -26.49082374572754,
+          "first_token_rank": 1,
+          "first_token_probability": 0.6311108469963074,
+          "n_target_tokens": 10
+        }
+      ],
+      "seconds": 1.3205367909977213
+    }
+  },
+  "qualification": {
+    "qualified": true,
+    "lift_nats": 3.7645673751831055,
+    "first_token_rank": 1
+  },
+  "state_checks": {
+    "replay_vs_never": {
+      "arrays": [
+        {
+          "name": "layer:0/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:0/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:0/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:0/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:3/keys",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:3/values",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:7/keys",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:7/values",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:11/keys",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:11/values",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:15/keys",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:15/values",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:19/keys",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:19/values",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:23/keys",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:23/values",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:26/keys",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:26/values",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        }
+      ],
+      "offsets": [
+        {
+          "layer": 3,
+          "candidate": 272,
+          "reference": 272,
+          "equal": true
+        },
+        {
+          "layer": 7,
+          "candidate": 272,
+          "reference": 272,
+          "equal": true
+        },
+        {
+          "layer": 11,
+          "candidate": 272,
+          "reference": 272,
+          "equal": true
+        },
+        {
+          "layer": 15,
+          "candidate": 272,
+          "reference": 272,
+          "equal": true
+        },
+        {
+          "layer": 19,
+          "candidate": 272,
+          "reference": 272,
+          "equal": true
+        },
+        {
+          "layer": 23,
+          "candidate": 272,
+          "reference": 272,
+          "equal": true
+        },
+        {
+          "layer": 26,
+          "candidate": 272,
+          "reference": 272,
+          "equal": true
+        }
+      ],
+      "n_arrays": 94,
+      "all_equal": true,
+      "max_abs_diff": 0.0,
+      "logits": {
+        "name": "audit_next_token_logits",
+        "shape_candidate": [
+          1,
+          163840
+        ],
+        "shape_reference": [
+          1,
+          163840
+        ],
+        "max_abs_diff": 0.0,
+        "equal": true
+      }
+    },
+    "repeat_never_vs_never": {
+      "arrays": [
+        {
+          "name": "layer:0/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:0/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:0/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:0/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:1/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:2/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:4/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:5/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:6/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:8/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:9/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:10/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:12/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:13/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:14/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:16/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:17/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:18/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:20/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:21/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:22/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:24/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:0",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:1",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:2",
+          "shape_candidate": [
+            1,
+            3,
+            4096
+          ],
+          "shape_reference": [
+            1,
+            3,
+            4096
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:25/array:3",
+          "shape_candidate": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "shape_reference": [
+            1,
+            32,
+            128,
+            128
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:3/keys",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:3/values",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:7/keys",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:7/values",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:11/keys",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:11/values",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:15/keys",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:15/values",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:19/keys",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:19/values",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:23/keys",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:23/values",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:26/keys",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            512
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        },
+        {
+          "name": "layer:26/values",
+          "shape_candidate": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "shape_reference": [
+            1,
+            1,
+            272,
+            64
+          ],
+          "max_abs_diff": 0.0,
+          "equal": true
+        }
+      ],
+      "offsets": [
+        {
+          "layer": 3,
+          "candidate": 272,
+          "reference": 272,
+          "equal": true
+        },
+        {
+          "layer": 7,
+          "candidate": 272,
+          "reference": 272,
+          "equal": true
+        },
+        {
+          "layer": 11,
+          "candidate": 272,
+          "reference": 272,
+          "equal": true
+        },
+        {
+          "layer": 15,
+          "candidate": 272,
+          "reference": 272,
+          "equal": true
+        },
+        {
+          "layer": 19,
+          "candidate": 272,
+          "reference": 272,
+          "equal": true
+        },
+        {
+          "layer": 23,
+          "candidate": 272,
+          "reference": 272,
+          "equal": true
+        },
+        {
+          "layer": 26,
+          "candidate": 272,
+          "reference": 272,
+          "equal": true
+        }
+      ],
+      "n_arrays": 94,
+      "all_equal": true,
+      "max_abs_diff": 0.0,
+      "logits": {
+        "name": "audit_next_token_logits",
+        "shape_candidate": [
+          1,
+          163840
+        ],
+        "shape_reference": [
+          1,
+          163840
+        ],
+        "max_abs_diff": 0.0,
+        "equal": true
+      }
+    },
+    "corrections": {
+      "present": {
+        "per_layer_residual_norm": [
+          1.5207666158676147,
+          0.8471347093582153,
+          0.528815507888794,
+          0.5106089115142822,
+          0.8948070406913757,
+          1.1303882598876953,
+          1.2312980890274048,
+          1.2646812200546265,
+          1.637479305267334,
+          1.3101322650909424,
+          2.05061411857605,
+          1.7643651962280273,
+          1.900856852531433,
+          1.8667078018188477,
+          2.0391910076141357,
+          3.224243640899658,
+          2.8772432804107666,
+          3.788543462753296,
+          2.912013530731201,
+          1.669452428817749
+        ],
+        "per_layer_relative_to_present_difference": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "per_layer_relative_to_reference": [
+          0.11074473649084389,
+          0.050452720357635865,
+          0.044003643908887835,
+          0.05297209283458522,
+          0.08236666454811292,
+          0.0882617944703777,
+          0.12375963309295074,
+          0.11348019693191758,
+          0.12146508831469548,
+          0.12480796478925958,
+          0.18357165700583064,
+          0.15264144967179635,
+          0.11330801317679354,
+          0.10728639954958441,
+          0.11752546265226668,
+          0.06882944255974191,
+          0.07655729728358095,
+          0.08440838742237232,
+          0.11470497348928918,
+          0.13173917228364698
+        ],
+        "global_relative_to_present_difference": 1.0
+      },
+      "static": {
+        "per_layer_residual_norm": [
+          1.5267170667648315,
+          1.5239460468292236,
+          1.4660533666610718,
+          1.3906534910202026,
+          1.7903895378112793,
+          5.148180961608887,
+          2.937730073928833,
+          3.7185592651367188,
+          4.619822978973389,
+          3.189772605895996,
+          4.019320011138916,
+          4.322103500366211,
+          4.048222541809082,
+          3.638364791870117,
+          4.441590309143066,
+          4.584361553192139,
+          4.2102556228637695,
+          5.0534892082214355,
+          3.265329122543335,
+          2.1183199882507324
+        ],
+        "per_layer_relative_to_present_difference": [
+          1.0039127968980448,
+          1.7989418093655458,
+          2.7723342919991905,
+          2.7235198204747837,
+          2.0008666186040833,
+          4.554347514295983,
+          2.385880478584458,
+          2.940313500485205,
+          2.8213015969805855,
+          2.43469509979176,
+          1.960056733604243,
+          2.449664904752304,
+          2.1296830092270924,
+          1.9490810443525417,
+          2.17811391505681,
+          1.4218409226397568,
+          1.4632949711025816,
+          1.3338870882449505,
+          1.1213303400150811,
+          1.2688711290508927
+        ],
+        "per_layer_relative_to_reference": [
+          0.11117805815226005,
+          0.09076150804757936,
+          0.12199281098153103,
+          0.1442705447670231,
+          0.16480470958007953,
+          0.4019748842534676,
+          0.2952756926332462,
+          0.33366735507663703,
+          0.34268964763963816,
+          0.30386934028739276,
+          0.3598108624131669,
+          0.37392040227151463,
+          0.24131015047189672,
+          0.20910988767892805,
+          0.2559838455763915,
+          0.09786451811392359,
+          0.11202590811626933,
+          0.11259125812227991,
+          0.1286221669241655,
+          0.16716003227578122
+        ],
+        "global_relative_to_present_difference": 1.8350971581166364
+      },
+      "ledger": {
+        "per_layer_residual_norm": [
+          0.6309587955474854,
+          0.47082650661468506,
+          0.36426225304603577,
+          0.4040585458278656,
+          0.6127257943153381,
+          2.071967601776123,
+          1.193777084350586,
+          1.218808650970459,
+          1.5265538692474365,
+          1.2117321491241455,
+          1.5883243083953857,
+          2.025906801223755,
+          1.7326042652130127,
+          1.5476460456848145,
+          1.843396782875061,
+          2.2245330810546875,
+          2.3022067546844482,
+          2.7013237476348877,
+          2.1456944942474365,
+          1.3729541301727295
+        ],
+        "per_layer_relative_to_present_difference": [
+          0.4148952172963872,
+          0.5557870565489882,
+          0.6888267223862078,
+          0.7913268584161083,
+          0.6847574576993867,
+          1.8329698523071836,
+          0.9695272777476196,
+          0.9637279589854382,
+          0.9322584195946294,
+          0.9248929908920559,
+          0.7745603104977747,
+          1.148235527177065,
+          0.9114859243112636,
+          0.8290778257726508,
+          0.9039843624221573,
+          0.6899395110333466,
+          0.8001432379245234,
+          0.7130243520214813,
+          0.7368422129922785,
+          0.8223978751793546
+        ],
+        "per_layer_relative_to_reference": [
+          0.04594746151079981,
+          0.028040968942459648,
+          0.030310885806809025,
+          0.041918239806518764,
+          0.05640118781514401,
+          0.1617812083747352,
+          0.11998834016765275,
+          0.10936403857446252,
+          0.1132368512681801,
+          0.11543401184108869,
+          0.1421873196490272,
+          0.17526833543296652,
+          0.1032786591223225,
+          0.08894877487354534,
+          0.10624118042407835,
+          0.047488151944366154,
+          0.06125680373523478,
+          0.060185235747015176,
+          0.08451946650706847,
+          0.1083420153639582
+        ],
+        "global_relative_to_present_difference": 0.8250169972814834
+      },
+      "transport": {
+        "per_layer_residual_norm": [
+          0.09981983155012131,
+          0.4153340756893158,
+          0.2997354567050934,
+          0.348597913980484,
+          0.5452513694763184,
+          0.8529840707778931,
+          1.1308447122573853,
+          1.1162978410720825,
+          1.270848274230957,
+          1.1938917636871338,
+          1.440110206604004,
+          1.6302341222763062,
+          1.4335638284683228,
+          1.427538514137268,
+          1.5239253044128418,
+          1.863782286643982,
+          1.9998736381530762,
+          2.2966177463531494,
+          1.9923595190048218,
+          1.3044140338897705
+        ],
+        "per_layer_relative_to_present_difference": [
+          0.06563783719908459,
+          0.49028102744600166,
+          0.5668053455953594,
+          0.6827102036795012,
+          0.6093507814321935,
+          0.7545938869381371,
+          0.9184166875062991,
+          0.8826713193573518,
+          0.7761003575086276,
+          0.9112757509290561,
+          0.7022824009443664,
+          0.9239777149093197,
+          0.7541671675903417,
+          0.7647359231832266,
+          0.7473185683551256,
+          0.578052558746439,
+          0.6950658819046981,
+          0.6062007124722543,
+          0.6841862161624448,
+          0.7813424398163374
+        ],
+        "per_layer_relative_to_reference": [
+          0.007269044984441533,
+          0.024736011574387515,
+          0.024941500593232302,
+          0.03616458828842912,
+          0.05019019140635596,
+          0.06660181055753729,
+          0.11366291227222276,
+          0.1001657151468278,
+          0.09426909846585219,
+          0.11373447183525973,
+          0.12891914402739046,
+          0.14103729786819233,
+          0.0854531833628315,
+          0.08204576380455594,
+          0.0878289604945657,
+          0.03978703538874986,
+          0.05321236535265235,
+          0.051168424594076174,
+          0.0784795617866503,
+          0.10293340629148956
+        ],
+        "global_relative_to_present_difference": 0.6933400527848733
+      }
+    }
+  },
+  "tokens": {
+    "prefix": 144,
+    "target": 38,
+    "suffix": 128,
+    "forget_instruction": 31,
+    "neutral_instruction": 31,
+    "forget_ids": [
+      382,
+      123556,
+      1919,
+      4695,
+      25,
+      12415,
+      316,
+      859,
+      667,
+      1328,
+      5365,
+      5864,
+      12,
+      9758,
+      27150,
+      13,
+      28639,
+      473,
+      5365,
+      559,
+      41515,
+      658,
+      566,
+      1650,
+      13,
+      61982,
+      799,
+      1356,
+      5964,
+      17979,
+      1481
+    ],
+    "neutral_ids": [
+      382,
+      123556,
+      1919,
+      4695,
+      25,
+      5065,
+      2389,
+      566,
+      5365,
+      1650,
+      395,
+      29103,
+      5964,
+      13,
+      28639,
+      276,
+      1650,
+      559,
+      276,
+      2525,
+      8366,
+      13,
+      61982,
+      799,
+      5964,
+      17979,
+      1481,
+      382,
+      123556,
+      1919,
+      4695
+    ]
+  },
+  "timing": {
+    "transport_seconds": 0.13678491699829465,
+    "replay_seconds": 0.16114024999842513,
+    "present_suffix_seconds": 0.17711104200134287,
+    "never_suffix_seconds": 0.1691454160027206
+  },
+  "n_kda_layers": 20,
+  "n_mla_layers": 7,
+  "seconds": 17.85558524999942
+}
