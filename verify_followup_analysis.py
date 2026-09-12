@@ -12,7 +12,7 @@ import tempfile
 
 ROOT=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT/'code'))
-from verify_followup import read, provenance, original_hash, verify
+from verify_followup import read, provenance, verify
 
 
 def main():
@@ -27,7 +27,6 @@ def main():
     from kda_followup.precision_report import attach_floors
     from recurrent_families.qwen_confirmation import summarize as qwen_summarize
     from kda_followup.auc_sensitivity import run as auc_sensitivity
-    from kda_followup.export_tables import render_tables
     mf=ROOT/'followup/manifests/main_v1.json'
     result=analyze(load_manifest(mf),load_results([ROOT/'followup/raw/kimi8_v2']))
     expected=read('followup/analysis/kimi8_analysis_v2.json')
@@ -78,10 +77,6 @@ def main():
         a=auc_sensitivity(mf,ROOT/'followup/raw/kimi8_v2',released_analysis)
         assert a==read('followup/analysis/auc_pairing_sensitivity_v2.json'), 'AUC sensitivity differs'
         print('PASS complete exploratory off-diagonal AUC sensitivity')
-    tex=render_tables(expected,'followup/analysis/kimi8_analysis_v2.json',original_hash('followup/analysis/kimi8_analysis_v2.json'))
-    tex=tex.replace('% Source SHA-256:', '% Original source SHA-256 before path anonymization:')
-    assert tex==(ROOT/'followup/figures/cohort_results_table.tex').read_text(), 'table regeneration differs'
-    print('PASS byte-identical follow-up numerical tables')
     print('All comparisons used released data, recorded source provenance and CPU statistics only. External weight SHA claims were not independently repeated.')
 
 if __name__=='__main__': main()

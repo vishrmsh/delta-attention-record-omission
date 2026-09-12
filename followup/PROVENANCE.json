@@ -1,8 +1,8 @@
 {
   "schema": "kda-followup-anonymous-provenance-v1",
-  "source_scope": "Selected completed 11 September 2026 experiment evidence; historical artifact retained separately. Original author files are not included.",
+  "source_scope": "Frozen synthetic cohort measurements, input manifests, model/runtime provenance, and measurement/analysis sources retained for reproduction.",
   "recorded_hash_scope": "Hashes embedded in frozen results and summaries refer to original run files before path anonymization. Use this map to resolve original byte/canonical hashes to released files. Do not compare an original hash directly to redacted bytes.",
-  "transformations": "Only path metadata and documentation links changed; all JSON non-path values, numeric values, synthetic target/probe/generation strings and token arrays preserved. Per-file masked-content digest excludes only the explicitly enumerated changed string leaves.",
+  "transformations": "JSON exports preserve every non-path value and record each anonymized path-string leaf. Retained documentation may be condensed as explicitly marked per file. Measurement source code, synthetic text, numerical results and frozen input selection are unchanged.",
   "model_provenance_scope": "Weight/config hashes are recorded external source provenance. No model weights are bundled; offline verification does not reverify external weights.",
   "files": [
     {
@@ -42,15 +42,6 @@
       "transformation": "verbatim"
     },
     {
-      "source_relative_path": "kda_followup/export_tables.py",
-      "released_path": "code/kda_followup/export_tables.py",
-      "original_sha256": "da743de640ba1c73c562265581673ef0d633782230cb520e8595c0fe355d9223",
-      "released_sha256": "da743de640ba1c73c562265581673ef0d633782230cb520e8595c0fe355d9223",
-      "original_bytes": 7717,
-      "released_bytes": 7717,
-      "transformation": "verbatim"
-    },
-    {
       "source_relative_path": "kda_followup/maintenance_report.py",
       "released_path": "code/kda_followup/maintenance_report.py",
       "original_sha256": "d6af4a18c977bc4d955327783755bb5b026e06fc965d9b42cf15a64102386912",
@@ -66,15 +57,6 @@
       "released_sha256": "cff310f2f5f232a6a6399a02cd50c7537576d52d2d1dab53b38f5cfe1e7b2dff",
       "original_bytes": 12931,
       "released_bytes": 12931,
-      "transformation": "verbatim"
-    },
-    {
-      "source_relative_path": "kda_followup/plot_results.py",
-      "released_path": "code/kda_followup/plot_results.py",
-      "original_sha256": "3ff7f36882453c0cdf0b7eeb5dd774df995cfb7795c6d5f50617eb9d7ed872e6",
-      "released_sha256": "3ff7f36882453c0cdf0b7eeb5dd774df995cfb7795c6d5f50617eb9d7ed872e6",
-      "original_bytes": 3980,
-      "released_bytes": 3980,
       "transformation": "verbatim"
     },
     {
@@ -164,28 +146,10 @@
       "source_relative_path": "kda_followup/protocol.md",
       "released_path": "followup/protocol.md",
       "original_sha256": "806b845d2fdb79ab26ad0f2d17e962da964be7f1d69267887ba9857b43d5c797",
-      "released_sha256": "d2db680d8fe6a31b4e1dedfd78a4abb5a44dab83cc238aed36428f4a5b7af436",
+      "released_sha256": "a1d1c7bb9ab335c69b70b4d2e1c716b822495fab8138872f8d579c4095c7d388",
       "original_bytes": 11585,
-      "released_bytes": 11577,
-      "transformation": "documentation_path_anonymization"
-    },
-    {
-      "source_relative_path": "kda_followup/RESULTS.md",
-      "released_path": "followup/RESULTS.md",
-      "original_sha256": "2dfa2dfc843308441da0f7aa34de70e47cec421acf23d695818ded9e3d63258b",
-      "released_sha256": "9f72c36a4343f992295652450571b0d5c166b201361124b62049189e2cc0eaaf",
-      "original_bytes": 10434,
-      "released_bytes": 10054,
-      "transformation": "documentation_path_anonymization"
-    },
-    {
-      "source_relative_path": "kda_followup/cohort_results_table.tex",
-      "released_path": "followup/figures/cohort_results_table.tex",
-      "original_sha256": "001a18518104195b7bdfd6701b39325c45a6316b229e3df67b2ce54235936a87",
-      "released_sha256": "b1a778d40be554d62425c38f226b9ceae8981177b3154949b01017c6b09a9411",
-      "original_bytes": 5560,
-      "released_bytes": 5592,
-      "transformation": "documentation_path_anonymization"
+      "released_bytes": 7809,
+      "transformation": "condensed_protocol_documentation; original source hash retained, frozen rules defined by unchanged manifest and measurement code"
     },
     {
       "source_relative_path": "outputs/kda_followup/kimi8_v2/kda-fu-calibration-000.json",
@@ -2796,15 +2760,6 @@
       "unchanged_content_sha256": "d9cf63e1b730713d3b6a868d1e4f9cbea50b444b1913e432ac5333cf91a17839"
     },
     {
-      "source_relative_path": "outputs/kda_followup/kimi8_analysis_v2.md",
-      "released_path": "followup/analysis/kimi8_analysis_v2.md",
-      "original_sha256": "a6206e08e30417aaecfc47db1b33fa708f3a9f3cb27b6faceac7483c042ba69a",
-      "released_sha256": "d462419578fe278ea71b511246d359dad9b4954fd595d54149dbbe52876bc3ed",
-      "original_bytes": 6977,
-      "released_bytes": 6946,
-      "transformation": "documentation_path_anonymization"
-    },
-    {
       "source_relative_path": "outputs/kda_followup/precision_comparison_v1.json",
       "released_path": "followup/analysis/precision_comparison_v1.json",
       "original_sha256": "99687b16265ea0f896ac5a3a4993e076f097de6304262e0c6ded8f1e211eb078",
@@ -2867,15 +2822,6 @@
         }
       ],
       "unchanged_content_sha256": "6207788505c2d8eabb6329d62d9259f54748e95222ba9906367c022f1ac1f3a9"
-    },
-    {
-      "source_relative_path": "outputs/kda_followup/precision_comparison_v1.md",
-      "released_path": "followup/analysis/precision_comparison_v1.md",
-      "original_sha256": "452b718a45d20f80981d3a60dcf08fa7e5a326c2c71f72442ed9f75732308953",
-      "released_sha256": "94ebca3a47b5018b27b155635314e3d6de87cab48a6b7b5326365d8b495c513f",
-      "original_bytes": 8515,
-      "released_bytes": 8399,
-      "transformation": "documentation_path_anonymization"
     },
     {
       "source_relative_path": "outputs/kda_followup/precision_cached8_comparison_v1.json",
@@ -2942,15 +2888,6 @@
       "unchanged_content_sha256": "2d8f8835d6be0a67f3a69a5946bf579ea556c28a6af33a0281ea03b58875ca73"
     },
     {
-      "source_relative_path": "outputs/kda_followup/precision_cached8_comparison_v1.md",
-      "released_path": "followup/analysis/precision_cached8_comparison_v1.md",
-      "original_sha256": "4ae02b22c6ac8e06d00ebd4e1146468a3553bda62bfb9a60bc5aa1a90ae8fafd",
-      "released_sha256": "c36fde8a9c35939c055a2f3252e0255f6b999d006ae745dc885a3a43f057d4c6",
-      "original_bytes": 8000,
-      "released_bytes": 7942,
-      "transformation": "documentation_path_anonymization"
-    },
-    {
       "source_relative_path": "outputs/kda_followup/maintenance_summary_v1.json",
       "released_path": "followup/analysis/maintenance_summary_v1.json",
       "original_sha256": "b7a93125cdad041de128dc7329820ec4ee49655140041c1dcbcb7ff9015724a5",
@@ -2970,15 +2907,6 @@
         }
       ],
       "unchanged_content_sha256": "681e9853729baa582c0e4dc70287438377f4c4674c619e54e1ae37416393a0bd"
-    },
-    {
-      "source_relative_path": "outputs/kda_followup/maintenance_summary_v1.md",
-      "released_path": "followup/analysis/maintenance_summary_v1.md",
-      "original_sha256": "4f532a372d50263b9cb39107f72f2de3c5fa2e0094dde382ca53bb260fea432b",
-      "released_sha256": "1b0ac597f40ac165186d86281d5c6efd4bfa8cab5e18be57b97d0681facd0196",
-      "original_bytes": 4832,
-      "released_bytes": 4750,
-      "transformation": "documentation_path_anonymization"
     },
     {
       "source_relative_path": "outputs/kda_followup/auc_pairing_sensitivity_v2.json",
@@ -3489,19 +3417,6 @@
       "unchanged_content_sha256": "1354ca3822a1bbca28f9e889e8b02fda0b43bd644705deb969cff6dd3aff8ace"
     },
     {
-      "source_relative_path": "outputs/kda_followup/precision_final_validation_v1.json",
-      "released_path": "followup/provenance/precision_final_validation_v1.json",
-      "original_sha256": "327fa3801b40a25e64529df13e05fbdd46ad2e193797c299c9c385cb28c2246c",
-      "released_sha256": "327fa3801b40a25e64529df13e05fbdd46ad2e193797c299c9c385cb28c2246c",
-      "original_bytes": 4841,
-      "released_bytes": 4841,
-      "transformation": "verbatim",
-      "original_canonical_sha256": "db932b34a9799b2c00acb1a66f041cf4f728876df10a09e859cdaff38def0b72",
-      "released_canonical_sha256": "db932b34a9799b2c00acb1a66f041cf4f728876df10a09e859cdaff38def0b72",
-      "path_string_changes": [],
-      "unchanged_content_sha256": "db932b34a9799b2c00acb1a66f041cf4f728876df10a09e859cdaff38def0b72"
-    },
-    {
       "source_relative_path": "outputs/kda_followup/maintenance_kimi8_provenance.json",
       "released_path": "followup/provenance/maintenance_kimi8_provenance.json",
       "original_sha256": "2272f57d7f45486095025be445a79c3d5f7b324b8b0b317c8053d5f0ef96f4cd",
@@ -3528,40 +3443,6 @@
         }
       ],
       "unchanged_content_sha256": "9b05b254e7c6ce2f9018f4447aa44ed8dbcef7c0dc08949860f3a83dad036c6a"
-    },
-    {
-      "source_relative_path": "outputs/kda_followup/final_validation_v1.json",
-      "released_path": "followup/provenance/final_validation_v1.json",
-      "original_sha256": "a84398c7c8ed6f9011464625829df640b469abba7a838866620f0621b9ece14d",
-      "released_sha256": "a84398c7c8ed6f9011464625829df640b469abba7a838866620f0621b9ece14d",
-      "original_bytes": 1219,
-      "released_bytes": 1219,
-      "transformation": "verbatim",
-      "original_canonical_sha256": "6e1c57c017e32b78c49b916b51fe057569bcd410e4cd46441103c03e280070d8",
-      "released_canonical_sha256": "6e1c57c017e32b78c49b916b51fe057569bcd410e4cd46441103c03e280070d8",
-      "path_string_changes": [],
-      "unchanged_content_sha256": "6e1c57c017e32b78c49b916b51fe057569bcd410e4cd46441103c03e280070d8"
-    },
-    {
-      "source_relative_path": "outputs/kda_followup/kimi8_v1/run_config.json",
-      "released_path": "followup/provenance/kimi8_initial_attempt_config.json",
-      "original_sha256": "5a5aa6830a57049defccb51cba08a2843deabab4a3fad0351c787891e3c08331",
-      "released_sha256": "31ed0b273b0046e2483defd36a2548b4093adb3e651ec4ff055d6e1401a4a627",
-      "original_bytes": 778,
-      "released_bytes": 756,
-      "transformation": "path_metadata_anonymization",
-      "original_canonical_sha256": "93d76fd3b00664a676d843e7547e08ed756376841428c8e660883ddf1a013eaa",
-      "released_canonical_sha256": "d018826dcada9e48e34ef67b87b093b3c44313cd68f3b2fd4855cdc7e3600dee",
-      "path_string_changes": [
-        {
-          "path": [
-            "model_id"
-          ],
-          "original_string_sha256": "2ac1135dd11cc1344eae180d226909256bbbe82e05b123545f5713966c8a3b62",
-          "released_string_sha256": "1ffd2331baa6ba1dbc489b2041d1ac656748ba24e3897d4effda933d00ec74fb"
-        }
-      ],
-      "unchanged_content_sha256": "b24a5a89b1a06db760da580dcab97998cc7748e377674106b629e70dd2e0b4e9"
     },
     {
       "source_relative_path": "outputs/kda_followup/maintenance_kimi8_v1.json",
@@ -3592,39 +3473,12 @@
       "unchanged_content_sha256": "98e7528467e2a3e1d5a6cb0fe93be4b84ca84da2e6c3e1748f35849515998c13"
     },
     {
-      "source_relative_path": "outputs/kda_followup/kimi_cohort_forest_v2.png",
-      "released_path": "followup/figures/kimi_cohort_forest_v2.png",
-      "original_sha256": "358266678d012f712bce041d022410f15ad9fe1fcae2e8aca140e798bc856186",
-      "released_sha256": "358266678d012f712bce041d022410f15ad9fe1fcae2e8aca140e798bc856186",
-      "original_bytes": 154998,
-      "released_bytes": 154998,
-      "transformation": "verbatim"
-    },
-    {
-      "source_relative_path": "outputs/kda_followup/kimi_cohort_forest_v2.svg",
-      "released_path": "followup/figures/kimi_cohort_forest_v2.svg",
-      "original_sha256": "788ca654a46856e75190bd561b5b565dcd3437d0e9254e91dd863bf4dcdaf38a",
-      "released_sha256": "788ca654a46856e75190bd561b5b565dcd3437d0e9254e91dd863bf4dcdaf38a",
-      "original_bytes": 34758,
-      "released_bytes": 34758,
-      "transformation": "verbatim"
-    },
-    {
       "source_relative_path": "recurrent_families/qwen_confirmation.py",
       "released_path": "code/recurrent_families/qwen_confirmation.py",
       "original_sha256": "ff66b0bdf1d00ce727875dea362ed4b66e09ed1b6a7a8522ed08dcef4c19a8c5",
       "released_sha256": "ff66b0bdf1d00ce727875dea362ed4b66e09ed1b6a7a8522ed08dcef4c19a8c5",
       "original_bytes": 21237,
       "released_bytes": 21237,
-      "transformation": "verbatim"
-    },
-    {
-      "source_relative_path": "recurrent_families/qwen_confirmation_report.py",
-      "released_path": "code/recurrent_families/qwen_confirmation_report.py",
-      "original_sha256": "1776cb9df9bb663ea1c951e2599b7882c7bced50f7a6a9f5b61638afa687dcee",
-      "released_sha256": "1776cb9df9bb663ea1c951e2599b7882c7bced50f7a6a9f5b61638afa687dcee",
-      "original_bytes": 10889,
-      "released_bytes": 10889,
       "transformation": "verbatim"
     },
     {
@@ -3647,19 +3501,6 @@
         }
       ],
       "unchanged_content_sha256": "cc089ace2f250113f71c5a5d66f7facf5a74e57aa8cc54541235225740c3b890"
-    },
-    {
-      "source_relative_path": "recurrent_families/results/qwen_confirmation_20260911/records.jsonl",
-      "released_path": "followup/raw/qwen_confirmation/records.jsonl",
-      "original_sha256": "c55a83ca8e8b89c4818631a84e98ae2fa3089c5e83e92c6c60a7f244fb37bb19",
-      "released_sha256": "c55a83ca8e8b89c4818631a84e98ae2fa3089c5e83e92c6c60a7f244fb37bb19",
-      "original_bytes": 1924272,
-      "released_bytes": 1924272,
-      "transformation": "verbatim",
-      "original_canonical_sha256": "775ac3bbf6ca61f617f7670b44f957ee68fd0a906c5f7f6df1624ea34e0c2767",
-      "released_canonical_sha256": "775ac3bbf6ca61f617f7670b44f957ee68fd0a906c5f7f6df1624ea34e0c2767",
-      "path_string_changes": [],
-      "unchanged_content_sha256": "775ac3bbf6ca61f617f7670b44f957ee68fd0a906c5f7f6df1624ea34e0c2767"
     },
     {
       "source_relative_path": "recurrent_families/results/qwen_confirmation_20260911/results.json",
@@ -3696,60 +3537,6 @@
       "unchanged_content_sha256": "ae0825a3b621e012c1cb847ce4a6a88ee68d283f335e7c61515b572b96f088d8"
     },
     {
-      "source_relative_path": "recurrent_families/results/qwen_confirmation_20260911/REPORT.md",
-      "released_path": "followup/analysis/qwen_report.md",
-      "original_sha256": "734be2c460b320dc172c322de994b880bf587bdb5998135132122a2c378aef42",
-      "released_sha256": "20ccfefa43c430b8827f1ebc135fa7a78c1d5b0e6c26e5d3970731653d0eedbe",
-      "original_bytes": 7501,
-      "released_bytes": 7413,
-      "transformation": "documentation_path_anonymization"
-    },
-    {
-      "source_relative_path": "tests/test_kda_followup_analysis.py",
-      "released_path": "code/tests/test_kda_followup_analysis.py",
-      "original_sha256": "593ff5ba7e71b9d31ac52f0ec728ec1521757b4d9b4ed517c7312cff1aa9469e",
-      "released_sha256": "593ff5ba7e71b9d31ac52f0ec728ec1521757b4d9b4ed517c7312cff1aa9469e",
-      "original_bytes": 9357,
-      "released_bytes": 9357,
-      "transformation": "verbatim"
-    },
-    {
-      "source_relative_path": "tests/test_kda_followup_runner.py",
-      "released_path": "code/tests/test_kda_followup_runner.py",
-      "original_sha256": "0607d2f321257f52f1f31f003cff362e57dd645eee0b321bf3ed856dbbcc95d6",
-      "released_sha256": "0607d2f321257f52f1f31f003cff362e57dd645eee0b321bf3ed856dbbcc95d6",
-      "original_bytes": 2509,
-      "released_bytes": 2509,
-      "transformation": "verbatim"
-    },
-    {
-      "source_relative_path": "tests/test_precision_control.py",
-      "released_path": "code/tests/test_precision_control.py",
-      "original_sha256": "8dca83b9d31ca03d58b5cf89868d73b1be91cfb21b8ec5407237257ca25a7896",
-      "released_sha256": "8dca83b9d31ca03d58b5cf89868d73b1be91cfb21b8ec5407237257ca25a7896",
-      "original_bytes": 4421,
-      "released_bytes": 4421,
-      "transformation": "verbatim"
-    },
-    {
-      "source_relative_path": "tests/test_precision_transport_floor.py",
-      "released_path": "code/tests/test_precision_transport_floor.py",
-      "original_sha256": "c3098e6611459b8fd8a5ea9f92e1d7d9a59454630b2617b122040d6eb0d71cf6",
-      "released_sha256": "c3098e6611459b8fd8a5ea9f92e1d7d9a59454630b2617b122040d6eb0d71cf6",
-      "original_bytes": 1811,
-      "released_bytes": 1811,
-      "transformation": "verbatim"
-    },
-    {
-      "source_relative_path": "recurrent_families/tests/test_qwen_confirmation.py",
-      "released_path": "code/tests/test_qwen_confirmation.py",
-      "original_sha256": "80e5bd0ff4b174b2516146e3f81225c90fb74c9c9b553c1a59438cad67106764",
-      "released_sha256": "80e5bd0ff4b174b2516146e3f81225c90fb74c9c9b553c1a59438cad67106764",
-      "original_bytes": 3747,
-      "released_bytes": 3747,
-      "transformation": "verbatim"
-    },
-    {
       "source_relative_path": "kimi_sv/__init__.py",
       "released_path": "code/kimi_sv/__init__.py",
       "original_sha256": "1aa390b2e015ed95c1308dd3c76602b022febca36d7a50a4375b38aedc89daf6",
@@ -3774,15 +3561,6 @@
       "released_sha256": "709ecc992a4560007292502586a74a9a05891e868259727bb1a7eab12f0ea4a4",
       "original_bytes": 2999,
       "released_bytes": 2999,
-      "transformation": "verbatim"
-    },
-    {
-      "source_relative_path": "kimi_sv/build_kda_sweep_macros.py",
-      "released_path": "code/kimi_sv/build_kda_sweep_macros.py",
-      "original_sha256": "b74074e0eb31e1761fbe88a963afc31ec5bbab72978a7d761662b15e8d2b1383",
-      "released_sha256": "b74074e0eb31e1761fbe88a963afc31ec5bbab72978a7d761662b15e8d2b1383",
-      "original_bytes": 13405,
-      "released_bytes": 13405,
       "transformation": "verbatim"
     },
     {
@@ -3813,30 +3591,12 @@
       "transformation": "verbatim"
     },
     {
-      "source_relative_path": "kimi_sv/eval_eviction.py",
-      "released_path": "code/kimi_sv/eval_eviction.py",
-      "original_sha256": "e3255dd7866010722e82b7c7944591a2da181f21cae8ec20e3d9c51db93e44a8",
-      "released_sha256": "e3255dd7866010722e82b7c7944591a2da181f21cae8ec20e3d9c51db93e44a8",
-      "original_bytes": 13182,
-      "released_bytes": 13182,
-      "transformation": "verbatim"
-    },
-    {
       "source_relative_path": "kimi_sv/eval_forcing_sweep.py",
       "released_path": "code/kimi_sv/eval_forcing_sweep.py",
       "original_sha256": "c3f0c48af18f9d409733a23d47845b4ace5a3a011c6f4830e6e685b523cd69aa",
       "released_sha256": "c3f0c48af18f9d409733a23d47845b4ace5a3a011c6f4830e6e685b523cd69aa",
       "original_bytes": 35622,
       "released_bytes": 35622,
-      "transformation": "verbatim"
-    },
-    {
-      "source_relative_path": "kimi_sv/eval_graft_degradation.py",
-      "released_path": "code/kimi_sv/eval_graft_degradation.py",
-      "original_sha256": "144e98841130a2fd2cb5792110bcb2c0020b2ebf557d286822bff0c9e974243d",
-      "released_sha256": "144e98841130a2fd2cb5792110bcb2c0020b2ebf557d286822bff0c9e974243d",
-      "original_bytes": 6632,
-      "released_bytes": 6632,
       "transformation": "verbatim"
     },
     {
@@ -3885,42 +3645,6 @@
       "transformation": "verbatim"
     },
     {
-      "source_relative_path": "kimi_sv/make_arch_figure.py",
-      "released_path": "code/kimi_sv/make_arch_figure.py",
-      "original_sha256": "1619efab9e5ed70153d5d21cda7951b51c84d7789ecc1b4afab9d1bc863c328d",
-      "released_sha256": "1619efab9e5ed70153d5d21cda7951b51c84d7789ecc1b4afab9d1bc863c328d",
-      "original_bytes": 10929,
-      "released_bytes": 10929,
-      "transformation": "verbatim"
-    },
-    {
-      "source_relative_path": "kimi_sv/make_forcing_sweep_figures.py",
-      "released_path": "code/kimi_sv/make_forcing_sweep_figures.py",
-      "original_sha256": "79d270638a43d302701b90eb1b9d86197715778679ce070102f2bf77c3038d93",
-      "released_sha256": "79d270638a43d302701b90eb1b9d86197715778679ce070102f2bf77c3038d93",
-      "original_bytes": 16725,
-      "released_bytes": 16725,
-      "transformation": "verbatim"
-    },
-    {
-      "source_relative_path": "kimi_sv/make_mimic_figure.py",
-      "released_path": "code/kimi_sv/make_mimic_figure.py",
-      "original_sha256": "442b0dec73dab5215a3a1e9cd948c4ffc221822a3c461e11d24f7e7c2f1971a0",
-      "released_sha256": "442b0dec73dab5215a3a1e9cd948c4ffc221822a3c461e11d24f7e7c2f1971a0",
-      "original_bytes": 9779,
-      "released_bytes": 9779,
-      "transformation": "verbatim"
-    },
-    {
-      "source_relative_path": "kimi_sv/make_split_paper_figures.py",
-      "released_path": "code/kimi_sv/make_split_paper_figures.py",
-      "original_sha256": "a14889130880db8118a0f4af13b1a45db2f417abe7ae97a3a80317fbe4ce9ad7",
-      "released_sha256": "a14889130880db8118a0f4af13b1a45db2f417abe7ae97a3a80317fbe4ce9ad7",
-      "original_bytes": 16785,
-      "released_bytes": 16785,
-      "transformation": "verbatim"
-    },
-    {
       "source_relative_path": "kimi_sv/mla_mask.py",
       "released_path": "code/kimi_sv/mla_mask.py",
       "original_sha256": "2f3b0ced2829158573f0f660140297292a3594856892703c84613e610c2fad7d",
@@ -3954,15 +3678,6 @@
       "released_sha256": "f6f8dbe24399f7f97b1e69fef107d316a1dff8aa6601e42068b9bd1604043062",
       "original_bytes": 7902,
       "released_bytes": 7902,
-      "transformation": "verbatim"
-    },
-    {
-      "source_relative_path": "kimi_sv/smoke_model.py",
-      "released_path": "code/kimi_sv/smoke_model.py",
-      "original_sha256": "c1da9bf462b418fcd75f3221df23167d721d43051e2b62c3a5f80e0c6f466d9f",
-      "released_sha256": "c1da9bf462b418fcd75f3221df23167d721d43051e2b62c3a5f80e0c6f466d9f",
-      "original_bytes": 1927,
-      "released_bytes": 1927,
       "transformation": "verbatim"
     },
     {
@@ -4017,15 +3732,6 @@
       "released_sha256": "26b5e9dc3692093c3763ef33ba2057f29a97cb8a7f7c560efce8d0525320e905",
       "original_bytes": 1610,
       "released_bytes": 1610,
-      "transformation": "verbatim"
-    },
-    {
-      "source_relative_path": "kimi_sv/verify_real.py",
-      "released_path": "code/kimi_sv/verify_real.py",
-      "original_sha256": "8b2866078645be8fe277258ff22f8e85ab88a8746e61bd130ee2fdd706e92594",
-      "released_sha256": "8b2866078645be8fe277258ff22f8e85ab88a8746e61bd130ee2fdd706e92594",
-      "original_bytes": 8812,
-      "released_bytes": 8812,
       "transformation": "verbatim"
     }
   ]

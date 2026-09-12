@@ -1,204 +1,79 @@
-# Anonymous KDA submission artifact
+# KDA results and reproduction
 
-This supplement accompanies *Exact Record Omission in Delta Attention: A
-Transport Criterion, Its Cost, and a Replay Certificate*, prepared for SaTML
-2027. It contains the numerical evidence and selected reproduction code. The
-manuscript and its figure sources are in the separate paper source package.
+Data and code for *Exact Record Omission in Delta Attention: A Transport Criterion, Its Cost, and a Replay Certificate*.
 
-The release supports a practical audit of inference-time memory edits: it
-connects the transport criterion to target and retained-record behavior, and
-checks replay against the declared never-stored state. The completed cohorts
-also test record replacement and repeated deletions with an intervening
-admission.
-
-This 11 September 2026 update retains the historical 116 configuration reports,
-benchmark records and numerical macros, and adds the completed frozen follow-up
-experiments. See [the follow-up guide](followup/README.md) and
-[results with limitations](followup/RESULTS.md): 80 main Kimi contexts, 32 paired
-Qwen contexts, eight same-master BF16/derived-8-bit pairs with their own arithmetic
-diagnostics, 12 amendments, and six sequential-deletion record pairs. The later
-larger attention-free model remains deferred. No model weights are included.
-
-## Start here: offline verification
+## Verify the saved results
 
 Run from this directory with Python 3.11 or later:
 
 ```bash
 python3 -B verify_offline.py
+python3 -m venv /tmp/kda-analysis
+/tmp/kda-analysis/bin/python -m pip install -r requirements-analysis.txt
+/tmp/kda-analysis/bin/python -B verify_followup_analysis.py
 ```
 
-This needs only the Python standard library. It verifies the file inventory,
-SHA-256 checksums, Python syntax, JSON validity, the recorded Qwen manifest and
-implementation fingerprints, and regeneration of all three sweep/sampling/family
-summary JSONs from the 116 shipped configuration reports. It also regenerates
-the exact numerical TeX macros supplied to the paper. It performs no inference,
-network access, package installation, credential access, or clinical-data read.
-It also checks follow-up record coverage and anonymization provenance. Full new
-statistical regeneration uses `python3 -B verify_followup_analysis.py` with
-`requirements-analysis.txt`.
-These checks validate the packaged records and aggregation; they do not repeat
-the original measurements or establish their correctness independently.
+The first command uses the standard library to check inventory, hashes, source syntax, record coverage and saved aggregates. The second verifier uses NumPy to regenerate the cohort statistics. Verification needs no model weights or datasets; installing dependencies may require network access. These commands check recorded measurements and their analysis, without repeating inference.
 
-The same command works in an extracted ZIP or a Git checkout. The checkout's
-top-level `.git` directory (or worktree `.git` file) is repository metadata and
-is excluded from the artifact inventory. Other unexpected files and changes to
-manifest-listed files still fail verification. Verifier regression checks run
-with `python3 -B -m unittest test_verify_offline.py`.
+## Results
 
-## Contents and evidence boundaries
+| Directory | Measurements |
+|---|---|
+| `benchmarks/`, `artifacts/kimi_sv/` | Transport, replay, channel controls, amendment and Qwen audit records |
+| `reports/kimi_forcing_sweep/` | 24 synthetic and 16 TOFU configurations |
+| `reports/kimi_masked_sampling/` | Sampling on the same 40 configurations |
+| `reports/recurrent_families/` | 12 configurations each for Mamba-2, Falcon-H1 and RWKV-7 |
+| `followup/` | Kimi and Qwen cohorts, precision controls, amendments and sequential deletions |
+| `code/` | Measurement and analysis implementations |
 
-| Location | Contents |
-| --- | --- |
-| `benchmarks/` | Eleven benchmark/protocol JSONs, including family predictions and the hybrid-channel diagnostic |
-| `artifacts/kimi_sv/` | Three reviewed aggregate replay reports and the full source-free transport report |
-| `reports/kimi_forcing_sweep/` | 40 reports: 24 synthetic and 16 TOFU configurations |
-| `reports/kimi_masked_sampling/` | 40 reports: 24 synthetic and 16 TOFU configurations |
-| `reports/recurrent_families/` | 36 reports: 12 each for Mamba-2, Falcon-H1 and RWKV-7 |
-| `code/` | Kimi, recurrent-family and Qwen audit code; shared clinical loaders and disclosure checks; minimal MLX gate dependency; existing focused tests |
-| `expected/` | Reference numerical TeX macros for offline comparison |
-| `followup/` | Completed frozen cohorts, complete synthetic readbacks, analysis, figures and anonymization provenance |
-| `provenance.json` | Original and released hashes and the treatment of each copied file |
-| `MANIFEST.json` | Complete file inventory, sizes and SHA-256 hashes, excluding the manifest itself |
+[The cohort guide](followup/README.md) gives its manifests, result paths and rerun commands. `MANIFEST.json` lists file checksums; `provenance.json` and `followup/PROVENANCE.json` map recorded source hashes to packaged files. Embedded filesystem paths identify provenance, not necessarily bundled files.
 
-The 13 original release-evidence records, full transport report and hybrid
-diagnostic are copied verbatim. Every numeric value, boolean, null value and
-measurement in the 116 configuration reports is unchanged. Exactly 3,760
-`greedy` string fields were removed from the 40 forcing reports to create a
-source-free export. Those fields contained synthetic/TOFU generated readbacks
-and are not consumed by the summary code; `greedy_exact` boolean measurements
-are preserved. The other 76 reports are copied verbatim.
+## Run the transport, sweep and family experiments
 
-The Qwen protocol contains explicitly invented audit dialogue. The amendment
-example contains invented medical statements, and the original fixed-position
-record retains reviewed synthetic/TOFU readbacks. The follow-up additionally retains its invented administrative records, all
-synthetic probes and complete generated readbacks so strict answer scoring is
-reproducible. These are the intended text-bearing evidence exceptions. No real patient text, clinical source
-identifiers, user conversations, credentials, model weights, caches, or
-checkpoints are included. The `patient-*` labels in synthetic reports are
-generated example keys, not clinical identifiers. Clinical replay records contain
-only reviewed aggregates and anonymous positions.
+Use Python 3.11 on Apple silicon. Install `requirements-kimi.txt` for MLX runs and `requirements-torch.txt` for Torch runs. The family harness also imports Kimi dependencies. The measured family runs use MPS and float32; Qwen uses bf16 and Transformers 5.12.1. Cohort runs used an M3 Ultra with 512 GiB unified memory. The Kimi 48B runs need substantial memory; process caps are not minimum-memory estimates. Saved configurations give available runtime details; not every sweep/family run records a complete dependency or model-revision lock.
 
-Historical report paths recorded within evidence identify provenance; a path
-such as `outputs/kimi_sv/decay_contrast_8bit.json` is not a bundled file. The
-hybrid diagnostic is included, but that historical full report and the full
-historical Qwen live report are not. The new 32-record Qwen full report is bundled. Their recorded hashes are preserved.
-
-Selected measurement implementation modules are unchanged. The quantitative
-figure renderer now uses larger labels, explicit norm-ratio and numerical-
-tolerance terminology, and a standalone replay timing curve. The three
-receipt classes share one scatter series with every original point retained.
-Actual zero is labelled outside the positive log scale. These presentation
-changes are synchronized with the canonical renderer; the recorded numerical
-values and measurement code are unchanged. `gemma_sv/__init__.py` and
-`svattn/__init__.py` are minimal packaging initializers so this subset does not
-import unrelated application code. The exact Qwen audit implementation hash
-still matches its measured result. No model, data, or dependency licenses are
-replaced by this review bundle; obtain third-party components under their own
-terms. A public software license is not assigned by this packaging step.
-
-## Optional figure regeneration
-
-Install `requirements-figures.txt`, then run from this directory:
+Obtain `mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit` revision `553a7a5673491df2b2d38f7380188a9d8e9f9a66`, including its tokenizer. Set its local path and a fresh output directory:
 
 ```bash
-PYTHONPATH=code python -B -m kimi_sv.make_forcing_sweep_figures \
-  --sweep benchmarks/kda_forcing_sweep_summary_v1.json \
-  --families benchmarks/recurrent_families_summary_v1.json \
-  --out-dir regenerated_figures
+export PYTHONPATH=code
+KDA_8BIT=/path/to/community-8bit-snapshot
+KDA_RUN=/tmp/kda-model-rerun
+mkdir -p "$KDA_RUN"
+python3 -m kimi_sv.eval_separability --model "$KDA_8BIT" \
+  --source synthetic --out "$KDA_RUN/separability.json"
+python3 -m kimi_sv.eval_oracle --model "$KDA_8BIT" --source synthetic \
+  --records 16 --victims 1 8 14 --mechanism native --memory-limit-gb 75 --out "$KDA_RUN/oracle.json"
+python3 -m kimi_sv.amendment_demo --model "$KDA_8BIT" \
+  --mechanism native --out "$KDA_RUN/amendment.json"
+python3 -m kimi_sv.eval_forcing_sweep --model "$KDA_8BIT" --source synthetic \
+  --n-cases 192 --victims 0,1,2,3,4,5 --prefix-depths 0,4,16,64 --out-dir "$KDA_RUN/forcing"
+python3 -m kimi_sv.eval_masked_sampling --model "$KDA_8BIT" --source synthetic \
+  --n-cases 192 --victims 0,1,2,3,4,5 --prefix-depths 0,4,16,64 --cuts 0,4096 \
+  --samples 100 --temperature 1 --top-p 1 --seed 0 --out-dir "$KDA_RUN/sampling"
+for KDA_FAMILY in mamba2 falcon_h1 rwkv7; do
+  python3 -m recurrent_families.audit --family "$KDA_FAMILY" --device mps \
+  --n-cases 192 --victims 0,1,2,3 --prefix-depths 0,4,16 \
+  --cuts 0,16,64,256,1024 --out-dir "$KDA_RUN/families"
+done
+python3 -m gemma_sv.qwen_replay_audit --manifest benchmarks/qwen35_replay_v3.json \
+  --device mps --out "$KDA_RUN/qwen-staged.json"
+python3 -m gemma_sv.publish_qwen_replay --manifest benchmarks/qwen35_replay_v3.json \
+  --report "$KDA_RUN/qwen-staged.json" --out "$KDA_RUN/qwen-staged-summary.json"
 ```
 
-This recreates four quantitative figures from the saved sweep/family summaries
-and replay timings, without model execution. These are all four figures in
-the current manuscript; illustrative diagrams are excluded from its source package.
+For TOFU sweep/sampling, substitute `--source tofu --n-cases 200 --victims 0,1,2,3,4,5,6,7 --prefix-depths 0,16` and use separate output directories. The loader downloads `locuslab/TOFU`, `forget10`, train split. Family defaults are `AntonV/mamba2-1.3b-hf`, `tiiuae/Falcon-H1-1.5B-Base` and `Hakureirm/rwkv7-1.5b-hf`; Qwen's revision is pinned in its manifest. Model loaders may download files and Kimi/RWKV loaders enable repository code.
 
-## Optional model reruns
+Additional controls use these modules; run `PYTHONPATH=code python3 -m MODULE --help` for arguments, and match the indicated saved configuration:
 
-These are separate from the verified offline path. No model reruns were
-performed for submission packaging. Use a separate environment with Python
-3.11. Kimi requires Apple silicon with MLX and substantial unified memory for
-the 48B 8-bit checkpoint plus activations and caches. The shipped sweep code
-sets a default process limit of 80 GiB; this is a limit, not a verified minimum
-memory requirement. Original reports record macOS 26.5/arm64, but do not record
-a complete machine specification or dependency lock for every run. Timing
-reproduction therefore depends on hardware, OS, kernels and workload.
+| Measurement | Module | Configuration/result |
+|---|---|---|
+| Direct decay and attention channels | `kimi_sv.eval_decay_contrast` | `benchmarks/kimi_hybrid_decay_v1.json` |
+| Logical MLA-cache equality | `kimi_sv.check_mla_logical_equality` | `benchmarks/kda_mla_logical_equality_v1.json`; synthetic and TOFU separately |
+| Primary replay and position costs | `kimi_sv.eval_mimic_deletion` | `artifacts/kimi_sv/*deletion*.json`; requires the corresponding local dataset |
+| Sparse-checkpoint cost estimates | `kimi_sv.augment_checkpoint_tradeoff` | Pass the 128-record replay report with `--report`, matching `--source`, `--records` and tokenizer |
 
-Install `requirements-kimi.txt` for Kimi and `requirements-torch.txt` for Qwen
-or the other recurrent families. The family harness currently imports the
-synthetic case generator from `kimi_sv.protocol`, so its unmodified import
-path also requires the Kimi dependencies. The recorded family and Qwen device
-is MPS. The pins reflect the available packaging environment; only Qwen's
-Transformers 5.12.1 requirement is explicitly bound by its protocol. They are
-not a reconstructed lock for all historical runs. Model and tokenizer loads
-may download external files; Kimi and RWKV loaders enable repository code.
+## Controlled-data runs
 
-The Kimi transport evidence records revision
-`553a7a5673491df2b2d38f7380188a9d8e9f9a66` of
-`mlx-community/Kimi-Linear-48B-A3B-Instruct-8bit`. The general Kimi runner
-defaults to a model ID rather than a revision; to target this recorded revision,
-obtain that snapshot separately and pass its directory through `--model`.
-Other Kimi evidence and the three family reports do not establish full model
-revision locks. Qwen's model revision is frozen in `benchmarks/qwen35_replay_v3.json`.
+MIMIC-IV-Ext-CDS 1.0.2 and MIMIC-IV-Note require independently authorized local access. Set `MIMIC_EXT_CDS_DIR` or `MIMIC_NOTE_DIR`; the datasets are not included. For fixed-position masking/replay, use `kimi_sv.eval_oracle --source cds --records 16 --victims 1 8 14 --mechanism native`, or `--source notes --records 8 --victims 1 4 6`, with `--model` and `--out` as above. Primary replay uses `kimi_sv.eval_mimic_deletion`; match the `--records`, `--victims`, `--skip` and note budget in the relevant saved aggregate. Keep clinical data and text-bearing outputs local.
 
-Run commands from this directory with `PYTHONPATH=code`. These examples write
-new results under `rerun/`, preserving submitted evidence:
-
-```bash
-mkdir -p rerun
-PYTHONPATH=code python -B -m kimi_sv.eval_separability \
-  --source synthetic --out rerun/kda_separability.json
-PYTHONPATH=code python -B -m kimi_sv.eval_oracle \
-  --source synthetic --records 16 --victims 1 8 14 \
-  --mechanism native --memory-limit-gb 75 --out rerun/oracle_synthetic.json
-PYTHONPATH=code python -B -m kimi_sv.amendment_demo \
-  --mechanism native --out rerun/amendment.json
-PYTHONPATH=code python -B -m kimi_sv.eval_forcing_sweep \
-  --source synthetic --n-cases 192 --victims 0,1,2,3,4,5 \
-  --prefix-depths 0,4,16,64 --no-greedy --out-dir rerun/forcing
-PYTHONPATH=code python -B -m kimi_sv.eval_masked_sampling \
-  --source synthetic --n-cases 192 --victims 0,1,2,3,4,5 \
-  --prefix-depths 0,4,16,64 --cuts 0,4096 --samples 100 \
-  --temperature 1 --top-p 1 --seed 0 --out-dir rerun/sampling
-PYTHONPATH=code python -B -m recurrent_families.audit \
-  --family mamba2 --device mps --n-cases 192 --victims 0,1,2,3 \
-  --prefix-depths 0,4,16 --cuts 0,16,64,256,1024 --out-dir rerun/families
-PYTHONPATH=code python -B -m gemma_sv.qwen_replay_audit \
-  --manifest benchmarks/qwen35_replay_v3.json --device mps \
-  --out rerun/qwen_audit_v3.json
-PYTHONPATH=code python -B -m gemma_sv.publish_qwen_replay \
-  --manifest benchmarks/qwen35_replay_v3.json --report rerun/qwen_audit_v3.json \
-  --out rerun/qwen_result_v3.json
-```
-
-For TOFU sweep/sampling use `--source tofu --victims 0,1,2,3,4,5,6,7
---prefix-depths 0,16`; `locuslab/TOFU`, `forget10`, train split is downloaded
-by the loader. For the other family runs substitute `--family falcon_h1` or
-`--family rwkv7`. Inspect each shipped report's protocol for the measured
-configuration. `--no-greedy` omits decoding from the example sweep command,
-so it will not regenerate `greedy_exact` statistics; remove that flag if those
-statistics are required, and keep resulting text-bearing reports local.
-
-After dependencies are available, existing implementation tests may be run
-from `code/` with `python -m pytest tests -q`. Several instantiate tiny random
-models and exercise accelerator kernels. The earlier release ran five data-free
-tests in `test_publish_qwen_replay.py`; all five passed. This follow-up packaging
-passed 10 offline-verifier regression tests and 11 analysis regression tests,
-plus complete CPU-only regeneration of the follow-up summaries and tables.
-Accelerator model tests are included but were not run during packaging. They
-use tiny random models and do not reproduce the pretrained measurements.
-
-## Controlled-data reproduction
-
-MIMIC-IV-Ext-CDS 1.0.2 and MIMIC-IV-Note require independently authorized local
-access. They are not obtainable from this bundle. The `mimic/` loaders preserve
-the original selection, qualification and disclosure policy. Configure
-`MIMIC_EXT_CDS_DIR` or `MIMIC_NOTE_DIR` locally and use the appropriate
-`--source cds` or `--source notes`. The replay aggregates record their own
-selection and record counts. The fixed-position CDS run used 16 records with
-victims 1, 8, 14; the note run used 8 records with victims 1, 4, 6. Always use
-`--mechanism native` to reproduce the reported masking control. Keep raw
-clinical files and text-bearing reports outside this submission folder.
-
-The offline artifact can be fully checked without those datasets, but the
-clinical measurements cannot be independently rerun from the supplied files
-alone. Missing full historical dependency and model-revision locks also limit
-claims of bitwise reproduction outside the declared execution schedule.
+No weights, caches, checkpoints, credentials or clinical source text are included. Synthetic cohort text and readbacks are included for answer scoring; sweep reports retain scored flags while omitting generated text. Third-party model/data licenses apply separately. This artifact does not assign a software license.

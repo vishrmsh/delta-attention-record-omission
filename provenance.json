@@ -1,5 +1,6 @@
 {
-  "schema": "anonymous-artifact-provenance-v1",
+  "schema": "anonymous-artifact-provenance-v2",
+  "scope": "Source and anonymization provenance for the retained experiment reproducer. File hashes describe the currently packaged files; recorded original-source hashes retain their stated scope.",
   "numeric_measurements_unchanged": true,
   "removed_greedy_string_fields": 3760,
   "copied_files": [
@@ -22,13 +23,6 @@
       "sha256": "709ecc992a4560007292502586a74a9a05891e868259727bb1a7eab12f0ea4a4",
       "bytes": 2999,
       "origin_sha256": "709ecc992a4560007292502586a74a9a05891e868259727bb1a7eab12f0ea4a4",
-      "treatment": "verbatim"
-    },
-    {
-      "path": "code/kimi_sv/build_kda_sweep_macros.py",
-      "sha256": "b74074e0eb31e1761fbe88a963afc31ec5bbab72978a7d761662b15e8d2b1383",
-      "bytes": 13405,
-      "origin_sha256": "b74074e0eb31e1761fbe88a963afc31ec5bbab72978a7d761662b15e8d2b1383",
       "treatment": "verbatim"
     },
     {
@@ -95,13 +89,6 @@
       "treatment": "verbatim"
     },
     {
-      "path": "code/kimi_sv/make_forcing_sweep_figures.py",
-      "sha256": "79d270638a43d302701b90eb1b9d86197715778679ce070102f2bf77c3038d93",
-      "bytes": 16725,
-      "origin_sha256": "79d270638a43d302701b90eb1b9d86197715778679ce070102f2bf77c3038d93",
-      "treatment": "verbatim copy of the maintained quantitative figure renderer; updated presentation and figure composition; benchmark records, measured values and measurement implementations unchanged"
-    },
-    {
       "path": "code/kimi_sv/mla_mask.py",
       "sha256": "2f3b0ced2829158573f0f660140297292a3594856892703c84613e610c2fad7d",
       "bytes": 4331,
@@ -162,13 +149,6 @@
       "sha256": "74d066d159cb219fef749809c199cfe006d0b28622a52b41b0f7ffd97125737d",
       "bytes": 2995,
       "origin_sha256": "74d066d159cb219fef749809c199cfe006d0b28622a52b41b0f7ffd97125737d",
-      "treatment": "verbatim"
-    },
-    {
-      "path": "code/kimi_sv/verify_real.py",
-      "sha256": "8b2866078645be8fe277258ff22f8e85ab88a8746e61bd130ee2fdd706e92594",
-      "bytes": 8812,
-      "origin_sha256": "8b2866078645be8fe277258ff22f8e85ab88a8746e61bd130ee2fdd706e92594",
       "treatment": "verbatim"
     },
     {
@@ -253,62 +233,6 @@
       "sha256": "d5c2f54a7a7ae4a42e31b567f418fa5174d7fdd00f3840e39bbde78c7a58a53f",
       "bytes": 3736,
       "origin_sha256": "d5c2f54a7a7ae4a42e31b567f418fa5174d7fdd00f3840e39bbde78c7a58a53f",
-      "treatment": "verbatim"
-    },
-    {
-      "path": "code/tests/test_kimi_records.py",
-      "sha256": "2c16cc8da890c6de26558c5c7ca0cb85b3a1b60255d7f77ac9ede83d0ee60e9e",
-      "bytes": 4730,
-      "origin_sha256": "2c16cc8da890c6de26558c5c7ca0cb85b3a1b60255d7f77ac9ede83d0ee60e9e",
-      "treatment": "verbatim"
-    },
-    {
-      "path": "code/tests/test_kimi_probes.py",
-      "sha256": "c2c7ce22659e317a920f06869a660e8c99648ac61231e2dba8319e73959708c3",
-      "bytes": 1990,
-      "origin_sha256": "c2c7ce22659e317a920f06869a660e8c99648ac61231e2dba8319e73959708c3",
-      "treatment": "verbatim"
-    },
-    {
-      "path": "code/tests/test_kimi_state.py",
-      "sha256": "85ff0cf73b53d994e4c42a80498384ee8e54f1d16e2a97f42e2d9c59941eaa84",
-      "bytes": 4176,
-      "origin_sha256": "85ff0cf73b53d994e4c42a80498384ee8e54f1d16e2a97f42e2d9c59941eaa84",
-      "treatment": "verbatim"
-    },
-    {
-      "path": "code/tests/test_kimi_graft.py",
-      "sha256": "79d68f690c05445b15fe86cab871f4453b536a62a683e611f34fbc5642ceb49f",
-      "bytes": 6888,
-      "origin_sha256": "79d68f690c05445b15fe86cab871f4453b536a62a683e611f34fbc5642ceb49f",
-      "treatment": "verbatim"
-    },
-    {
-      "path": "code/tests/test_kimi_decay.py",
-      "sha256": "3dc4de2576eaf237ed5d70e9782eba4e68e1eef0894223ae7d39ad9f6bcf7bd6",
-      "bytes": 2710,
-      "origin_sha256": "3dc4de2576eaf237ed5d70e9782eba4e68e1eef0894223ae7d39ad9f6bcf7bd6",
-      "treatment": "verbatim"
-    },
-    {
-      "path": "code/tests/test_kimi_checkpoint_tradeoff.py",
-      "sha256": "ace3859e050b7080072f529ef2254a8911877630fbc3987a6c590c184916669e",
-      "bytes": 1157,
-      "origin_sha256": "ace3859e050b7080072f529ef2254a8911877630fbc3987a6c590c184916669e",
-      "treatment": "verbatim"
-    },
-    {
-      "path": "code/tests/test_qwen_replay_audit.py",
-      "sha256": "bad36c60cd67011bbab1b9355c8d62f43e7c5f0f83360cda7857bc6d5c250d6d",
-      "bytes": 3216,
-      "origin_sha256": "bad36c60cd67011bbab1b9355c8d62f43e7c5f0f83360cda7857bc6d5c250d6d",
-      "treatment": "verbatim"
-    },
-    {
-      "path": "code/tests/test_publish_qwen_replay.py",
-      "sha256": "7151d39b655250888b627d1dae9e345276b0be895cf46cfb664d719adb10d831",
-      "bytes": 6764,
-      "origin_sha256": "7151d39b655250888b627d1dae9e345276b0be895cf46cfb664d719adb10d831",
       "treatment": "verbatim"
     },
     {
@@ -428,13 +352,6 @@
       "sha256": "bd1a47842e5ba2f4f1654099ac020edbefe13443ace50cda00f70162f3136e32",
       "bytes": 3272,
       "origin_sha256": "bd1a47842e5ba2f4f1654099ac020edbefe13443ace50cda00f70162f3136e32",
-      "treatment": "verbatim"
-    },
-    {
-      "path": "expected/kda_sweep_macros.tex",
-      "sha256": "3360be1cefd4b6356fc5ee815eb3fd84d60ef7483f136969517f31e7b07baf65",
-      "bytes": 16856,
-      "origin_sha256": "3360be1cefd4b6356fc5ee815eb3fd84d60ef7483f136969517f31e7b07baf65",
       "treatment": "verbatim"
     },
     {
@@ -1250,27 +1167,41 @@
       "treatment": "verbatim"
     }
   ],
-  "release_update": {
-    "date": "2026-09-11",
-    "scope": "Synchronize completed quantitative figure renderer and describe current artifact boundaries. No model rerun or newly completed experiment is included.",
-    "measurement_implementations_unchanged": true,
-    "configuration_reports_unchanged": true,
-    "numerical_macros_unchanged": true
-  },
-  "verifier_update": {
-    "date": "2026-09-11",
-    "scope": "Exclude only the top-level .git directory or worktree file from the artifact inventory; add end-to-end regression checks.",
-    "measurement_implementations_unchanged": true,
-    "configuration_reports_unchanged": true,
-    "numerical_macros_unchanged": true
-  },
-  "followup_update": {
-    "schema": "completed-followup-release-v1",
-    "date": "2026-09-11",
-    "provenance": "followup/PROVENANCE.json",
-    "provenance_sha256": "280a9ec7907b70e9792fa78e16ca27498caeb821d60312cfd5da580bc98d0b06",
-    "scope": "Added completed synthetic evidence; historical numerical records retained. Original-versus-released hash scope is explicit. No weights or author ZIP included.",
-    "offline_analysis": "verify_followup_analysis.py",
-    "measurement_source_unchanged": true
+  "artifact_support_files": [
+    {
+      "path": "code/gemma_sv/__init__.py",
+      "sha256": "12c61f49090e8c8990def333d1e7d37252313b8bfe4bad3c1efd22e0415bf62e",
+      "bytes": 69,
+      "treatment": "artifact package initializer; no original measured-source hash claimed"
+    },
+    {
+      "path": "code/svattn/__init__.py",
+      "sha256": "168f49beee67abef5f7c10a10c1f86c6eb1e3c0b0f60eca9abfa37c95ce1482e",
+      "bytes": 63,
+      "treatment": "artifact package initializer; no original measured-source hash claimed"
+    },
+    {
+      "path": "verify_offline.py",
+      "sha256": "6b3ca2f81d927e22ee00a46743eeba26b5954485ebdb18d637d66adc7f2fe4be",
+      "bytes": 5120,
+      "treatment": "artifact verification implementation; no original measured-source hash claimed"
+    },
+    {
+      "path": "verify_followup.py",
+      "sha256": "b62af966577ce8a0d05fcd6574e196b9e65972ed11559b1f5cb75afe5ae4dc9c",
+      "bytes": 11521,
+      "treatment": "artifact verification implementation; no original measured-source hash claimed"
+    },
+    {
+      "path": "verify_followup_analysis.py",
+      "sha256": "98ae5207086fe29ed86026c78acdd7ae0b256411ea775566a028b009d9ecb3c1",
+      "bytes": 5499,
+      "treatment": "artifact verification implementation; no original measured-source hash claimed"
+    }
+  ],
+  "followup_provenance": {
+    "path": "followup/PROVENANCE.json",
+    "sha256": "c8f8eefa38efe510cab9370d40dbb454608bf321fa13aba45dc62c2861f37d44",
+    "scope": "Original-versus-released hashes, explicit path anonymization, and retained protocol documentation treatment."
   }
 }

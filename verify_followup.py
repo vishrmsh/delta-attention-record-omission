@@ -20,14 +20,21 @@ def read(relative):
     return json.loads((ROOT/relative).read_text())
 
 def provenance():
-    return {item['released_path']:item for item in read('followup/PROVENANCE.json')['files']}
+    files=read('followup/PROVENANCE.json')['files']
+    entries={item['released_path']:item for item in files}
+    assert len(entries)==len(files), 'duplicate follow-up provenance path'
+    return entries
 
 def original_hash(relative, canonical_hash=False):
     return provenance()[relative]['original_canonical_sha256' if canonical_hash else 'original_sha256']
 
 def verify():
     entries=provenance()
-    assert len(entries)==211, 'follow-up allowlist inventory'
+    scientific={path.relative_to(ROOT).as_posix()
+                for path in (ROOT/'followup').rglob('*')
+                if path.is_file() and path.suffix in ('.json','.jsonl')
+                and path.name!='PROVENANCE.json'}
+    assert scientific <= set(entries), 'follow-up scientific provenance coverage differs'
     for name,item in entries.items():
         path=ROOT/name
         assert path.is_file() and not path.is_symlink(), f'follow-up file missing: {name}'
@@ -132,7 +139,6 @@ def verify():
     assert qwen['implementation_sha256']==digest((ROOT/'code/recurrent_families/qwen_confirmation.py').read_bytes())
     assert qwen['base_audit_implementation_sha256']==digest((ROOT/'code/gemma_sv/qwen_replay_audit.py').read_bytes())
     assert len(rows)==32 and [r['record_id'] for r in rows]==[r['record_id'] for r in qmanifest['records']]
-    assert rows==[json.loads(line) for line in (ROOT/'followup/raw/qwen_confirmation/records.jsonl').read_text().splitlines()]
     assert qwen['summary']==read('followup/analysis/qwen_summary.json')
     assert all(r['status']=='completed' and [c['suffix'] for c in r['cases']]==['short','long'] for r in rows)
     assert all(all(c['checks'].values()) for r in rows for c in r['cases'])

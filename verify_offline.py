@@ -6,7 +6,6 @@ import hashlib
 import json
 import os
 from pathlib import Path
-import re
 import subprocess
 import sys
 import tempfile
@@ -16,6 +15,33 @@ ROOT = Path(__file__).resolve().parent
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def verify_provenance_coverage(observed):
+    """Bind every surviving scientific payload/source to its recorded treatment."""
+    metadata = json.loads((ROOT / "provenance.json").read_text())
+    followup = metadata["followup_provenance"]
+    assert digest(ROOT / followup["path"]) == followup["sha256"], "follow-up provenance map checksum"
+    records = metadata["copied_files"] + metadata.get("artifact_support_files", [])
+    paths = [item["path"] for item in records]
+    assert len(paths) == len(set(paths)), "duplicate source provenance path"
+    for item in records:
+        path = ROOT / item["path"]
+        assert item["path"] in observed, f"source provenance file missing: {item['path']}"
+        assert digest(path) == item["sha256"], f"source provenance checksum: {item['path']}"
+        assert path.stat().st_size == item["bytes"], f"source provenance size: {item['path']}"
+        if item.get("treatment") == "verbatim":
+            assert item["origin_sha256"] == item["sha256"], f"verbatim source provenance: {item['path']}"
+    from verify_followup import provenance
+    covered = set(paths) | set(provenance())
+    containers = {"code", "benchmarks", "reports", "artifacts", "followup"}
+    scientific = {
+        name for name, path in observed.items()
+        if Path(name).parts[0] in containers and path.suffix in (".py", ".json", ".jsonl")
+        and name != "followup/PROVENANCE.json"
+    }
+    assert scientific <= covered, f"scientific source provenance missing: {sorted(scientific - covered)}"
+    print(f"PASS source provenance coverage: {len(scientific)} scientific data/source files")
 
 
 def main():
@@ -41,6 +67,7 @@ def main():
             for value in strings:
                 json.loads(value, parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)))
     print(f"PASS inventory, SHA-256, Python syntax and strict JSON: {len(observed)} files")
+    verify_provenance_coverage(observed)
 
     environment = dict(os.environ, PYTHONPATH=str(ROOT / "code"), PYTHONDONTWRITEBYTECODE="1")
     tasks = [
@@ -60,22 +87,6 @@ def main():
             shipped = json.loads((ROOT / "benchmarks" / name).read_text())
             assert regenerated == shipped, f"regenerated summary differs: {name}"
             print(f"PASS complete JSON regeneration: {name}")
-        output = Path(temporary) / "kda_sweep_macros.tex"
-        command = [sys.executable, "-B", "-m", "kimi_sv.build_kda_sweep_macros"]
-        for flag, name in [
-            ("sweep", "kda_forcing_sweep_summary_v1.json"),
-            ("families", "recurrent_families_summary_v1.json"),
-            ("sampling", "kda_masked_sampling_summary_v1.json"),
-            ("mla", "kda_mla_logical_equality_v1.json"),
-        ]:
-            command += ["--" + flag, str(ROOT / "benchmarks" / name)]
-        command += ["--out", str(output)]
-        completed = subprocess.run(command, cwd=ROOT, env=environment, capture_output=True, text=True)
-        assert completed.returncode == 0, completed.stdout + completed.stderr
-        assert output.read_bytes() == (ROOT / "expected/kda_sweep_macros.tex").read_bytes(), "paper macros differ"
-        assert "PENDING" not in output.read_text(), "pending paper macro"
-        print("PASS byte-identical numerical paper macros; no PENDING values")
-
     qwen = json.loads((ROOT / "benchmarks/qwen35_replay_result_v3.json").read_text())
     assert qwen["manifest_sha256"] == digest(ROOT / "benchmarks/qwen35_replay_v3.json")
     assert qwen["implementation_sha256"] == digest(ROOT / "code/gemma_sv/qwen_replay_audit.py")
