@@ -1165,6 +1165,13 @@
       "bytes": 96355,
       "origin_sha256": "d5ea97d9c8e03a3b0df4307497e9b4b0e32aecd90a5ca1c53c38d54a7120ec75",
       "treatment": "verbatim"
+    },
+    {
+      "path": "code/kimi_sv/make_forcing_sweep_figures.py",
+      "sha256": "5a56e63dcb8c77f39e023525dcecdcd7ff49fe8b89d9f7f1ddfbe17a8cdf52ad",
+      "bytes": 16490,
+      "origin_sha256": "8efbe99e3829461d4cbc88f7e1eb4732d08da313614ac454564932d29ce9704d",
+      "treatment": "September 25 figure renderer; only documentation and CLI paths adapted to the artifact layout; plotting implementation unchanged"
     }
   ],
   "artifact_support_files": [
@@ -1203,5 +1210,38 @@
     "path": "followup/PROVENANCE.json",
     "sha256": "c8f8eefa38efe510cab9370d40dbb454608bf321fa13aba45dc62c2861f37d44",
     "scope": "Original-versus-released hashes, explicit path anonymization, and retained protocol documentation treatment."
+  },
+  "figure_refresh": {
+    "date": "2026-09-25",
+    "numeric_measurements_unchanged": true,
+    "summary_inputs": [
+      {
+        "path": "benchmarks/kda_forcing_sweep_summary_v1.json",
+        "sha256": "72e455a58ef425e71bd9b89ee9817c63a5397a61d4c95d14dfb05a17e26ef761"
+      },
+      {
+        "path": "benchmarks/recurrent_families_summary_v1.json",
+        "sha256": "2a46cfd470cde1e78e118e91408c035c10b633123fd6ff43ac378eaf8b4ef939"
+      },
+      {
+        "path": "artifacts/kimi_sv/mimic_deletion_8bit_n128_v2.json",
+        "sha256": "ab7b617c6868180b0e6391ad9965dcfb38f053fbecdd979ddcd42d0acd65943e"
+      }
+    ],
+    "presentation_changes": [
+      "Distinct static-receipt and diagonal-ledger colors; suffix ticks at 16, 256 and 4096.",
+      "Target lift axes state nats/token.",
+      "Frozen-input receipt checks use points without stems; tolerance line and native-forcing range bars retained."
+    ],
+    "scope": "Rendering-only refresh from saved summaries; no new model inference or changed statistical summaries.",
+    "verification": {
+      "reference": "Latest manuscript figure assets exported on 2026-09-25",
+      "python": "3.11",
+      "numpy": "2.4.6",
+      "matplotlib": "3.11.0",
+      "all_four_pdf_and_png_files_byte_identical": true,
+      "all_four_svg_files_identical_after_random_identifier_normalization": true,
+      "plotting_function_implementations_unchanged": true
+    }
   }
 }
