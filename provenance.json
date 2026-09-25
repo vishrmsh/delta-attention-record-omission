@@ -1172,6 +1172,16 @@
       "bytes": 16490,
       "origin_sha256": "8efbe99e3829461d4cbc88f7e1eb4732d08da313614ac454564932d29ce9704d",
       "treatment": "September 25 figure renderer; only documentation and CLI paths adapted to the artifact layout; plotting implementation unchanged"
+    },
+    {
+      "path": "benchmarks/kda_separability_controlled_summary_v1.json",
+      "sha256": "79ff2b5a2de1707b224dc9d7f26f9bbd4c382159dc366a4d79cc6f2b0e7aca01",
+      "bytes": 4399,
+      "source_report_sha256": {
+        "cds": "1a43609cadb8892314d12a8f40f5d6492ab0ac5c0a583e99f715740e83c5fac3",
+        "notes": "f8ea0d1d46a28acebac98762f8b0409375d087ed6d2ea9d437209e5179d9cf92"
+      },
+      "treatment": "Whitelisted protocol and numeric summary fields from two local controlled-data reports; source report hashes retained; original reports and all per-configuration payloads excluded. Every extracted summary field was independently regenerated exactly from the original local numeric report before extraction, using the recorded upper-order-statistic median. No source text, patient identifiers or clinical records are included."
     }
   ],
   "artifact_support_files": [
@@ -1189,8 +1199,8 @@
     },
     {
       "path": "verify_offline.py",
-      "sha256": "6b3ca2f81d927e22ee00a46743eeba26b5954485ebdb18d637d66adc7f2fe4be",
-      "bytes": 5120,
+      "sha256": "3187f556177e303f1366cdbed80d21c39b974942bd073c9132ddb0ae131c2e9c",
+      "bytes": 8929,
       "treatment": "artifact verification implementation; no original measured-source hash claimed"
     },
     {
