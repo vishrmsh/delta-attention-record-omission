@@ -1,6 +1,7 @@
 """Standard-library verification of the completed anonymized follow-up evidence."""
 from __future__ import annotations
 import copy
+import gzip
 import hashlib
 import json
 import math
@@ -17,7 +18,8 @@ def digest(data):
     return hashlib.sha256(data).hexdigest()
 
 def read(relative):
-    return json.loads((ROOT/relative).read_text())
+    data=(ROOT/relative).read_bytes()
+    return json.loads(gzip.decompress(data) if relative.endswith('.gz') else data)
 
 def provenance():
     files=read('followup/PROVENANCE.json')['files']
@@ -32,7 +34,7 @@ def verify():
     entries=provenance()
     scientific={path.relative_to(ROOT).as_posix()
                 for path in (ROOT/'followup').rglob('*')
-                if path.is_file() and path.suffix in ('.json','.jsonl')
+                if path.is_file() and (path.suffix in ('.json','.jsonl') or path.name.endswith('.json.gz'))
                 and path.name!='PROVENANCE.json'}
     assert scientific <= set(entries), 'follow-up scientific provenance coverage differs'
     for name,item in entries.items():
@@ -41,6 +43,12 @@ def verify():
         data=path.read_bytes()
         assert digest(data)==item['released_sha256'], f'follow-up release checksum: {name}'
         assert len(data)==item['released_bytes'], f'follow-up size: {name}'
+        if name.endswith('.json.gz'):
+            # Large records ship as gzip -9 -n; the decompressed bytes are the released JSON.
+            data=gzip.decompress(data)
+            assert digest(data)==item['decompressed_sha256'], f'follow-up decompressed checksum: {name}'
+            assert len(data)==item['decompressed_bytes'], f'follow-up decompressed size: {name}'
+            path=path.with_suffix('')
         if path.suffix in ('.json','.jsonl'):
             value=json.loads(data) if path.suffix=='.json' else [json.loads(line) for line in data.decode().splitlines()]
             assert digest(canonical(value))==item['released_canonical_sha256'], f'follow-up canonical checksum: {name}'
@@ -133,7 +141,7 @@ def verify():
                 assert value['max_empirical_floor']==max(value['reconstruction_error_triangle_sum'],value['frozen_input_identity_error_frobenius'])
                 assert value['residual_to_max_empirical_floor_ratio']==value['native_transport_residual_frobenius']/value['max_empirical_floor']
     qmanifest=read('followup/manifests/qwen_confirmation_20260911.json')
-    qwen=read('followup/raw/qwen_confirmation/results.json')
+    qwen=read('followup/raw/qwen_confirmation/results.json.gz')
     rows=qwen['records']
     assert qwen['manifest_sha256']==original_hash('followup/manifests/qwen_confirmation_20260911.json')
     assert qwen['implementation_sha256']==digest((ROOT/'code/recurrent_families/qwen_confirmation.py').read_bytes())
@@ -142,12 +150,12 @@ def verify():
     assert qwen['summary']==read('followup/analysis/qwen_summary.json')
     assert all(r['status']=='completed' and [c['suffix'] for c in r['cases']]==['short','long'] for r in rows)
     assert all(all(c['checks'].values()) for r in rows for c in r['cases'])
-    maintenance=read('followup/raw/maintenance_kimi8_v1.json')
+    maintenance=read('followup/raw/maintenance_kimi8_v1.json.gz')
     assert maintenance['status']=='complete' and not maintenance['tiny_plumbing_only']
     assert len(maintenance['amendments'])==12 and len(maintenance['sequences'])==12
     assert sum(len(s['steps']) for s in maintenance['sequences'])==36
     msummary=read('followup/analysis/maintenance_summary_v1.json')
-    assert msummary['raw_output_sha256']==original_hash('followup/raw/maintenance_kimi8_v1.json')
+    assert msummary['raw_output_sha256']==original_hash('followup/raw/maintenance_kimi8_v1.json.gz')
     assert msummary['sequential']['independent_record_pairs']==6
     print(f'PASS follow-up provenance; {arrays} Kimi contexts, 24 arithmetic diagnostics, 32 paired Qwen contexts, 12 amendments and 36 sequential transitions')
     return {'status':'pass','kimi_contexts':arrays,'arithmetic_diagnostics':24,'qwen_records':32,'qwen_suffix_evaluations':64,'amendment_records':12,'sequential_independent_pairs':6,'sequential_transitions':36}

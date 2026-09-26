@@ -285,7 +285,7 @@ def figure_replay(report: Dict[str, Any], out_dir: Path) -> None:
     ax.set_ylim(-0.1, 7.6)
     ax.grid(axis="y", alpha=0.2)
     fig.tight_layout()
-    save(fig, out_dir, "kda_replay_iclr",
+    save(fig, out_dir, "kda_replay_timing",
          "Nine single replay timings in one 128-record context, from zero seconds for the newest record to 6.70 seconds for the oldest, against a 6.77-second full rebuild. Cohort exactness results appear in the paper tables.")
 
 

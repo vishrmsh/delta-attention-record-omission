@@ -2,10 +2,13 @@
 
 Recorded external snapshot audits are checked as provenance, not re-executed.
 Only path fields and original-vs-released file hashes differ during regeneration.
+Floats must agree to 1e-12 relative: Apple silicon reproduces them bit for bit,
+while other CPUs can differ in the last digit through NumPy's SIMD summation.
 """
 from __future__ import annotations
 import copy
 import json
+import math
 from pathlib import Path
 import sys
 import tempfile
@@ -13,6 +16,20 @@ import tempfile
 ROOT=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT/'code'))
 from verify_followup import read, provenance, verify
+
+ROUNDED=[]
+
+def matches(got,want,path='$'):
+    """Exact comparison, except floats may differ by rounding (rel_tol=1e-12)."""
+    if isinstance(got,dict) and isinstance(want,dict):
+        return got.keys()==want.keys() and all(matches(got[k],want[k],f'{path}.{k}') for k in got)
+    if isinstance(got,list) and isinstance(want,list):
+        return len(got)==len(want) and all(matches(a,b,f'{path}[{i}]') for i,(a,b) in enumerate(zip(got,want)))
+    if isinstance(got,float) and isinstance(want,float) and got!=want:
+        if not math.isclose(got,want,rel_tol=1e-12,abs_tol=0.0): return False
+        ROUNDED.append(path)
+        return True
+    return got==want
 
 
 def main():
@@ -35,15 +52,15 @@ def main():
     # map independently verifies both values; the current analyzer hashes released records.
     mapped={rid:provenance()[f'followup/raw/kimi8_v2/{rid}.json']['released_canonical_sha256'] for rid in expected['analysis_provenance']['raw_result_canonical_sha256']}
     comparison['analysis_provenance']['raw_result_canonical_sha256']=mapped
-    assert result==comparison, 'complete main analysis regeneration differs'
+    assert matches(result,comparison), 'complete main analysis regeneration differs'
     print('PASS main analysis: every statistic, interval, attack and state aggregate')
-    m=summarize(read('followup/raw/maintenance_kimi8_v1.json'))
+    m=summarize(read('followup/raw/maintenance_kimi8_v1.json.gz'))
     m_expected=read('followup/analysis/maintenance_summary_v1.json')
     m_expected.pop('raw_output_sha256')  # Original raw hash already checked by verify().
-    assert m==m_expected, 'maintenance statistics differ'
+    assert matches(m,m_expected), 'maintenance statistics differ'
     print('PASS maintenance: exact/containment, record bootstrap, six independent sequence groups')
-    q=qwen_summarize(read('followup/raw/qwen_confirmation/results.json')['records'],read('followup/manifests/qwen_confirmation_20260911.json'))
-    assert q==read('followup/analysis/qwen_summary.json'), 'Qwen statistics differ'
+    q=qwen_summarize(read('followup/raw/qwen_confirmation/results.json.gz')['records'],read('followup/manifests/qwen_confirmation_20260911.json'))
+    assert matches(q,read('followup/analysis/qwen_summary.json')), 'Qwen statistics differ'
     print('PASS Qwen: all paired suffix summaries, record bootstrap and Wilson intervals')
     with tempfile.TemporaryDirectory(prefix='kda-followup-offline-') as temporary:
         temporary=Path(temporary)
@@ -71,12 +88,16 @@ def main():
             for label in ('8bit','bf16'):
                 assert str(Path(got['arithmetic_diagnostics'][label]['directory']).relative_to(ROOT))==want['arithmetic_diagnostics'][label]['directory']
                 got['arithmetic_diagnostics'][label]['directory']=want['arithmetic_diagnostics'][label]['directory']
-            assert got==want, variant+' precision statistics differ'
+            assert matches(got,want), variant+' precision statistics differ'
             print('PASS '+variant+' precision: every own-reference metric, paired difference and own arithmetic diagnostic')
         released_analysis=temporary/'released-analysis.json';released_analysis.write_text(json.dumps(result))
         a=auc_sensitivity(mf,ROOT/'followup/raw/kimi8_v2',released_analysis)
-        assert a==read('followup/analysis/auc_pairing_sensitivity_v2.json'), 'AUC sensitivity differs'
+        assert matches(a,read('followup/analysis/auc_pairing_sensitivity_v2.json')), 'AUC sensitivity differs'
         print('PASS complete exploratory off-diagonal AUC sensitivity')
+    if ROUNDED:
+        print(f'NOTE {len(ROUNDED)} floating-point values matched to within 1e-12 relative rather than bit for bit (expected off Apple silicon); all other values matched exactly.')
+    else:
+        print('All regenerated values matched the recorded values bit for bit.')
     print('All comparisons used released data, recorded source provenance and CPU statistics only. External weight SHA claims were not independently repeated.')
 
 if __name__=='__main__': main()

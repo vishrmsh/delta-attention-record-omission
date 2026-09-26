@@ -38,7 +38,7 @@ def verify_provenance_coverage(observed):
     containers = {"code", "benchmarks", "reports", "artifacts", "followup"}
     scientific = {
         name for name, path in observed.items()
-        if Path(name).parts[0] in containers and path.suffix in (".py", ".json", ".jsonl")
+        if Path(name).parts[0] in containers and (path.suffix in (".py", ".json", ".jsonl") or name.endswith(".json.gz"))
         and name != "followup/PROVENANCE.json"
     }
     assert scientific <= covered, f"scientific source provenance missing: {sorted(scientific - covered)}"

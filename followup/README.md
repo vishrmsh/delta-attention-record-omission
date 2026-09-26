@@ -8,7 +8,7 @@
 | Qwen bf16 | 32 contexts, each with two suffixes | `manifests/qwen_confirmation_20260911.json`, `raw/qwen_confirmation/`, `analysis/qwen_summary.json` |
 | Same-master precision | Eight fixed contexts per variant | `manifests/precision_subset_v1.json`, `raw/kimi_bf16_v1/`, `raw/kimi_derived8_v1/`, `analysis/precision_comparison_v1.json` |
 | Arithmetic diagnostics | The same eight contexts per variant | `raw/transport_floor_*/` |
-| Maintenance | 12 amendment contexts; six reused target pairs | `raw/maintenance_kimi8_v1.json`, `analysis/maintenance_summary_v1.json` |
+| Maintenance | 12 amendment contexts; six reused target pairs | `raw/maintenance_kimi8_v1.json.gz`, `analysis/maintenance_summary_v1.json` |
 
 [Protocol](protocol.md) specifies qualification, scoring, calibration, paired intervals and state checks. Retain every frozen context and all qualification outcomes. Sequential paths reuse amendment targets; 36 transitions are not 36 independent samples. The raw `greedy_exact` flag means containment; analysis recomputes strict whole-answer equality from saved text. Run times overlap other workloads and are not controlled latency measurements.
 
